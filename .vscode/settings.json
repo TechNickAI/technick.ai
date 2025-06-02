@@ -1,0 +1,61 @@
+{
+  "cSpell.words": [
+    "technickAI",
+    "HeartCentered",
+    "Cora",
+    "AICodeBot",
+    "Krux",
+    "ChangeTip",
+    "Wikia",
+    "HeartRithm"
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#a45dc5",
+    "activityBar.background": "#a45dc5",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#cdb072",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#a45dc5",
+    "statusBar.background": "#8c3fb0",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#a45dc5",
+    "statusBarItem.remoteBackground": "#8c3fb0",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#8c3fb0",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#8c3fb099",
+    "titleBar.inactiveForeground": "#e7e7e799"
+},
+  "peacock.color": "#8c3fb0",
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "editor.rulers": [120],
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "files.associations": {
+    "*.mdc": "markdown"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
+  },
+  "window.title": "💜 TechNick.AI - ${activeEditorShort}${dirty}"
+} 
