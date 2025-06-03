@@ -81,22 +81,38 @@
               lustria: ["Lustria", "serif"],
             },
             colors: {
-              "warm-beige": "#EAE8E1",
-              cream: "#F9F7F6",
-              "dark-charcoal": "#111011",
-              "charcoal-60": "rgba(17, 16, 17, 0.6)",
-              "light-cream": "#F4F2EF",
-              sage: "#827C6A",
-              "lavender-light": "#E5DBEB",
-              lavender: "#DEC8E8",
+              // Primary: Deep charcoal/black for sophistication
+              charcoal: "#1a1a1a",
+              "charcoal-light": "#2d2d2d",
+              "charcoal-60": "rgba(26, 26, 26, 0.6)",
+
+              // Accent: Bold electric blue (confidence, tech)
+              "electric-blue": "#0066FF",
+              "blue-dark": "#0052CC",
+              "blue-light": "#E6F0FF",
+
+              // Secondary: Deep forest green (growth, stability)
+              forest: "#0F4C3A",
+              "forest-light": "#1B6B50",
+              "mint-light": "#E8F5F0",
+
+              // Warm accent: Burnt orange (energy, creativity)
+              "burnt-orange": "#CC5500",
+              "orange-light": "#FFF0E6",
+
+              // Neutrals: Grays and off-whites
+              "gray-900": "#111111",
+              "gray-700": "#374151",
+              "gray-500": "#6B7280",
+              "gray-300": "#D1D5DB",
+              "gray-100": "#F3F4F6",
+              "off-white": "#FAFAFA",
+
+              // Keep some original colors for specific uses
+              "warm-beige": "#F5F5F0",
+              cream: "#FAFAFA",
               purple: "#8C3FB0",
-              "mint-light": "#D2E8C8",
-              mint: "#C1DEAF",
               green: "#6F9954",
-              "blue-light": "#DCE4EA",
-              blue: "#CCD3D9",
-              "blue-dark": "#94A1AA",
-              "peach-light": "#FAE4D0",
               peach: "#C28951",
             },
           },
@@ -149,16 +165,16 @@
     <style>
       body {
         font-family: "Montserrat", sans-serif;
-        background-color: #f9f7f6;
-        color: #111011;
+        background-color: #fafafa;
+        color: #1a1a1a;
       }
 
       .hero-gradient {
-        background: linear-gradient(135deg, #f9f7f6 0%, #eae8e1 100%);
+        background: linear-gradient(135deg, #fafafa 0%, #f3f4f6 100%);
       }
 
       .text-gradient {
-        background: linear-gradient(135deg, #8c3fb0, #6f9954);
+        background: linear-gradient(135deg, #0066ff, #0f4c3a);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -175,20 +191,20 @@
       }
 
       .btn-primary {
-        background: linear-gradient(135deg, #8c3fb0, #6f9954);
+        background: linear-gradient(135deg, #0066ff, #0052cc);
         transition: all 0.3s ease;
       }
 
       .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 15px -3px rgba(140, 63, 176, 0.3);
+        box-shadow: 0 10px 15px -3px rgba(0, 102, 255, 0.3);
       }
     </style>
   </head>
   <body id="top">
     <!-- Navigation -->
     <nav
-      class="fixed top-0 w-full bg-cream/80 backdrop-blur-md z-50 border-b border-warm-beige"
+      class="fixed top-0 w-full bg-off-white/90 backdrop-blur-md z-50 border-b border-gray-300"
       x-data="{ open: false }"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -204,22 +220,22 @@
             <div class="ml-10 flex items-baseline space-x-8">
               <a
                 href="#about"
-                class="text-dark-charcoal hover:text-purple transition-colors"
+                class="text-charcoal hover:text-electric-blue transition-colors"
                 >About</a
               >
               <a
                 href="#projects"
-                class="text-dark-charcoal hover:text-purple transition-colors"
+                class="text-charcoal hover:text-electric-blue transition-colors"
                 >Projects</a
               >
               <a
                 href="#experience"
-                class="text-dark-charcoal hover:text-purple transition-colors"
+                class="text-charcoal hover:text-electric-blue transition-colors"
                 >Experience</a
               >
               <a
                 href="#contact"
-                class="text-dark-charcoal hover:text-purple transition-colors"
+                class="text-charcoal hover:text-electric-blue transition-colors"
                 >Contact</a
               >
             </div>
@@ -229,7 +245,7 @@
           <div class="md:hidden">
             <button
               @click="open = !open"
-              class="text-dark-charcoal hover:text-purple"
+              class="text-charcoal hover:text-electric-blue"
             >
               <svg
                 class="h-6 w-6"
@@ -252,26 +268,26 @@
       <!-- Mobile Navigation -->
       <div x-show="open" x-transition class="md:hidden">
         <div
-          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-cream border-t border-warm-beige"
+          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-off-white border-t border-gray-300"
         >
           <a
             href="#about"
-            class="block px-3 py-2 text-dark-charcoal hover:text-purple transition-colors"
+            class="block px-3 py-2 text-charcoal hover:text-electric-blue transition-colors"
             >About</a
           >
           <a
             href="#projects"
-            class="block px-3 py-2 text-dark-charcoal hover:text-purple transition-colors"
+            class="block px-3 py-2 text-charcoal hover:text-electric-blue transition-colors"
             >Projects</a
           >
           <a
             href="#experience"
-            class="block px-3 py-2 text-dark-charcoal hover:text-purple transition-colors"
+            class="block px-3 py-2 text-charcoal hover:text-electric-blue transition-colors"
             >Experience</a
           >
           <a
             href="#contact"
-            class="block px-3 py-2 text-dark-charcoal hover:text-purple transition-colors"
+            class="block px-3 py-2 text-charcoal hover:text-electric-blue transition-colors"
             >Contact</a
           >
         </div>
@@ -285,7 +301,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div data-aos="fade-up" data-aos-duration="1000">
           <h1 class="text-5xl md:text-7xl font-bold mb-6">
-            <span class="text-dark-charcoal">Nick Sullivan</span>
+            <span class="text-charcoal">Nick Sullivan</span>
           </h1>
           <h2 class="text-2xl md:text-4xl font-light mb-8 text-charcoal-60">
             AI Entrepreneur & Heart-Centered Technologist
@@ -308,7 +324,7 @@
             </a>
             <a
               href="#contact"
-              class="border-2 border-purple text-purple px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple hover:text-white transition-all"
+              class="border-2 border-electric-blue text-electric-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-electric-blue hover:text-white transition-all"
             >
               Get In Touch
             </a>
@@ -318,10 +334,10 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-gray-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark-charcoal">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-charcoal">
             About Me
           </h2>
           <p class="text-xl text-charcoal-60 max-w-3xl mx-auto">
@@ -352,26 +368,26 @@
             </p>
             <div class="flex flex-wrap gap-3">
               <span
-                class="bg-lavender-light text-purple px-4 py-2 rounded-full text-sm font-medium"
-                >AI Ethics</span
+                class="bg-electric-blue text-white px-4 py-2 rounded-full text-sm font-medium"
+                >AI Innovation</span
               >
               <span
-                class="bg-mint-light text-green px-4 py-2 rounded-full text-sm font-medium"
-                >Sustainable Tech</span
+                class="bg-forest text-white px-4 py-2 rounded-full text-sm font-medium"
+                >Strategic Tech</span
               >
               <span
-                class="bg-blue-light text-blue-dark px-4 py-2 rounded-full text-sm font-medium"
-                >Human-Centered Design</span
+                class="bg-charcoal text-white px-4 py-2 rounded-full text-sm font-medium"
+                >Leadership</span
               >
               <span
-                class="bg-peach-light text-peach px-4 py-2 rounded-full text-sm font-medium"
-                >Consciousness Tech</span
+                class="bg-burnt-orange text-white px-4 py-2 rounded-full text-sm font-medium"
+                >Entrepreneurship</span
               >
             </div>
           </div>
 
           <div data-aos="fade-left">
-            <div class="bg-warm-beige rounded-2xl p-8 mb-8">
+            <div class="bg-white rounded-2xl p-8 mb-8 shadow-lg">
               <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
                 <img
                   src="images/projects/nick-heartcentered.png"
@@ -380,40 +396,38 @@
                 />
               </div>
               <div class="text-center mb-6">
-                <h3 class="text-xl font-bold text-dark-charcoal mb-2">
+                <h3 class="text-xl font-bold text-charcoal mb-2">
                   Nick Sullivan
                 </h3>
                 <p class="text-charcoal-60">Heart-Centered Technologist</p>
                 <p class="text-sm text-charcoal-60">Austin, TX</p>
               </div>
             </div>
-            <div class="bg-white rounded-2xl p-8">
-              <h4 class="text-xl font-bold mb-4 text-dark-charcoal">
-                Core Values
-              </h4>
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+              <h4 class="text-xl font-bold mb-4 text-charcoal">Core Values</h4>
               <ul class="space-y-4">
                 <li class="flex items-start">
-                  <span class="text-purple mr-3">💜</span>
+                  <span class="text-electric-blue mr-3">🚀</span>
                   <span class="text-charcoal-60"
-                    >Heart-centered approach to technology development</span
+                    >Innovation-driven technology leadership</span
                   >
                 </li>
                 <li class="flex items-start">
-                  <span class="text-green mr-3">🌱</span>
+                  <span class="text-forest mr-3">💪</span>
                   <span class="text-charcoal-60"
-                    >Sustainable and regenerative tech practices</span
+                    >Strategic execution and proven results</span
                   >
                 </li>
                 <li class="flex items-start">
-                  <span class="text-blue-dark mr-3">🤝</span>
+                  <span class="text-burnt-orange mr-3">🎯</span>
                   <span class="text-charcoal-60"
-                    >Collaborative and inclusive innovation</span
+                    >Entrepreneurial mindset and risk-taking</span
                   >
                 </li>
                 <li class="flex items-start">
-                  <span class="text-peach mr-3">✨</span>
+                  <span class="text-charcoal mr-3">⚡</span>
                   <span class="text-charcoal-60"
-                    >Technology that enhances human potential</span
+                    >Building transformative technology at scale</span
                   >
                 </li>
               </ul>
@@ -424,13 +438,13 @@
     </section>
 
     <!-- Life Philosophy Section -->
-    <section class="py-20 bg-warm-beige">
+    <section class="py-20 bg-charcoal text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark-charcoal">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
             Life Philosophy
           </h2>
-          <p class="text-xl text-charcoal-60 max-w-3xl mx-auto">
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
             How I approach life, relationships, and the beautiful complexity of
             being human.
           </p>
@@ -438,35 +452,39 @@
 
         <div class="grid md:grid-cols-2 gap-12">
           <div data-aos="fade-right">
-            <div class="bg-white rounded-2xl p-8 mb-8">
-              <h3 class="text-xl font-bold mb-4 text-dark-charcoal">
+            <div
+              class="bg-charcoal-light rounded-2xl p-8 mb-8 border border-gray-700"
+            >
+              <h3 class="text-xl font-bold mb-4 text-white">
                 💆‍♂️ Massage Table Wisdom
               </h3>
-              <p class="text-charcoal-60 mb-4">
+              <p class="text-gray-300 mb-4">
                 I do my best thinking on a massage table—it's my forced
                 meditation time. When the world slows down and my body relaxes,
                 that's when the biggest insights come. Some of my most important
                 life and business decisions have happened in that peaceful
                 space.
               </p>
-              <p class="text-charcoal-60">
+              <p class="text-gray-300">
                 It taught me that breakthrough thinking often requires stepping
                 away from the noise, creating space for wisdom to emerge
                 naturally.
               </p>
             </div>
 
-            <div class="bg-white rounded-2xl p-8">
-              <h3 class="text-xl font-bold mb-4 text-dark-charcoal">
+            <div
+              class="bg-charcoal-light rounded-2xl p-8 border border-gray-700"
+            >
+              <h3 class="text-xl font-bold mb-4 text-white">
                 💜 Relationships & Love
               </h3>
-              <p class="text-charcoal-60 mb-4">
+              <p class="text-gray-300 mb-4">
                 I believe in radical authenticity and emotional intelligence.
                 Real connection happens when we show up fully—vulnerabilities,
                 strengths, and everything in between. I'm passiosexual: deeply
                 attracted to someone's passion and dedication to their pursuits.
               </p>
-              <p class="text-charcoal-60">
+              <p class="text-gray-300">
                 Love isn't just a feeling—it's a practice of seeing and honoring
                 the divine in another person, supporting their growth while
                 staying true to your own path.
@@ -475,11 +493,13 @@
           </div>
 
           <div data-aos="fade-left">
-            <div class="bg-white rounded-2xl p-8 mb-8">
-              <h3 class="text-xl font-bold mb-4 text-dark-charcoal">
+            <div
+              class="bg-charcoal-light rounded-2xl p-8 mb-8 border border-gray-700"
+            >
+              <h3 class="text-xl font-bold mb-4 text-white">
                 ✨ What Brings Me Joy
               </h3>
-              <ul class="space-y-3 text-charcoal-60">
+              <ul class="space-y-3 text-gray-300">
                 <li>• Deep conversations that shift perspectives</li>
                 <li>• Creating something beautiful from nothing</li>
                 <li>• Moments of genuine human connection</li>
@@ -490,17 +510,19 @@
               </ul>
             </div>
 
-            <div class="bg-white rounded-2xl p-8">
-              <h3 class="text-xl font-bold mb-4 text-dark-charcoal">
+            <div
+              class="bg-charcoal-light rounded-2xl p-8 border border-gray-700"
+            >
+              <h3 class="text-xl font-bold mb-4 text-white">
                 🌅 Perfect Evening
               </h3>
-              <p class="text-charcoal-60 mb-4">
+              <p class="text-gray-300 mb-4">
                 Great conversation over dinner with someone who challenges my
                 thinking, followed by stargazing while discussing the mysteries
                 of consciousness and technology. Maybe some tequila, definitely
                 some laughter.
               </p>
-              <p class="text-charcoal-60">
+              <p class="text-gray-300">
                 Or: Building something meaningful in my workshop, then sharing
                 the excitement with someone who gets as fired up about
                 possibilities as I do.
@@ -512,10 +534,10 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-light-cream">
+    <section id="projects" class="py-20 bg-off-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark-charcoal">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-charcoal">
             Featured Projects
           </h2>
           <p class="text-xl text-charcoal-60 max-w-3xl mx-auto">
@@ -818,7 +840,7 @@
     </section>
 
     <!-- TechNickAI Philosophy Section -->
-    <section class="py-20 bg-warm-beige">
+    <section class="py-20 bg-gray-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
           <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark-charcoal">
@@ -1121,7 +1143,7 @@
     </section>
 
     <!-- Values & Fun Facts Section -->
-    <section class="py-20 bg-light-cream">
+    <section class="py-20 bg-gray-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 gap-12">
           <!-- Core Values -->
@@ -1300,7 +1322,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-dark-charcoal text-white">
+    <section id="contact" class="py-20 bg-charcoal text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
           <h2 class="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h2>
@@ -1316,48 +1338,48 @@
             <div data-aos="fade-right">
               <div class="space-y-6">
                 <div class="flex items-center text-lg">
-                  <span class="text-purple mr-4">📍</span>
+                  <span class="text-electric-blue mr-4">📍</span>
                   <span>Austin, TX</span>
                 </div>
                 <div class="flex items-center text-lg">
-                  <span class="text-green mr-4">💌</span>
+                  <span class="text-forest-light mr-4">💌</span>
                   <a
                     href="mailto:nick@technick.ai"
-                    class="hover:text-purple transition-colors"
+                    class="hover:text-electric-blue transition-colors"
                     >nick@technick.ai</a
                   >
                 </div>
                 <div class="flex items-start">
-                  <span class="text-blue-dark mr-4 mt-1">🔗</span>
+                  <span class="text-burnt-orange mr-4 mt-1">🔗</span>
                   <div class="grid grid-cols-2 gap-4">
                     <a
                       href="https://linkedin.com/in/nicksullivan"
                       target="_blank"
-                      class="hover:text-purple transition-colors"
+                      class="hover:text-electric-blue transition-colors"
                       >LinkedIn</a
                     >
                     <a
                       href="https://twitter.com/technickai"
                       target="_blank"
-                      class="hover:text-purple transition-colors"
+                      class="hover:text-electric-blue transition-colors"
                       >Twitter</a
                     >
                     <a
                       href="https://substack.com/@technickai"
                       target="_blank"
-                      class="hover:text-purple transition-colors"
+                      class="hover:text-electric-blue transition-colors"
                       >Substack</a
                     >
                     <a
                       href="https://github.com/technickai"
                       target="_blank"
-                      class="hover:text-purple transition-colors"
+                      class="hover:text-electric-blue transition-colors"
                       >GitHub</a
                     >
                     <a
                       href="https://instagram.com/technickai_"
                       target="_blank"
-                      class="hover:text-purple transition-colors"
+                      class="hover:text-electric-blue transition-colors"
                       >Instagram</a
                     >
                   </div>
