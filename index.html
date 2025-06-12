@@ -54,7 +54,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Lustria:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Inter:wght@700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -77,8 +77,8 @@
         theme: {
           extend: {
             fontFamily: {
-              montserrat: ["Montserrat", "sans-serif"],
-              lustria: ["Lustria", "serif"],
+              roboto: ["Roboto", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
             },
             colors: {
               // Primary: Deep charcoal/black for sophistication
@@ -94,22 +94,26 @@
               // Secondary: Deep forest green (growth, stability)
               forest: "#0F4C3A",
               "forest-light": "#1B6B50",
-              "mint-light": "#E8F5F0",
+              "forest-pale": "#E8F5F0",
 
-              // Warm accent: Burnt orange (energy, creativity)
+              // Power accent: Burnt orange (energy, creativity)
               "burnt-orange": "#CC5500",
+              "orange-dark": "#994000",
               "orange-light": "#FFF0E6",
 
-              // Neutrals: Grays and off-whites
-              "gray-900": "#111111",
-              "gray-700": "#374151",
-              "gray-500": "#6B7280",
-              "gray-300": "#D1D5DB",
-              "gray-100": "#F3F4F6",
-              "off-white": "#FAFAFA",
+              // Masculine grays - stronger contrast
+              "steel-gray": "#1F2937",
+              gunmetal: "#374151",
+              slate: "#475569",
+              silver: "#94A3B8",
+              "light-gray": "#E2E8F0",
+              "off-white": "#F8FAFC",
 
-              // Keep some original colors for specific uses
-              "warm-beige": "#F5F5F0",
+              // Reduced purple - now just an accent
+              "deep-purple": "#5B21B6",
+              "purple-light": "#EDE9FE",
+
+              // Keep for specific uses but minimize
               cream: "#FAFAFA",
               purple: "#8C3FB0",
               green: "#6F9954",
@@ -164,13 +168,13 @@
     <!-- Custom CSS -->
     <style>
       body {
-        font-family: "Montserrat", sans-serif;
-        background-color: #fafafa;
+        font-family: "Roboto", sans-serif;
+        background-color: #f8fafc;
         color: #1a1a1a;
       }
 
       .hero-gradient {
-        background: linear-gradient(135deg, #fafafa 0%, #f3f4f6 100%);
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
       }
 
       .text-gradient {
@@ -204,7 +208,7 @@
   <body id="top">
     <!-- Navigation -->
     <nav
-      class="fixed top-0 w-full bg-off-white/90 backdrop-blur-md z-50 border-b border-gray-300"
+      class="fixed top-0 w-full bg-off-white/90 backdrop-blur-md z-50 border-b border-silver"
       x-data="{ open: false }"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -273,7 +277,7 @@
       <!-- Mobile Navigation -->
       <div x-show="open" x-transition class="md:hidden">
         <div
-          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-off-white border-t border-gray-300"
+          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-off-white border-t border-silver"
         >
           <a
             href="#about"
@@ -310,10 +314,12 @@
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div data-aos="fade-up" data-aos-duration="1000">
-          <h1 class="text-5xl md:text-7xl font-bold mb-6">
+          <h1 class="text-4xl md:text-6xl font-inter font-black mb-6">
             <span class="text-charcoal">Nick Sullivan</span>
           </h1>
-          <h2 class="text-2xl md:text-4xl font-light mb-8 text-charcoal-60">
+          <h2
+            class="text-2xl md:text-4xl font-roboto font-medium mb-8 text-charcoal-60"
+          >
             AI Entrepreneur & Heart-Centered Technologist
           </h2>
           <p
@@ -343,10 +349,12 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-100">
+    <section id="about" class="py-20 bg-light-gray">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-charcoal">
+          <h2
+            class="text-5xl md:text-6xl font-inter font-black mb-6 text-charcoal"
+          >
             My Story
           </h2>
           <p class="text-xl text-charcoal-60 max-w-3xl mx-auto">
@@ -449,10 +457,12 @@
     <section class="py-20 bg-charcoal text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <h2
+            class="text-5xl md:text-6xl font-inter font-black mb-6 text-white"
+          >
             Life Philosophy
           </h2>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p class="text-xl text-silver max-w-3xl mx-auto">
             How I approach life, relationships, and the beautiful complexity of
             being human.
           </p>
@@ -549,7 +559,9 @@
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl md:text-6xl font-bold mb-6 text-charcoal">
+          <h2
+            class="text-5xl md:text-7xl font-inter font-black mb-6 text-charcoal"
+          >
             <span class="text-gradient">Luminous Intelligence</span>
           </h2>
           <p class="text-2xl md:text-3xl font-light mb-8 text-charcoal">
@@ -739,7 +751,9 @@
     <section id="projects" class="py-20 bg-off-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-charcoal">
+          <h2
+            class="text-5xl md:text-6xl font-inter font-black mb-6 text-charcoal"
+          >
             My Creations
           </h2>
           <p class="text-xl text-charcoal-60 max-w-3xl mx-auto">
@@ -785,15 +799,15 @@
               </div>
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
-                  class="bg-lavender-light text-purple px-3 py-1 rounded-full text-xs"
+                  class="bg-steel-gray text-white px-3 py-1 rounded-full text-xs"
                   >Personal Growth</span
                 >
                 <span
-                  class="bg-mint-light text-green px-3 py-1 rounded-full text-xs"
+                  class="bg-forest text-white px-3 py-1 rounded-full text-xs"
                   >Ethical Design</span
                 >
                 <span
-                  class="bg-peach-light text-peach px-3 py-1 rounded-full text-xs"
+                  class="bg-orange-dark text-white px-3 py-1 rounded-full text-xs"
                   >Human Values</span
                 >
               </div>
