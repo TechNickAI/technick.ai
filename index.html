@@ -308,41 +308,61 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Headshot -->
     <section
       class="hero-gradient min-h-screen flex items-center justify-center pt-16"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div data-aos="fade-up" data-aos-duration="1000">
-          <h1 class="text-4xl md:text-6xl font-inter font-black mb-6">
-            <span class="text-charcoal">Nick Sullivan</span>
-          </h1>
-          <h2
-            class="text-2xl md:text-4xl font-roboto font-medium mb-8 text-charcoal-60"
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid lg:grid-cols-5 gap-12 items-center max-w-6xl mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <!-- Headshot - Left Side (2 columns) -->
+          <div class="order-2 lg:order-1 lg:col-span-2 flex justify-center">
+            <div class="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="images/headshot.png"
+                alt="Nick Sullivan - AI Entrepreneur & Heart-Centered Technologist"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Content - Right Side (3 columns) -->
+          <div
+            class="order-1 lg:order-2 lg:col-span-3 text-center lg:text-left"
           >
-            AI Entrepreneur & Heart-Centered Technologist
-          </h2>
-          <p
-            class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-charcoal-60 leading-relaxed"
-          >
-            Building technology with heart while staying curious about life,
-            love, and what makes us human. I combine strategic leadership with
-            emotional intelligence to create AI that bridges consciousness with
-            code, serving our highest human aspirations.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#projects"
-              class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg"
+            <h1 class="text-3xl md:text-5xl font-inter font-black mb-4">
+              <span class="text-charcoal">Nick Sullivan</span>
+            </h1>
+            <h2
+              class="text-xl md:text-2xl font-roboto font-medium mb-6 text-charcoal-60"
             >
-              Explore My Creations
-            </a>
-            <a
-              href="#contact"
-              class="border-2 border-electric-blue text-electric-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-electric-blue hover:text-white transition-all"
+              AI Entrepreneur & Heart-Centered Technologist
+            </h2>
+            <p class="text-lg md:text-xl mb-8 text-charcoal-60 leading-relaxed">
+              Building technology with heart while staying curious about life,
+              love, and what makes us human. I combine strategic leadership with
+              emotional intelligence to create AI that bridges consciousness
+              with code, serving our highest human aspirations.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              Let's Connect
-            </a>
+              <a
+                href="#projects"
+                class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg"
+              >
+                Explore My Creations
+              </a>
+              <a
+                href="#contact"
+                class="border-2 border-electric-blue text-electric-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-electric-blue hover:text-white transition-all"
+              >
+                Let's Connect
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -404,19 +424,25 @@
 
           <div data-aos="fade-left">
             <div class="bg-white rounded-2xl p-8 mb-8 shadow-lg">
-              <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                <img
-                  src="images/projects/nick-heartcentered.png"
-                  alt="Nick Sullivan - Heart-Centered Technologist"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="text-center mb-6">
-                <h3 class="text-xl font-bold text-charcoal mb-2">
-                  Nick Sullivan
-                </h3>
-                <p class="text-charcoal-60">Heart-Centered Technologist</p>
-                <p class="text-sm text-charcoal-60">Austin, TX</p>
+              <div class="flex items-center gap-6">
+                <div
+                  class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="images/projects/nick-heartcentered.png"
+                    alt="Nick Sullivan - Heart-Centered Technologist"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold text-charcoal mb-1">
+                    Nick Sullivan
+                  </h3>
+                  <p class="text-charcoal-60 mb-1">
+                    Heart-Centered Technologist
+                  </p>
+                  <p class="text-sm text-charcoal-60">Austin, TX</p>
+                </div>
               </div>
             </div>
             <div class="bg-white rounded-2xl p-8 shadow-lg">
