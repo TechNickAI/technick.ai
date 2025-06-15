@@ -29,7 +29,10 @@
     "titleBar.activeBackground": "#0066ff",
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#0066ff99",
-    "titleBar.inactiveForeground": "#e7e7e799"
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.border": "#0066ff",
+    "tab.activeBorder": "#3385ff",
+    "titleBar.border": "#0066ff"
   },
   "peacock.color": "#0066FF",
   "editor.formatOnSave": true,
@@ -62,4 +65,4 @@
   },
   "window.title": "💜 TechNick.AI - ${activeEditorShort}${dirty}",
   "djlint.showInstallError": false
-} 
+}
