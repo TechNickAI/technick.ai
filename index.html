@@ -1,455 +1,817 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nick Sullivan - TechNick.AI 💜</title>
-    <meta name="description" content="Nick Sullivan is a heart-centered AI entrepreneur and technologist, blending Silicon Valley expertise with emotional intelligence to create meaningful technology solutions.">
-    <meta name="keywords" content="Nick Sullivan, TechNick.AI, AI entrepreneur, heart-centered technology, Silicon Valley, artificial intelligence, HeartCentered.AI">
-    
+    <meta
+      name="description"
+      content="Nick Sullivan is a heart-centered AI entrepreneur and technologist, blending Silicon Valley expertise with emotional intelligence to create meaningful technology solutions."
+    />
+    <meta
+      name="keywords"
+      content="Nick Sullivan, TechNick.AI, AI entrepreneur, heart-centered technology, Silicon Valley, artificial intelligence, HeartCentered.AI"
+    />
+
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://technick.ai/">
-    <meta property="og:title" content="Nick Sullivan - TechNick.AI 💜">
-    <meta property="og:description" content="Heart-centered AI entrepreneur blending Silicon Valley expertise with emotional intelligence">
-    <meta property="og:image" content="https://technick.ai/images/nick-photo.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://technick.ai/" />
+    <meta property="og:title" content="Nick Sullivan - TechNick.AI 💜" />
+    <meta
+      property="og:description"
+      content="Heart-centered AI entrepreneur blending Silicon Valley expertise with emotional intelligence"
+    />
+    <meta
+      property="og:image"
+      content="https://technick.ai/images/nick-photo.jpg"
+    />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://technick.ai/">
-    <meta property="twitter:title" content="Nick Sullivan - TechNick.AI 💜">
-    <meta property="twitter:description" content="Heart-centered AI entrepreneur blending Silicon Valley expertise with emotional intelligence">
-    <meta property="twitter:image" content="https://technick.ai/images/nick-photo.jpg">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://technick.ai/" />
+    <meta property="twitter:title" content="Nick Sullivan - TechNick.AI 💜" />
+    <meta
+      property="twitter:description"
+      content="Heart-centered AI entrepreneur blending Silicon Valley expertise with emotional intelligence"
+    />
+    <meta
+      property="twitter:image"
+      content="https://technick.ai/images/nick-photo.jpg"
+    />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/favicon-light.png" media="(prefers-color-scheme: light)">
-    <link rel="icon" type="image/png" href="/images/favicon-dark.png" media="(prefers-color-scheme: dark)">
-    
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-light.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lustria:wght@400&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lustria:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'montserrat': ['Montserrat', 'sans-serif'],
-                        'lustria': ['Lustria', 'serif'],
-                    },
-                    colors: {
-                        'heart-purple': '#8B5CF6',
-                        'heart-pink': '#EC4899',
-                        'deep-blue': '#1E3A8A',
-                        'warm-gray': '#6B7280',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"],
+              lustria: ["Lustria", "serif"],
+            },
+            colors: {
+              "heart-purple": "#8B5CF6",
+              "heart-pink": "#EC4899",
+              "deep-blue": "#1E3A8A",
+              "warm-gray": "#6B7280",
+            },
+          },
+        },
+      };
     </script>
-    
-    <!-- Alpine.js -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-</head>
 
-<body class="font-montserrat bg-gradient-to-br from-slate-50 to-blue-50 text-gray-800">
+    <!-- Alpine.js -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+
+  <body
+    class="font-montserrat bg-gradient-to-br from-slate-50 to-blue-50 text-gray-800"
+  >
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200" x-data="{ isOpen: false }">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold bg-gradient-to-r from-heart-purple to-heart-pink bg-clip-text text-transparent">
-                        TechNick.AI 💜
-                    </span>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-gray-700 hover:text-heart-purple transition-colors duration-300">About</a>
-                    <a href="#philosophy" class="text-gray-700 hover:text-heart-purple transition-colors duration-300">Philosophy</a>
-                    <a href="#projects" class="text-gray-700 hover:text-heart-purple transition-colors duration-300">Projects</a>
-                    <a href="#values" class="text-gray-700 hover:text-heart-purple transition-colors duration-300">Values</a>
-                    <a href="#connect" class="text-gray-700 hover:text-heart-purple transition-colors duration-300">Connect</a>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button @click="isOpen = !isOpen" class="text-gray-700 hover:text-heart-purple">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div x-show="isOpen" x-transition class="md:hidden pb-4">
-                <a href="#about" class="block py-2 text-gray-700 hover:text-heart-purple transition-colors duration-300">About</a>
-                <a href="#philosophy" class="block py-2 text-gray-700 hover:text-heart-purple transition-colors duration-300">Philosophy</a>
-                <a href="#projects" class="block py-2 text-gray-700 hover:text-heart-purple transition-colors duration-300">Projects</a>
-                <a href="#values" class="block py-2 text-gray-700 hover:text-heart-purple transition-colors duration-300">Values</a>
-                <a href="#connect" class="block py-2 text-gray-700 hover:text-heart-purple transition-colors duration-300">Connect</a>
-            </div>
+    <nav
+      class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200"
+      x-data="{ isOpen: false }"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <span
+              class="text-2xl font-bold bg-gradient-to-r from-heart-purple to-heart-pink bg-clip-text text-transparent"
+            >
+              TechNick.AI 💜
+            </span>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-heart-purple transition-colors duration-300"
+              >About</a
+            >
+            <a
+              href="#philosophy"
+              class="text-gray-700 hover:text-heart-purple transition-colors duration-300"
+              >Philosophy</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-700 hover:text-heart-purple transition-colors duration-300"
+              >Projects</a
+            >
+            <a
+              href="#values"
+              class="text-gray-700 hover:text-heart-purple transition-colors duration-300"
+              >Values</a
+            >
+            <a
+              href="#connect"
+              class="text-gray-700 hover:text-heart-purple transition-colors duration-300"
+              >Connect</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button
+              @click="isOpen = !isOpen"
+              class="text-gray-700 hover:text-heart-purple"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="isOpen" x-transition class="md:hidden pb-4">
+          <a
+            href="#about"
+            class="block py-2 text-gray-700 hover:text-heart-purple transition-colors duration-300"
+            >About</a
+          >
+          <a
+            href="#philosophy"
+            class="block py-2 text-gray-700 hover:text-heart-purple transition-colors duration-300"
+            >Philosophy</a
+          >
+          <a
+            href="#projects"
+            class="block py-2 text-gray-700 hover:text-heart-purple transition-colors duration-300"
+            >Projects</a
+          >
+          <a
+            href="#values"
+            class="block py-2 text-gray-700 hover:text-heart-purple transition-colors duration-300"
+            >Values</a
+          >
+          <a
+            href="#connect"
+            class="block py-2 text-gray-700 hover:text-heart-purple transition-colors duration-300"
+            >Connect</a
+          >
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <h1 class="text-5xl lg:text-6xl font-bold mb-6">
-                        <span class="bg-gradient-to-r from-heart-purple to-heart-pink bg-clip-text text-transparent">
-                            Heart-Centered
-                        </span>
-                        <br>
-                        <span class="text-gray-800">AI Pioneer</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        Blending Silicon Valley expertise with emotional intelligence to create technology that serves humanity's highest potential.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#connect" class="bg-gradient-to-r from-heart-purple to-heart-pink text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                            Let's Connect
-                        </a>
-                        <a href="#about" class="border-2 border-heart-purple text-heart-purple px-8 py-3 rounded-full font-semibold hover:bg-heart-purple hover:text-white transition-all duration-300">
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-                <div data-aos="fade-left" class="relative">
-                    <div class="relative z-10">
-                        <img src="/images/nick-photo.jpg" alt="Nick Sullivan" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto">
-                    </div>
-                    <div class="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-heart-purple/20 to-heart-pink/20 rounded-2xl"></div>
-                </div>
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <h1 class="text-5xl lg:text-6xl font-bold mb-6">
+              <span
+                class="bg-gradient-to-r from-heart-purple to-heart-pink bg-clip-text text-transparent"
+              >
+                Heart-Centered
+              </span>
+              <br />
+              <span class="text-gray-800">AI Pioneer</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              Blending Silicon Valley expertise with emotional intelligence to
+              create technology that serves humanity's highest potential.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#connect"
+                class="bg-gradient-to-r from-heart-purple to-heart-pink text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+              >
+                Let's Connect
+              </a>
+              <a
+                href="#about"
+                class="border-2 border-heart-purple text-heart-purple px-8 py-3 rounded-full font-semibold hover:bg-heart-purple hover:text-white transition-all duration-300"
+              >
+                Learn More
+              </a>
             </div>
+          </div>
+          <div data-aos="fade-left" class="relative">
+            <div class="relative z-10">
+              <img
+                src="/images/nick-photo.jpg"
+                alt="Nick Sullivan"
+                class="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
+              />
+            </div>
+            <div
+              class="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-heart-purple/20 to-heart-pink/20 rounded-2xl"
+            ></div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold mb-4">My Journey</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    From overcoming early challenges to pioneering heart-centered AI solutions
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <img src="/images/headshot.png" alt="Nick Sullivan Professional Headshot" class="rounded-2xl shadow-xl w-full">
-                </div>
-                <div data-aos="fade-left" class="space-y-6">
-                    <div class="prose prose-lg text-gray-700">
-                        <p class="text-lg leading-relaxed">
-                            My path began with significant challenges—growing up with an alcoholic father and navigating learning disabilities that made traditional education difficult. These early experiences taught me resilience and the importance of finding alternative approaches to success.
-                        </p>
-                        <p class="text-lg leading-relaxed">
-                            After discovering my passion for technology, I built a successful career in Silicon Valley, working with cutting-edge AI and machine learning technologies. But something was missing—the human element that makes technology truly meaningful.
-                        </p>
-                        <p class="text-lg leading-relaxed">
-                            This realization led me to develop a heart-centered approach to technology, combining analytical rigor with emotional intelligence. Today, I'm dedicated to creating AI solutions that enhance human potential rather than replace it.
-                        </p>
-                        <p class="text-lg leading-relaxed">
-                            When I'm not coding or strategizing, you might find me exploring consciousness at Burning Man )'(, mentoring aspiring entrepreneurs, or diving deep into the latest AI research.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-4">My Journey</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From overcoming early challenges to pioneering heart-centered AI
+            solutions
+          </p>
         </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <img
+              src="/images/headshot.png"
+              alt="Nick Sullivan Professional Headshot"
+              class="rounded-2xl shadow-xl w-full"
+            />
+          </div>
+          <div data-aos="fade-left" class="space-y-6">
+            <div class="prose prose-lg text-gray-700">
+              <p class="text-lg leading-relaxed">
+                My path began with significant challenges—growing up with an
+                alcoholic father and navigating learning disabilities that made
+                traditional education difficult. These early experiences taught
+                me resilience and the importance of finding alternative
+                approaches to success.
+              </p>
+              <p class="text-lg leading-relaxed">
+                After discovering my passion for technology, I built a
+                successful career in Silicon Valley, working with cutting-edge
+                AI and machine learning technologies. But something was
+                missing—the human element that makes technology truly
+                meaningful.
+              </p>
+              <p class="text-lg leading-relaxed">
+                This realization led me to develop a heart-centered approach to
+                technology, combining analytical rigor with emotional
+                intelligence. Today, I'm dedicated to creating AI solutions that
+                enhance human potential rather than replace it.
+              </p>
+              <p class="text-lg leading-relaxed">
+                When I'm not coding or strategizing, you might find me exploring
+                consciousness at Burning Man )'(, mentoring aspiring
+                entrepreneurs, or diving deep into the latest AI research.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Philosophy Section -->
-    <section id="philosophy" class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold mb-4">The TechNickAI Philosophy</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    A tech-centric evolution of Ikigai, emphasizing heart-centered innovation
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right" class="space-y-6">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4 text-heart-purple">What You Love</h3>
-                        <p class="text-gray-700">Technology that serves humanity, AI innovation, and creating solutions that enhance human potential.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4 text-heart-pink">What You're Good At</h3>
-                        <p class="text-gray-700">AI/ML engineering, strategic thinking, heart-centered leadership, and bridging technical complexity with human needs.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4 text-deep-blue">What the World Needs</h3>
-                        <p class="text-gray-700">Ethical AI development, technology that enhances rather than replaces human connection, and conscious innovation.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4 text-warm-gray">What You Can Be Paid For</h3>
-                        <p class="text-gray-700">AI consulting, strategic advisory, speaking engagements, and building transformative technology products.</p>
-                    </div>
-                </div>
-                <div data-aos="fade-left">
-                    <img src="/images/technick-philosophy.png" alt="TechNickAI Philosophy Diagram" class="rounded-2xl shadow-xl w-full">
-                </div>
-            </div>
+    <section
+      id="philosophy"
+      class="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-4">The TechNickAI Philosophy</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            A tech-centric evolution of Ikigai, emphasizing heart-centered
+            innovation
+          </p>
         </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right" class="space-y-6">
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 class="text-2xl font-bold mb-4 text-heart-purple">
+                What You Love
+              </h3>
+              <p class="text-gray-700">
+                Technology that serves humanity, AI innovation, and creating
+                solutions that enhance human potential.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 class="text-2xl font-bold mb-4 text-heart-pink">
+                What You're Good At
+              </h3>
+              <p class="text-gray-700">
+                AI/ML engineering, strategic thinking, heart-centered
+                leadership, and bridging technical complexity with human needs.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 class="text-2xl font-bold mb-4 text-deep-blue">
+                What the World Needs
+              </h3>
+              <p class="text-gray-700">
+                Ethical AI development, technology that enhances rather than
+                replaces human connection, and conscious innovation.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 class="text-2xl font-bold mb-4 text-warm-gray">
+                What You Can Be Paid For
+              </h3>
+              <p class="text-gray-700">
+                AI consulting, strategic advisory, speaking engagements, and
+                building transformative technology products.
+              </p>
+            </div>
+          </div>
+          <div data-aos="fade-left">
+            <img
+              src="/images/technick-philosophy.png"
+              alt="TechNickAI Philosophy Diagram"
+              class="rounded-2xl shadow-xl w-full"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold mb-4">Featured Creations</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Innovative projects at the intersection of technology and human consciousness
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- HeartCentered.AI -->
-                <div data-aos="fade-up" data-aos-delay="100" class="bg-gradient-to-br from-heart-purple/10 to-heart-pink/10 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="/images/projects/heartcentered-ai.jpeg" alt="HeartCentered.AI" class="w-full h-48 object-cover rounded-xl mb-4">
-                    <h3 class="text-xl font-bold mb-2">HeartCentered.AI</h3>
-                    <p class="text-gray-600 mb-4">AI platform designed to enhance human connection and emotional intelligence in digital interactions.</p>
-                    <a href="#" class="text-heart-purple font-semibold hover:text-heart-pink transition-colors">Learn More →</a>
-                </div>
-                
-                <!-- AICodeBot -->
-                <div data-aos="fade-up" data-aos-delay="200" class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="/images/projects/aicodebot.webp" alt="AICodeBot" class="w-full h-48 object-cover rounded-xl mb-4">
-                    <h3 class="text-xl font-bold mb-2">AICodeBot</h3>
-                    <p class="text-gray-600 mb-4">Intelligent coding assistant that understands context and provides meaningful code suggestions.</p>
-                    <a href="#" class="text-heart-purple font-semibold hover:text-heart-pink transition-colors">Learn More →</a>
-                </div>
-                
-                <!-- Cora -->
-                <div data-aos="fade-up" data-aos-delay="300" class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="/images/projects/cora.png" alt="Cora AI Assistant" class="w-full h-48 object-cover rounded-xl mb-4">
-                    <h3 class="text-xl font-bold mb-2">Cora</h3>
-                    <p class="text-gray-600 mb-4">Advanced AI assistant focused on emotional intelligence and meaningful human-AI collaboration.</p>
-                    <a href="#" class="text-heart-purple font-semibold hover:text-heart-pink transition-colors">Learn More →</a>
-                </div>
-                
-                <!-- The Goddess Guide -->
-                <div data-aos="fade-up" data-aos-delay="400" class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="/images/projects/goddess-guide.png" alt="The Goddess Guide" class="w-full h-48 object-cover rounded-xl mb-4">
-                    <h3 class="text-xl font-bold mb-2">The Goddess Guide</h3>
-                    <p class="text-gray-600 mb-4">Empowering platform celebrating feminine wisdom and supporting women's personal growth journeys.</p>
-                    <a href="#" class="text-heart-purple font-semibold hover:text-heart-pink transition-colors">Learn More →</a>
-                </div>
-                
-                <!-- The Heartpiece -->
-                <div data-aos="fade-up" data-aos-delay="500" class="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="/images/projects/heart-piece.png" alt="The Heartpiece Burning Man Installation" class="w-full h-48 object-cover rounded-xl mb-4">
-                    <h3 class="text-xl font-bold mb-2">The Heartpiece</h3>
-                    <p class="text-gray-600 mb-4">Interactive Burning Man installation exploring the intersection of technology, art, and human connection.</p>
-                    <a href="#" class="text-heart-purple font-semibold hover:text-heart-pink transition-colors">Learn More →</a>
-                </div>
-                
-                <!-- GitHub Portfolio -->
-                <div data-aos="fade-up" data-aos-delay="600" class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="/images/projects/github-portfolio.png" alt="GitHub Portfolio" class="w-full h-48 object-cover rounded-xl mb-4">
-                    <h3 class="text-xl font-bold mb-2">Open Source Contributions</h3>
-                    <p class="text-gray-600 mb-4">Extensive portfolio of open-source projects and contributions to the AI/ML community.</p>
-                    <a href="#" class="text-heart-purple font-semibold hover:text-heart-pink transition-colors">View GitHub →</a>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-4">Featured Creations</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Innovative projects at the intersection of technology and human
+            consciousness
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- HeartCentered.AI -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="bg-gradient-to-br from-heart-purple/10 to-heart-pink/10 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <img
+              src="/images/projects/heartcentered-ai.jpeg"
+              alt="HeartCentered.AI"
+              class="w-full h-48 object-cover rounded-xl mb-4"
+            />
+            <h3 class="text-xl font-bold mb-2">HeartCentered.AI</h3>
+            <p class="text-gray-600 mb-4">
+              AI platform designed to enhance human connection and emotional
+              intelligence in digital interactions.
+            </p>
+            <a
+              href="#"
+              class="text-heart-purple font-semibold hover:text-heart-pink transition-colors"
+              >Learn More →</a
+            >
+          </div>
+
+          <!-- AICodeBot -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <img
+              src="/images/projects/aicodebot.webp"
+              alt="AICodeBot"
+              class="w-full h-48 object-cover rounded-xl mb-4"
+            />
+            <h3 class="text-xl font-bold mb-2">AICodeBot</h3>
+            <p class="text-gray-600 mb-4">
+              Intelligent coding assistant that understands context and provides
+              meaningful code suggestions.
+            </p>
+            <a
+              href="#"
+              class="text-heart-purple font-semibold hover:text-heart-pink transition-colors"
+              >Learn More →</a
+            >
+          </div>
+
+          <!-- Cora -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <img
+              src="/images/projects/cora.png"
+              alt="Cora AI Assistant"
+              class="w-full h-48 object-cover rounded-xl mb-4"
+            />
+            <h3 class="text-xl font-bold mb-2">Cora</h3>
+            <p class="text-gray-600 mb-4">
+              Advanced AI assistant focused on emotional intelligence and
+              meaningful human-AI collaboration.
+            </p>
+            <a
+              href="#"
+              class="text-heart-purple font-semibold hover:text-heart-pink transition-colors"
+              >Learn More →</a
+            >
+          </div>
+
+          <!-- The Goddess Guide -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <img
+              src="/images/projects/goddess-guide.png"
+              alt="The Goddess Guide"
+              class="w-full h-48 object-cover rounded-xl mb-4"
+            />
+            <h3 class="text-xl font-bold mb-2">The Goddess Guide</h3>
+            <p class="text-gray-600 mb-4">
+              Empowering platform celebrating feminine wisdom and supporting
+              women's personal growth journeys.
+            </p>
+            <a
+              href="#"
+              class="text-heart-purple font-semibold hover:text-heart-pink transition-colors"
+              >Learn More →</a
+            >
+          </div>
+
+          <!-- The Heartpiece -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="500"
+            class="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <img
+              src="/images/projects/heart-piece.png"
+              alt="The Heartpiece Burning Man Installation"
+              class="w-full h-48 object-cover rounded-xl mb-4"
+            />
+            <h3 class="text-xl font-bold mb-2">The Heartpiece</h3>
+            <p class="text-gray-600 mb-4">
+              Interactive Burning Man installation exploring the intersection of
+              technology, art, and human connection.
+            </p>
+            <a
+              href="#"
+              class="text-heart-purple font-semibold hover:text-heart-pink transition-colors"
+              >Learn More →</a
+            >
+          </div>
+
+          <!-- GitHub Portfolio -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="600"
+            class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <img
+              src="/images/projects/github-portfolio.png"
+              alt="GitHub Portfolio"
+              class="w-full h-48 object-cover rounded-xl mb-4"
+            />
+            <h3 class="text-xl font-bold mb-2">Open Source Contributions</h3>
+            <p class="text-gray-600 mb-4">
+              Extensive portfolio of open-source projects and contributions to
+              the AI/ML community.
+            </p>
+            <a
+              href="#"
+              class="text-heart-purple font-semibold hover:text-heart-pink transition-colors"
+              >View GitHub →</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Values Section -->
-    <section id="values" class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold mb-4">Core Values & Fun Facts</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    The principles that guide my work and some quirky details about who I am
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <img src="/images/core-values.png" alt="Core Values" class="rounded-2xl shadow-xl w-full">
-                </div>
-                <div data-aos="fade-left" class="space-y-8">
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-3 text-heart-purple">💜 Heart-Centered Leadership</h3>
-                        <p class="text-gray-700">Leading with empathy, authenticity, and genuine care for human flourishing.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-3 text-heart-pink">🚀 Innovation with Purpose</h3>
-                        <p class="text-gray-700">Creating technology that enhances human potential rather than replacing human connection.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-3 text-deep-blue">🌟 Continuous Growth</h3>
-                        <p class="text-gray-700">Embracing challenges as opportunities for learning and personal evolution.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-3 text-warm-gray">🤝 Authentic Collaboration</h3>
-                        <p class="text-gray-700">Building genuine relationships based on trust, transparency, and mutual respect.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Fun Facts -->
-            <div class="mt-16" data-aos="fade-up">
-                <h3 class="text-2xl font-bold text-center mb-8">Fun Facts About Nick</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                        <div class="text-3xl mb-2">🎯</div>
-                        <p class="font-semibold">Perfectenschlag</p>
-                        <p class="text-sm text-gray-600">Believes in the perfect balance of efficiency and excellence</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                        <div class="text-3xl mb-2">🔥</div>
-                        <p class="font-semibold">Burning Man Veteran</p>
-                        <p class="text-sm text-gray-600">Regular participant exploring consciousness and community</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                        <div class="text-3xl mb-2">🧠</div>
-                        <p class="font-semibold">Learning Differences</p>
-                        <p class="text-sm text-gray-600">Turned challenges into superpowers for creative problem-solving</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                        <div class="text-3xl mb-2">💡</div>
-                        <p class="font-semibold">AI Optimist</p>
-                        <p class="text-sm text-gray-600">Believes AI can enhance human potential when built with heart</p>
-                    </div>
-                </div>
-            </div>
+    <section
+      id="values"
+      class="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-4">Core Values & Fun Facts</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            The principles that guide my work and some quirky details about who
+            I am
+          </p>
         </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <img
+              src="/images/core-values.png"
+              alt="Core Values"
+              class="rounded-2xl shadow-xl w-full"
+            />
+          </div>
+          <div data-aos="fade-left" class="space-y-8">
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold mb-3 text-heart-purple">
+                💜 Heart-Centered Leadership
+              </h3>
+              <p class="text-gray-700">
+                Leading with empathy, authenticity, and genuine care for human
+                flourishing.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold mb-3 text-heart-pink">
+                🚀 Innovation with Purpose
+              </h3>
+              <p class="text-gray-700">
+                Creating technology that enhances human potential rather than
+                replacing human connection.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold mb-3 text-deep-blue">
+                🌟 Continuous Growth
+              </h3>
+              <p class="text-gray-700">
+                Embracing challenges as opportunities for learning and personal
+                evolution.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold mb-3 text-warm-gray">
+                🤝 Authentic Collaboration
+              </h3>
+              <p class="text-gray-700">
+                Building genuine relationships based on trust, transparency, and
+                mutual respect.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fun Facts -->
+        <div class="mt-16" data-aos="fade-up">
+          <h3 class="text-2xl font-bold text-center mb-8">
+            Fun Facts About Nick
+          </h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div class="text-3xl mb-2">🎯</div>
+              <p class="font-semibold">Perfectenschlag</p>
+              <p class="text-sm text-gray-600">
+                Believes in the perfect balance of efficiency and excellence
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div class="text-3xl mb-2">🔥</div>
+              <p class="font-semibold">Burning Man Veteran</p>
+              <p class="text-sm text-gray-600">
+                Regular participant exploring consciousness and community
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div class="text-3xl mb-2">🧠</div>
+              <p class="font-semibold">Learning Differences</p>
+              <p class="text-sm text-gray-600">
+                Turned challenges into superpowers for creative problem-solving
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div class="text-3xl mb-2">💡</div>
+              <p class="font-semibold">AI Optimist</p>
+              <p class="text-sm text-gray-600">
+                Believes AI can enhance human potential when built with heart
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Connect Section -->
     <section id="connect" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold mb-4">Let's Connect</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Ready to explore how heart-centered AI can transform your business or project?
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Mentorship -->
-                <div data-aos="fade-up" data-aos-delay="100" class="bg-gradient-to-br from-heart-purple/10 to-heart-pink/10 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-4xl mb-4">🌱</div>
-                    <h3 class="text-xl font-bold mb-4">Mentorship</h3>
-                    <p class="text-gray-600 mb-6">Guidance for aspiring AI entrepreneurs and technologists seeking to build with purpose.</p>
-                    <a href="mailto:nick@technick.ai?subject=Mentorship Inquiry" class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors">
-                        Get Mentorship
-                    </a>
-                </div>
-                
-                <!-- Speaking -->
-                <div data-aos="fade-up" data-aos-delay="200" class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-4xl mb-4">🎤</div>
-                    <h3 class="text-xl font-bold mb-4">Speaking</h3>
-                    <p class="text-gray-600 mb-6">Keynotes and workshops on heart-centered AI, conscious technology, and innovation leadership.</p>
-                    <a href="mailto:nick@technick.ai?subject=Speaking Engagement" class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors">
-                        Book Speaking
-                    </a>
-                </div>
-                
-                <!-- Advisory -->
-                <div data-aos="fade-up" data-aos-delay="300" class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-4xl mb-4">🎯</div>
-                    <h3 class="text-xl font-bold mb-4">Advisory</h3>
-                    <p class="text-gray-600 mb-6">Strategic guidance for startups and enterprises integrating AI with human-centered design.</p>
-                    <a href="mailto:nick@technick.ai?subject=Advisory Services" class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors">
-                        Explore Advisory
-                    </a>
-                </div>
-                
-                <!-- Collaboration -->
-                <div data-aos="fade-up" data-aos-delay="400" class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-4xl mb-4">🤝</div>
-                    <h3 class="text-xl font-bold mb-4">Collaboration</h3>
-                    <p class="text-gray-600 mb-6">Partnership opportunities for innovative AI projects that serve humanity's highest potential.</p>
-                    <a href="mailto:nick@technick.ai?subject=Collaboration Opportunity" class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors">
-                        Collaborate
-                    </a>
-                </div>
-                
-                <!-- Investment -->
-                <div data-aos="fade-up" data-aos-delay="500" class="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-4xl mb-4">💰</div>
-                    <h3 class="text-xl font-bold mb-4">Investment</h3>
-                    <p class="text-gray-600 mb-6">Supporting ethical AI startups and heart-centered technology ventures.</p>
-                    <a href="mailto:nick@technick.ai?subject=Investment Opportunity" class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors">
-                        Pitch Project
-                    </a>
-                </div>
-                
-                <!-- General Contact -->
-                <div data-aos="fade-up" data-aos-delay="600" class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-4xl mb-4">💬</div>
-                    <h3 class="text-xl font-bold mb-4">General Inquiry</h3>
-                    <p class="text-gray-600 mb-6">Have a question or want to connect? I'd love to hear from you.</p>
-                    <a href="mailto:nick@technick.ai?subject=General Inquiry" class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors">
-                        Say Hello
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Social Links -->
-            <div class="text-center mt-16" data-aos="fade-up">
-                <h3 class="text-xl font-semibold mb-6">Follow the Journey</h3>
-                <div class="flex justify-center space-x-6">
-                    <a href="#" class="text-gray-600 hover:text-heart-purple transition-colors text-2xl">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-heart-purple transition-colors text-2xl">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-heart-purple transition-colors text-2xl">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-4">Let's Connect</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ready to explore how heart-centered AI can transform your business
+            or project?
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Mentorship -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="bg-gradient-to-br from-heart-purple/10 to-heart-pink/10 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="text-4xl mb-4">🌱</div>
+            <h3 class="text-xl font-bold mb-4">Mentorship</h3>
+            <p class="text-gray-600 mb-6">
+              Guidance for aspiring AI entrepreneurs and technologists seeking
+              to build with purpose.
+            </p>
+            <a
+              href="mailto:nick@technick.ai?subject=Mentorship Inquiry"
+              class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors"
+            >
+              Get Mentorship
+            </a>
+          </div>
+
+          <!-- Speaking -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="text-4xl mb-4">🎤</div>
+            <h3 class="text-xl font-bold mb-4">Speaking</h3>
+            <p class="text-gray-600 mb-6">
+              Keynotes and workshops on heart-centered AI, conscious technology,
+              and innovation leadership.
+            </p>
+            <a
+              href="mailto:nick@technick.ai?subject=Speaking Engagement"
+              class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors"
+            >
+              Book Speaking
+            </a>
+          </div>
+
+          <!-- Advisory -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="text-4xl mb-4">🎯</div>
+            <h3 class="text-xl font-bold mb-4">Advisory</h3>
+            <p class="text-gray-600 mb-6">
+              Strategic guidance for startups and enterprises integrating AI
+              with human-centered design.
+            </p>
+            <a
+              href="mailto:nick@technick.ai?subject=Advisory Services"
+              class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors"
+            >
+              Explore Advisory
+            </a>
+          </div>
+
+          <!-- Collaboration -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="text-4xl mb-4">🤝</div>
+            <h3 class="text-xl font-bold mb-4">Collaboration</h3>
+            <p class="text-gray-600 mb-6">
+              Partnership opportunities for innovative AI projects that serve
+              humanity's highest potential.
+            </p>
+            <a
+              href="mailto:nick@technick.ai?subject=Collaboration Opportunity"
+              class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors"
+            >
+              Collaborate
+            </a>
+          </div>
+
+          <!-- Investment -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="500"
+            class="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="text-4xl mb-4">💰</div>
+            <h3 class="text-xl font-bold mb-4">Investment</h3>
+            <p class="text-gray-600 mb-6">
+              Supporting ethical AI startups and heart-centered technology
+              ventures.
+            </p>
+            <a
+              href="mailto:nick@technick.ai?subject=Investment Opportunity"
+              class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors"
+            >
+              Pitch Project
+            </a>
+          </div>
+
+          <!-- General Contact -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="600"
+            class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="text-4xl mb-4">💬</div>
+            <h3 class="text-xl font-bold mb-4">General Inquiry</h3>
+            <p class="text-gray-600 mb-6">
+              Have a question or want to connect? I'd love to hear from you.
+            </p>
+            <a
+              href="mailto:nick@technick.ai?subject=General Inquiry"
+              class="bg-heart-purple text-white px-6 py-3 rounded-full font-semibold hover:bg-heart-pink transition-colors"
+            >
+              Say Hello
+            </a>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="text-center mt-16" data-aos="fade-up">
+          <h3 class="text-xl font-semibold mb-6">Follow the Journey</h3>
+          <div class="flex justify-center space-x-6">
+            <a
+              href="#"
+              class="text-gray-600 hover:text-heart-purple transition-colors text-2xl"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-heart-purple transition-colors text-2xl"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-heart-purple transition-colors text-2xl"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="text-2xl font-bold mb-4">
-                    <span class="bg-gradient-to-r from-heart-purple to-heart-pink bg-clip-text text-transparent">
-                        TechNick.AI 💜
-                    </span>
-                </div>
-                <p class="text-gray-400 mb-6">
-                    Building the future of heart-centered AI, one connection at a time.
-                </p>
-                <div class="border-t border-gray-800 pt-6">
-                    <p class="text-gray-500 text-sm">
-                        © 2024 Nick Sullivan. Built with 💜 and a commitment to conscious technology.
-                    </p>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div class="text-2xl font-bold mb-4">
+            <span
+              class="bg-gradient-to-r from-heart-purple to-heart-pink bg-clip-text text-transparent"
+            >
+              TechNick.AI 💜
+            </span>
+          </div>
+          <p class="text-gray-400 mb-6">
+            Building the future of heart-centered AI, one connection at a time.
+          </p>
+          <div class="border-t border-gray-800 pt-6">
+            <p class="text-gray-500 text-sm">
+              © 2024 Nick Sullivan. Built with 💜 and a commitment to conscious
+              technology.
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
     </script>
-</body>
+  </body>
 </html>
