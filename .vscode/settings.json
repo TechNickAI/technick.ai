@@ -61,5 +61,6 @@
     "editor.wordWrap": "on"
   },
   "window.title": "💜 TechNick.AI - ${activeEditorShort}${dirty}",
-  "djlint.showInstallError": false
+  "djlint.showInstallError": false,
+  "terminal.integrated.defaultProfile.osx": "bash"
 }
