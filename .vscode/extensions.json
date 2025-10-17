@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    // Formatting
+    "esbenp.prettier-vscode",
+
+    // Tailwind CSS support
+    "bradlc.vscode-tailwindcss",
+
+    // Utilities
+    "streetsidesoftware.code-spell-checker",
+    "johnpapa.vscode-peacock"
+  ]
+}
+
