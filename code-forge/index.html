@@ -192,32 +192,41 @@
 
           <!-- Mobile Menu Button -->
           <div class="md:hidden">
-            <button @click="isOpen = !isOpen" class="text-gray-700 hover:text-steel-blue">
+            <button @click="isOpen = !isOpen" class="text-gray-700 hover:text-steel-blue focus:outline-none focus:text-steel-blue transition-colors duration-200">
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div x-show="isOpen" x-transition class="md:hidden pb-4">
-          <a href="/#about" class="block py-2 text-gray-700 hover:text-steel-blue transition-colors duration-300">
+        <div
+          x-show="isOpen"
+          x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 transform -translate-y-2"
+          x-transition:enter-end="opacity-100 transform translate-y-0"
+          x-transition:leave="transition ease-in duration-150"
+          x-transition:leave-start="opacity-100 transform translate-y-0"
+          x-transition:leave-end="opacity-0 transform -translate-y-2"
+          class="md:hidden border-t border-gray-100 mt-2 pt-4 pb-4">
+          <a href="/#about" @click="isOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-steel-blue/5 hover:text-steel-blue rounded-lg transition-colors duration-200">
             About
           </a>
-          <a href="/#philosophy" class="block py-2 text-gray-700 hover:text-steel-blue transition-colors duration-300">
+          <a href="/#philosophy" @click="isOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-steel-blue/5 hover:text-steel-blue rounded-lg transition-colors duration-200">
             Philosophy
           </a>
-          <a href="/#projects" class="block py-2 text-gray-700 hover:text-steel-blue transition-colors duration-300">
+          <a href="/#projects" @click="isOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-steel-blue/5 hover:text-steel-blue rounded-lg transition-colors duration-200">
             Projects
           </a>
-          <a href="/code-forge" class="block py-2 text-steel-blue font-semibold transition-colors duration-300">
+          <a href="/code-forge" @click="isOpen = false" class="block py-3 px-4 text-steel-blue font-semibold hover:bg-steel-blue/5 rounded-lg transition-colors duration-200">
             Code Forge
           </a>
-          <a href="/#values" class="block py-2 text-gray-700 hover:text-steel-blue transition-colors duration-300">
+          <a href="/#values" @click="isOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-steel-blue/5 hover:text-steel-blue rounded-lg transition-colors duration-200">
             Values
           </a>
-          <a href="/#connect" class="block py-2 text-gray-700 hover:text-steel-blue transition-colors duration-300">
+          <a href="/#connect" @click="isOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-steel-blue/5 hover:text-steel-blue rounded-lg transition-colors duration-200">
             Connect
           </a>
         </div>
@@ -225,17 +234,17 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div class="absolute inset-0 forge-glow"></div>
       <div class="max-w-7xl mx-auto relative z-10">
         <div class="text-center" data-aos="fade-up">
-          <h1 class="text-5xl lg:text-7xl font-bold mb-6">
+          <h1 class="text-5xl lg:text-6xl font-bold mb-4">
             <span
               class="bg-gradient-to-r from-steel-blue via-warm-blue to-accent-teal bg-clip-text text-transparent">
               The Code Forge
             </span>
           </h1>
-          <p class="text-2xl lg:text-3xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed font-light">
+          <p class="text-xl lg:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed font-light">
             Where ideas are tempered with love and shaped into tools that serve
           </p>
           <p class="text-lg text-gray-500 max-w-3xl mx-auto mb-12">
@@ -249,25 +258,25 @@
             <button
               @click="activeFilter = 'all'"
               :class="activeFilter === 'all' ? 'bg-steel-blue text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
-              class="px-6 py-2 rounded-full font-semibold transition-all duration-300 border-2 border-steel-blue">
+              class="px-6 py-2 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-steel-blue focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
               All Projects
             </button>
             <button
               @click="activeFilter = 'production'"
               :class="activeFilter === 'production' ? 'bg-green-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
-              class="px-6 py-2 rounded-full font-semibold transition-all duration-300 border-2 border-green-600">
+              class="px-6 py-2 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-green-600 focus:outline-none focus:ring-4 focus:ring-green-600/30">
               Production
             </button>
             <button
               @click="activeFilter = 'active'"
               :class="activeFilter === 'active' ? 'bg-blue-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
-              class="px-6 py-2 rounded-full font-semibold transition-all duration-300 border-2 border-blue-600">
+              class="px-6 py-2 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-600/30">
               Active Development
             </button>
             <button
               @click="activeFilter = 'legacy'"
               :class="activeFilter === 'legacy' ? 'bg-gray-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
-              class="px-6 py-2 rounded-full font-semibold transition-all duration-300 border-2 border-gray-600">
+              class="px-6 py-2 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600/30">
               Legacy
             </button>
           </div>
@@ -285,7 +294,7 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="100"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1">
             <div class="flex justify-between items-start mb-4">
               <div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-2">MCP Hubby</h3>
@@ -318,14 +327,14 @@
                 href="https://mcphubby.ai"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
                 Visit Site
               </a>
               <a
                 href="https://github.com/carmentacollective/mcp-hubby"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center border-2 border-steel-blue text-steel-blue px-4 py-2 rounded-lg font-semibold hover:bg-steel-blue hover:text-white transition-all duration-300">
+                class="flex-1 text-center border-2 border-steel-blue text-steel-blue px-4 py-2 rounded-lg font-semibold hover:bg-steel-blue hover:text-white transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
                 View Code
               </a>
             </div>
@@ -337,7 +346,7 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="200"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1">
             <div class="flex justify-between items-start mb-4">
               <div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-2">claude_telemetry</h3>
@@ -370,14 +379,14 @@
                 href="https://github.com/TechNickAI/claude_telemetry"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
                 View on GitHub
               </a>
               <a
                 href="https://pypi.org/project/claude_telemetry/"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center border-2 border-steel-blue text-steel-blue px-4 py-2 rounded-lg font-semibold hover:bg-steel-blue hover:text-white transition-all duration-300">
+                class="flex-1 text-center border-2 border-steel-blue text-steel-blue px-4 py-2 rounded-lg font-semibold hover:bg-steel-blue hover:text-white transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
                 PyPI Package
               </a>
             </div>
@@ -389,7 +398,7 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="300"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1">
             <div class="flex justify-between items-start mb-4">
               <div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-2">heart-centered-prompts</h3>
@@ -422,14 +431,14 @@
                 href="https://github.com/technickai/heart-centered-prompts"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
                 View on GitHub
               </a>
               <a
                 href="https://heartcentered.ai"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center border-2 border-steel-blue text-steel-blue px-4 py-2 rounded-lg font-semibold hover:bg-steel-blue hover:text-white transition-all duration-300">
+                class="flex-1 text-center border-2 border-steel-blue text-steel-blue px-4 py-2 rounded-lg font-semibold hover:bg-steel-blue hover:text-white transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
                 Philosophy
               </a>
             </div>
@@ -441,7 +450,7 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="400"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1">
             <div class="flex justify-between items-start mb-4">
               <div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-2">ai-coding-config</h3>
@@ -474,7 +483,7 @@
                 href="https://github.com/TechNickAI/ai-coding-config"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
                 View on GitHub
               </a>
             </div>
@@ -532,7 +541,7 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="600"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1">
             <div class="flex justify-between items-start mb-4">
               <div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-2">TeslaBot</h3>
@@ -571,7 +580,7 @@
                 href="https://github.com/gorillamania/teslabot"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
                 View on GitHub
               </a>
             </div>
