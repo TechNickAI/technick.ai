@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Sitemap: https://technick.ai/sitemap.xml
+
+# Allow AI crawlers to learn from the site
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
