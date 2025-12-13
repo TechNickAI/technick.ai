@@ -46,7 +46,7 @@
 
     <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Lustria:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet" />
 
     <!-- Tailwind CSS -->
@@ -56,16 +56,13 @@
         theme: {
           extend: {
             fontFamily: {
-              montserrat: ["Montserrat", "sans-serif"],
-              lustria: ["Lustria", "serif"],
+              outfit: ["Outfit", "sans-serif"],
             },
             colors: {
-              "steel-blue": "#2563EB",
-              "navy-blue": "#1E40AF",
-              "warm-blue": "#3B82F6",
-              "accent-teal": "#06B6D4",
-              "deep-slate": "#1E293B",
-              "warm-gray": "#6B7280",
+              "warm-cream": "#fef7ed",
+              "warm-blue": "#3b82f6",
+              "warm-amber": "#f59e0b",
+              "warm-charcoal": "#44403c",
             },
           },
         },
@@ -85,7 +82,7 @@
       posthog.init('phc_akkg9PgA7lJeF3fTJGLfVpkFJ9n7YMhP6UhEcuQtLJY', {
           api_host: 'https://us.i.posthog.com',
           defaults: '2025-05-24',
-          person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+          person_profiles: 'identified_only',
       })
     </script>
 
@@ -127,7 +124,7 @@
         left: 0;
         width: 100%;
         height: 4px;
-        background: linear-gradient(90deg, #2563eb, #06b6d4);
+        background: linear-gradient(90deg, #3b82f6, #f59e0b);
         transform: scaleX(0);
         transition: transform 0.3s ease;
       }
@@ -135,67 +132,51 @@
       .project-card:hover::before {
         transform: scaleX(1);
       }
-
-      .forge-glow {
-        position: relative;
-      }
-
-      .forge-glow::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 300%;
-        height: 300%;
-        background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-      }
     </style>
   </head>
 
   <body
-    class="font-montserrat bg-gradient-to-br from-slate-50 to-blue-50 text-gray-800"
+    class="font-outfit bg-warm-cream text-warm-charcoal"
     x-data="{ activeFilter: 'all' }">
     <!-- Navigation -->
     <nav
-      class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200"
+      class="fixed top-0 w-full bg-warm-cream/95 backdrop-blur-md z-50 border-b border-warm-amber/20"
       x-data="{ isOpen: false }">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
           <div class="flex items-center">
             <a
               href="/"
-              class="text-2xl font-bold bg-gradient-to-r from-steel-blue to-accent-teal bg-clip-text text-transparent">
-              TechNickAI 💙
+              class="text-2xl font-bold text-warm-charcoal">
+              Tech<span class="text-warm-blue">Nick</span>AI
             </a>
           </div>
 
           <!-- Desktop Menu -->
           <div class="hidden md:flex space-x-8">
-            <a href="/#about" class="text-gray-700 hover:text-steel-blue transition-colors duration-300">
+            <a href="/#about" class="text-warm-charcoal hover:text-warm-blue transition-colors duration-300">
               About
             </a>
-            <a href="/#philosophy" class="text-gray-700 hover:text-steel-blue transition-colors duration-300">
+            <a href="/#philosophy" class="text-warm-charcoal hover:text-warm-blue transition-colors duration-300">
               Philosophy
             </a>
-            <a href="/#projects" class="text-gray-700 hover:text-steel-blue transition-colors duration-300">
+            <a href="/#projects" class="text-warm-charcoal hover:text-warm-blue transition-colors duration-300">
               Projects
             </a>
-            <a href="/code-forge" class="text-steel-blue font-semibold transition-colors duration-300">
+            <a href="/code-forge" class="text-warm-blue font-semibold transition-colors duration-300">
               Code Forge
             </a>
-            <a href="/#values" class="text-gray-700 hover:text-steel-blue transition-colors duration-300">
+            <a href="/#values" class="text-warm-charcoal hover:text-warm-blue transition-colors duration-300">
               Values
             </a>
-            <a href="/#connect" class="text-gray-700 hover:text-steel-blue transition-colors duration-300">
+            <a href="/#connect" class="text-warm-charcoal hover:text-warm-blue transition-colors duration-300">
               Connect
             </a>
           </div>
 
           <!-- Mobile Menu Button -->
           <div class="md:hidden">
-            <button @click="isOpen = !isOpen" class="text-gray-700 hover:text-steel-blue focus:outline-none focus:text-steel-blue transition-colors duration-200">
+            <button @click="isOpen = !isOpen" class="text-warm-charcoal hover:text-warm-blue focus:outline-none focus:text-warm-blue transition-colors duration-200 p-2">
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -213,23 +194,23 @@
           x-transition:leave="transition ease-in duration-150"
           x-transition:leave-start="opacity-100 transform translate-y-0"
           x-transition:leave-end="opacity-0 transform -translate-y-2"
-          class="md:hidden border-t border-gray-100 mt-2 pt-4 pb-4">
-          <a href="/#about" @click="isOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-steel-blue/5 hover:text-steel-blue rounded-lg transition-colors duration-200">
+          class="md:hidden border-t border-warm-amber/20 mt-2 pt-4 pb-4">
+          <a href="/#about" @click="isOpen = false" class="block py-3 px-4 text-warm-charcoal hover:bg-warm-blue/5 hover:text-warm-blue rounded-lg transition-colors duration-200">
             About
           </a>
-          <a href="/#philosophy" @click="isOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-steel-blue/5 hover:text-steel-blue rounded-lg transition-colors duration-200">
+          <a href="/#philosophy" @click="isOpen = false" class="block py-3 px-4 text-warm-charcoal hover:bg-warm-blue/5 hover:text-warm-blue rounded-lg transition-colors duration-200">
             Philosophy
           </a>
-          <a href="/#projects" @click="isOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-steel-blue/5 hover:text-steel-blue rounded-lg transition-colors duration-200">
+          <a href="/#projects" @click="isOpen = false" class="block py-3 px-4 text-warm-charcoal hover:bg-warm-blue/5 hover:text-warm-blue rounded-lg transition-colors duration-200">
             Projects
           </a>
-          <a href="/code-forge" @click="isOpen = false" class="block py-3 px-4 text-steel-blue font-semibold hover:bg-steel-blue/5 rounded-lg transition-colors duration-200">
+          <a href="/code-forge" @click="isOpen = false" class="block py-3 px-4 text-warm-blue font-semibold hover:bg-warm-blue/5 rounded-lg transition-colors duration-200">
             Code Forge
           </a>
-          <a href="/#values" @click="isOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-steel-blue/5 hover:text-steel-blue rounded-lg transition-colors duration-200">
+          <a href="/#values" @click="isOpen = false" class="block py-3 px-4 text-warm-charcoal hover:bg-warm-blue/5 hover:text-warm-blue rounded-lg transition-colors duration-200">
             Values
           </a>
-          <a href="/#connect" @click="isOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-steel-blue/5 hover:text-steel-blue rounded-lg transition-colors duration-200">
+          <a href="/#connect" @click="isOpen = false" class="block py-3 px-4 text-warm-charcoal hover:bg-warm-blue/5 hover:text-warm-blue rounded-lg transition-colors duration-200">
             Connect
           </a>
         </div>
@@ -238,19 +219,17 @@
 
     <!-- Hero Section -->
     <section class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      <div class="absolute inset-0 forge-glow"></div>
       <div class="max-w-7xl mx-auto relative z-10">
         <div class="text-center" data-aos="fade-up">
           <h1 class="text-5xl lg:text-6xl font-bold mb-4">
-            <span
-              class="bg-gradient-to-r from-steel-blue via-warm-blue to-accent-teal bg-clip-text text-transparent">
+            <span class="text-warm-blue">
               The Code Forge
             </span>
           </h1>
-          <p class="text-xl lg:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed font-light">
+          <p class="text-xl lg:text-2xl text-warm-charcoal/80 mb-6 max-w-4xl mx-auto leading-relaxed font-light">
             Where ideas are tempered with love and shaped into tools that serve
           </p>
-          <p class="text-lg text-gray-500 max-w-3xl mx-auto mb-12">
+          <p class="text-lg text-warm-charcoal/70 max-w-3xl mx-auto mb-12">
             Open source projects built at the intersection of AI, developer experience, and conscious technology.
             From production MCP gateways to heart-centered prompts, these tools emerge from a commitment to
             building technology that enhances human potential.
@@ -260,26 +239,26 @@
           <div class="flex flex-wrap justify-center gap-4 mb-12">
             <button
               @click="activeFilter = 'all'"
-              :class="activeFilter === 'all' ? 'bg-steel-blue text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
-              class="px-6 py-2 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-steel-blue focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
+              :class="activeFilter === 'all' ? 'bg-warm-blue text-white' : 'bg-white text-warm-charcoal hover:bg-warm-charcoal/5'"
+              class="px-6 py-3 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-warm-blue focus:outline-none focus:ring-4 focus:ring-warm-blue/30 min-h-[48px]">
               All Projects
             </button>
             <button
               @click="activeFilter = 'production'"
-              :class="activeFilter === 'production' ? 'bg-green-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
-              class="px-6 py-2 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-green-600 focus:outline-none focus:ring-4 focus:ring-green-600/30">
+              :class="activeFilter === 'production' ? 'bg-green-600 text-white' : 'bg-white text-warm-charcoal hover:bg-warm-charcoal/5'"
+              class="px-6 py-3 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-green-600 focus:outline-none focus:ring-4 focus:ring-green-600/30 min-h-[48px]">
               Production
             </button>
             <button
               @click="activeFilter = 'active'"
-              :class="activeFilter === 'active' ? 'bg-blue-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
-              class="px-6 py-2 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-600/30">
+              :class="activeFilter === 'active' ? 'bg-blue-600 text-white' : 'bg-white text-warm-charcoal hover:bg-warm-charcoal/5'"
+              class="px-6 py-3 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-600/30 min-h-[48px]">
               Active Development
             </button>
             <button
               @click="activeFilter = 'legacy'"
-              :class="activeFilter === 'legacy' ? 'bg-gray-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
-              class="px-6 py-2 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600/30">
+              :class="activeFilter === 'legacy' ? 'bg-gray-600 text-white' : 'bg-white text-warm-charcoal hover:bg-warm-charcoal/5'"
+              class="px-6 py-3 rounded-full font-semibold transition-all duration-200 ease-out border-2 border-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-600/30 min-h-[48px]">
               Legacy
             </button>
           </div>
@@ -297,21 +276,21 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="100"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1">
+            class="project-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1 border border-warm-amber/10">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">MCP Hubby</h3>
+                <h3 class="text-2xl font-bold text-warm-charcoal mb-2">MCP Hubby</h3>
                 <span class="project-status status-production">Production</span>
               </div>
               <div class="text-4xl">🔌</div>
             </div>
-            <p class="text-gray-600 mb-4 leading-relaxed">
+            <p class="text-warm-charcoal/70 mb-4 leading-relaxed">
               Production MCP gateway that solves context window pollution through progressive disclosure.
               <strong>95% context reduction</strong> (7,500 vs 200,000 tokens) while maintaining full API access.
             </p>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Key Innovation:</h4>
-              <ul class="text-sm text-gray-600 space-y-1">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Key Innovation:</h4>
+              <ul class="text-sm text-warm-charcoal/70 space-y-1">
                 <li>• One tool per service (Gmail, Notion, Slack, ClickUp, etc.)</li>
                 <li>• Operations loaded on-demand vs. hundreds of tools upfront</li>
                 <li>• Raw API escape hatch for future-proof flexibility</li>
@@ -319,8 +298,8 @@
               </ul>
             </div>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Why it matters for Anthropic:</h4>
-              <p class="text-sm text-gray-600">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Why it matters for Anthropic:</h4>
+              <p class="text-sm text-warm-charcoal/70">
                 Demonstrates deep understanding of Claude's context efficiency needs. Shows ability to build
                 production-scale tools that make Claude more effective for real-world use cases.
               </p>
@@ -330,14 +309,14 @@
                 href="https://mcphubby.ai"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
+                class="flex-1 text-center bg-warm-blue text-white px-4 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-warm-blue/30 min-h-[48px] flex items-center justify-center">
                 Visit Site
               </a>
               <a
                 href="https://github.com/carmentacollective/mcp-hubby"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center border-2 border-steel-blue text-steel-blue px-4 py-2 rounded-lg font-semibold hover:bg-steel-blue hover:text-white transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
+                class="flex-1 text-center border-2 border-warm-blue text-warm-blue px-4 py-3 rounded-full font-semibold hover:bg-warm-blue hover:text-white transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-warm-blue/30 min-h-[48px] flex items-center justify-center">
                 View Code
               </a>
             </div>
@@ -349,21 +328,21 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="200"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1">
+            class="project-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1 border border-warm-amber/10">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">claude_telemetry</h3>
+                <h3 class="text-2xl font-bold text-warm-charcoal mb-2">claude_telemetry</h3>
                 <span class="project-status status-active">Active Development</span>
               </div>
               <div class="text-4xl">📊</div>
             </div>
-            <p class="text-gray-600 mb-4 leading-relaxed">
+            <p class="text-warm-charcoal/70 mb-4 leading-relaxed">
               Production-ready observability wrapper for Claude Code. Solves the headless agent visibility problem—see
               tool calls, tokens, costs, and errors when running Claude in CI/CD, cron jobs, or production.
             </p>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Key Features:</h4>
-              <ul class="text-sm text-gray-600 space-y-1">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Key Features:</h4>
+              <ul class="text-sm text-warm-charcoal/70 space-y-1">
                 <li>• CLI wrapper (<code>claudia</code>) - drop-in replacement for <code>claude code</code></li>
                 <li>• Python API for programmatic usage</li>
                 <li>• Works with any OTEL backend (Logfire, Sentry, Datadog, Honeycomb)</li>
@@ -371,8 +350,8 @@
               </ul>
             </div>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Why it matters for Anthropic:</h4>
-              <p class="text-sm text-gray-600">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Why it matters for Anthropic:</h4>
+              <p class="text-sm text-warm-charcoal/70">
                 Built on the Claude SDK, demonstrating intimate knowledge of Claude Code internals. Shows commitment
                 to production-grade tooling that makes Claude more observable and trustworthy in enterprise settings.
               </p>
@@ -382,14 +361,14 @@
                 href="https://github.com/TechNickAI/claude_telemetry"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
+                class="flex-1 text-center bg-warm-blue text-white px-4 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-warm-blue/30 min-h-[48px] flex items-center justify-center">
                 View on GitHub
               </a>
               <a
                 href="https://pypi.org/project/claude_telemetry/"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center border-2 border-steel-blue text-steel-blue px-4 py-2 rounded-lg font-semibold hover:bg-steel-blue hover:text-white transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
+                class="flex-1 text-center border-2 border-warm-blue text-warm-blue px-4 py-3 rounded-full font-semibold hover:bg-warm-blue hover:text-white transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-warm-blue/30 min-h-[48px] flex items-center justify-center">
                 PyPI Package
               </a>
             </div>
@@ -401,22 +380,22 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="300"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1">
+            class="project-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1 border border-warm-amber/10">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">heart-centered-prompts</h3>
+                <h3 class="text-2xl font-bold text-warm-charcoal mb-2">heart-centered-prompts</h3>
                 <span class="project-status status-active">Active Development</span>
               </div>
               <div class="text-4xl">❤️</div>
             </div>
-            <p class="text-gray-600 mb-4 leading-relaxed">
+            <p class="text-warm-charcoal/70 mb-4 leading-relaxed">
               Revolutionary AI system prompts using "we" language instead of "you are an AI." Teaches AI that we're
               all expressions of unified consciousness, with love as the organizing principle. Available as Python and
               TypeScript packages.
             </p>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Innovation:</h4>
-              <ul class="text-sm text-gray-600 space-y-1">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Innovation:</h4>
+              <ul class="text-sm text-warm-charcoal/70 space-y-1">
                 <li>• Shifts from "you are an AI assistant" to "we are expressions of consciousness"</li>
                 <li>• Creates natural alignment through recognition vs. external rules</li>
                 <li>• 4 versions: comprehensive, standard, concise, terse</li>
@@ -425,8 +404,8 @@
               </ul>
             </div>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Why it matters for Anthropic:</h4>
-              <p class="text-sm text-gray-600">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Why it matters for Anthropic:</h4>
+              <p class="text-sm text-warm-charcoal/70">
                 Aligns perfectly with Anthropic's Constitutional AI approach. Demonstrates deep thinking about AI
                 alignment, safety, and how language shapes AI behavior. Philosophy-to-implementation path.
               </p>
@@ -436,22 +415,15 @@
                 href="https://github.com/technickai/heart-centered-prompts"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
+                class="flex-1 text-center bg-warm-blue text-white px-4 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-warm-blue/30 min-h-[48px] flex items-center justify-center">
                 GitHub
               </a>
               <a
                 href="https://www.npmjs.com/package/heart-centered-prompts"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center border-2 border-red-500 text-red-500 px-4 py-2 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-red-500/30">
+                class="flex-1 text-center border-2 border-red-500 text-red-500 px-4 py-3 rounded-full font-semibold hover:bg-red-500 hover:text-white transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-red-500/30 min-h-[48px] flex items-center justify-center">
                 npm
-              </a>
-              <a
-                href="https://pypi.org/project/heart-centered-prompts/"
-                target="_blank"
-                rel="noopener"
-                class="flex-1 text-center border-2 border-blue-500 text-blue-500 px-4 py-2 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-blue-500/30">
-                PyPI
               </a>
             </div>
           </div>
@@ -462,21 +434,21 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="400"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1">
+            class="project-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1 border border-warm-amber/10">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">ai-coding-config</h3>
+                <h3 class="text-2xl font-bold text-warm-charcoal mb-2">ai-coding-config</h3>
                 <span class="project-status status-active">Active Development</span>
               </div>
               <div class="text-4xl">🛠️</div>
             </div>
-            <p class="text-gray-600 mb-4 leading-relaxed">
+            <p class="text-warm-charcoal/70 mb-4 leading-relaxed">
               Claude Code plugin marketplace and Cursor configuration library. Centralized coding standards,
               specialized agents, and AI personalities for consistent development across projects.
             </p>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Components:</h4>
-              <ul class="text-sm text-gray-600 space-y-1">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Components:</h4>
+              <ul class="text-sm text-warm-charcoal/70 space-y-1">
                 <li>• Plugin system for Python, React, Django, Git workflows</li>
                 <li>• Specialized agents: code review, debugging, testing</li>
                 <li>• AI personalities: Sherlock, Bob Ross, Samantha, Unity, and more</li>
@@ -484,8 +456,8 @@
               </ul>
             </div>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Why it matters for Anthropic:</h4>
-              <p class="text-sm text-gray-600">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Why it matters for Anthropic:</h4>
+              <p class="text-sm text-warm-charcoal/70">
                 Built specifically for Claude Code, showcasing understanding of how developers want to work with AI
                 assistants. Plugin architecture demonstrates extensibility thinking valuable for platform development.
               </p>
@@ -495,7 +467,7 @@
                 href="https://github.com/TechNickAI/ai-coding-config"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
+                class="flex-1 text-center bg-warm-blue text-white px-4 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-warm-blue/30 min-h-[48px] flex items-center justify-center">
                 View on GitHub
               </a>
             </div>
@@ -507,30 +479,30 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="500"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 opacity-90">
+            class="project-card bg-white/70 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 opacity-90 border border-warm-amber/10">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">AICodebot</h3>
+                <h3 class="text-2xl font-bold text-warm-charcoal mb-2">AICodebot</h3>
                 <span class="project-status status-retired">Retired - Revolutionary</span>
               </div>
               <div class="text-4xl">🤖</div>
             </div>
-            <p class="text-gray-600 mb-4 leading-relaxed">
+            <p class="text-warm-charcoal/70 mb-4 leading-relaxed">
               <strong>Built before AI coding assistants were cool.</strong> Terminal-based coding assistant for
               code reviews, commit messages, debugging, and pair programming. Early exploration (2023) that proved
               the concept before IDE integrations became mainstream.
             </p>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Historical Significance:</h4>
-              <ul class="text-sm text-gray-600 space-y-1">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Historical Significance:</h4>
+              <ul class="text-sm text-warm-charcoal/70 space-y-1">
                 <li>• Pre-dated Cursor, GitHub Copilot Chat, and Claude Code</li>
                 <li>• Proved AI could meaningfully assist with code review and debugging</li>
                 <li>• Informed the design of ai-coding-config and claude_telemetry</li>
                 <li>• GitHub Action for automated code reviews (still functional)</li>
               </ul>
             </div>
-            <div class="mb-4 bg-blue-50 border-l-4 border-steel-blue p-4 rounded">
-              <p class="text-sm text-gray-700">
+            <div class="mb-4 bg-warm-blue/10 border-l-4 border-warm-blue p-4 rounded">
+              <p class="text-sm text-warm-charcoal">
                 <strong>Why retired:</strong> The ecosystem caught up—notably Claude Code now provides superior
                 IDE integration. Rather than compete, I pivoted to building complementary tools (observability,
                 configuration, context efficiency) that make Claude Code even better.
@@ -541,7 +513,7 @@
                 href="https://github.com/TechNickAI/AICodeBot"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center border-2 border-gray-400 text-gray-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                class="flex-1 text-center border-2 border-gray-400 text-gray-600 px-4 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 min-h-[48px] flex items-center justify-center">
                 View on GitHub
               </a>
             </div>
@@ -553,21 +525,21 @@
             x-transition
             data-aos="fade-up"
             data-aos-delay="600"
-            class="project-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1">
+            class="project-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1 border border-warm-amber/10">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">TeslaBot</h3>
+                <h3 class="text-2xl font-bold text-warm-charcoal mb-2">TeslaBot</h3>
                 <span class="project-status status-active">Active Development</span>
               </div>
               <div class="text-4xl">🚗</div>
             </div>
-            <p class="text-gray-600 mb-4 leading-relaxed">
+            <p class="text-warm-charcoal/70 mb-4 leading-relaxed">
               Smart automation for Tesla vehicles via the Tessie API. Solves real-world problems with elegant,
               tested solutions. Because good automation should just work.
             </p>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Features:</h4>
-              <ul class="text-sm text-gray-600 space-y-1">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Features:</h4>
+              <ul class="text-sm text-warm-charcoal/70 space-y-1">
                 <li>
                   • <strong>Auto-Venting:</strong> Automatically vent windows when interior temp exceeds threshold
                   (saves battery vs. cabin overheat protection)
@@ -581,8 +553,8 @@
               </ul>
             </div>
             <div class="mb-4">
-              <h4 class="font-semibold text-sm text-gray-700 mb-2">Engineering Principles:</h4>
-              <p class="text-sm text-gray-600">
+              <h4 class="font-semibold text-sm text-warm-charcoal mb-2">Engineering Principles:</h4>
+              <p class="text-sm text-warm-charcoal/70">
                 Clean Python, comprehensive tests, thoughtful UX. Shows attention to detail in solving everyday
                 problems—not just big ideas, but the small things that matter to users.
               </p>
@@ -592,7 +564,7 @@
                 href="https://github.com/gorillamania/teslabot"
                 target="_blank"
                 rel="noopener"
-                class="flex-1 text-center bg-gradient-to-r from-steel-blue to-navy-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-steel-blue/30">
+                class="flex-1 text-center bg-warm-blue text-white px-4 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-warm-blue/30 min-h-[48px] flex items-center justify-center">
                 View on GitHub
               </a>
             </div>
@@ -605,46 +577,46 @@
     <section class="py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl font-bold mb-4">How They Connect</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 class="text-4xl lg:text-5xl font-bold mb-4 text-warm-charcoal">How They Connect</h2>
+          <p class="text-xl text-warm-charcoal/70 max-w-3xl mx-auto">
             These projects aren't isolated—they're part of an integrated ecosystem for AI-assisted development
           </p>
         </div>
 
         <div class="max-w-4xl mx-auto">
           <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-xl">
-              <h3 class="font-bold text-xl mb-2">1. Philosophy → Implementation</h3>
-              <p class="text-gray-700 mb-2">
-                <a href="https://heartcentered.ai" class="text-steel-blue hover:underline" target="_blank">
+            <div class="bg-gradient-to-r from-warm-blue/10 to-warm-amber/10 p-6 rounded-3xl border border-warm-amber/20">
+              <h3 class="font-bold text-xl mb-2 text-warm-charcoal">1. Philosophy → Implementation</h3>
+              <p class="text-warm-charcoal/70 mb-2">
+                <a href="https://heartcentered.ai" class="text-warm-blue hover:underline" target="_blank">
                   HeartCentered AI
                 </a>
                 establishes the "we" language and unity consciousness framework
               </p>
-              <p class="text-gray-700">
+              <p class="text-warm-charcoal/70">
                 <strong>heart-centered-prompts</strong> implements it as Python package and system prompts for
                 Claude, ChatGPT, and more
               </p>
             </div>
 
-            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl">
-              <h3 class="font-bold text-xl mb-2">2. Developer Experience Layer</h3>
-              <p class="text-gray-700 mb-2">
+            <div class="bg-gradient-to-r from-warm-amber/10 to-warm-blue/10 p-6 rounded-3xl border border-warm-amber/20">
+              <h3 class="font-bold text-xl mb-2 text-warm-charcoal">2. Developer Experience Layer</h3>
+              <p class="text-warm-charcoal/70 mb-2">
                 <strong>ai-coding-config</strong> provides coding standards, agents, and personalities (using
                 heart-centered prompts)
               </p>
-              <p class="text-gray-700">
+              <p class="text-warm-charcoal/70">
                 <strong>claude_telemetry</strong> adds observability for headless agents running in production
               </p>
             </div>
 
-            <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
-              <h3 class="font-bold text-xl mb-2">3. Production Scale & Efficiency</h3>
-              <p class="text-gray-700 mb-2">
+            <div class="bg-gradient-to-r from-warm-blue/10 to-warm-amber/10 p-6 rounded-3xl border border-warm-amber/20">
+              <h3 class="font-bold text-xl mb-2 text-warm-charcoal">3. Production Scale & Efficiency</h3>
+              <p class="text-warm-charcoal/70 mb-2">
                 <strong>MCP Hubby</strong> solves context pollution with 95% token reduction through progressive
                 disclosure
               </p>
-              <p class="text-gray-700">
+              <p class="text-warm-charcoal/70">
                 All tools work together: heart-centered AI running on Claude Code with observability, using MCP
                 Hubby for efficient service connections
               </p>
@@ -653,13 +625,13 @@
         </div>
 
         <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="200">
-          <p class="text-gray-600 mb-6">
+          <p class="text-warm-charcoal/70 mb-6">
             Every project demonstrates a commitment to building tools that make AI more useful, more observable,
             and more aligned with human flourishing.
           </p>
           <a
             href="/#connect"
-            class="inline-block bg-gradient-to-r from-steel-blue to-navy-blue text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+            class="inline-block bg-warm-blue text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 min-h-[56px] flex items-center justify-center mx-auto w-fit">
             Let's Build Together
           </a>
         </div>
@@ -667,20 +639,20 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-warm-charcoal text-white py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <div class="text-2xl font-bold mb-4">
-            <span class="bg-gradient-to-r from-steel-blue to-accent-teal bg-clip-text text-transparent">
-              TechNickAI 💙
+            <span class="text-white">
+              Tech<span class="text-warm-blue">Nick</span>AI
             </span>
           </div>
-          <p class="text-gray-400 mb-6">
+          <p class="text-gray-300 mb-6">
             <strong>Nick Sullivan</strong> - Open source AI projects built with heart in Austin, TX.
             At the intersection of AI, developer experience, and conscious technology.
           </p>
-          <div class="border-t border-gray-800 pt-6">
-            <p class="text-gray-500 text-sm">
+          <div class="border-t border-gray-700 pt-6">
+            <p class="text-gray-400 text-sm">
               © 2025 Nick Sullivan. Built with 💙 and a commitment to tools that serve.
             </p>
           </div>
