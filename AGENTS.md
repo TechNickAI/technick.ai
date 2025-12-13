@@ -16,11 +16,11 @@ Static website for technick.ai - Nick Sullivan's personal and professional site.
 - `code-forge/` - Open source projects showcase
 - `images/` - Site assets
 - `.claude/` - AI assistant configurations
-- `.cursor/rules/` - Coding rules (load with `/load-cursor-rules`)
+- `rules/` - Coding rules (load with `/load-rules`)
 
 ## Commands
 
-- `/load-cursor-rules` - Load relevant rules for current task
+- `/load-rules` - Load relevant rules for current task
 - `python -m http.server 8000` - Local dev server
 
 ## Code Conventions
