@@ -14,7 +14,7 @@ intersection of technology and human consciousness. It features:
 - **TechNickAI Philosophy**: A tech-centric evolution of Ikigai, emphasizing a
   heart-centered approach to technology.
 - **Featured Creations**: Highlights of Nick's work, including HeartCentered.AI,
-  AICodeBot, heart-centered-prompts (Python and npm packages), Cora, The Goddess Guide,
+  AICodeBot, heart-centered-prompts (Python and npm packages), Carmenta, The Goddess Guide,
   and The Heartpiece Burning Man installation.
 - **Values & Fun Facts**: Insight into Nick's core principles, leadership style, and
   personal quirks.
