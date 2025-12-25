@@ -219,12 +219,16 @@
           <div class="md:hidden">
             <button
               @click="isOpen = !isOpen"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              :aria-expanded="isOpen.toString()"
               class="text-warm-charcoal hover:text-warm-blue focus:outline-none focus:text-warm-blue transition-colors duration-200 p-2">
               <svg
                 class="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor">
+                stroke="currentColor"
+                aria-hidden="true">
                 <path
                   x-show="!isOpen"
                   stroke-linecap="round"
@@ -292,6 +296,7 @@
       </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <section class="pt-32 pb-24 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
@@ -327,7 +332,9 @@
               <img
                 src="images/headshot.png"
                 alt="Nick Sullivan"
-                loading="lazy"
+                width="1000"
+                height="1017"
+                fetchpriority="high"
                 class="heart-shape shadow-2xl w-full transform hover:scale-[1.02] transition-transform duration-300" />
               <div class="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg">
                 <div class="text-3xl font-bold text-warm-blue">25</div>
@@ -357,6 +364,8 @@
               <img
                 src="images/headshot-sf.jpg"
                 alt="Nick Sullivan Professional Headshot"
+                width="1000"
+                height="748"
                 loading="lazy"
                 class="heart-shape shadow-2xl w-full transform hover:scale-[1.02] transition-transform duration-300" />
             </div>
@@ -443,7 +452,9 @@
           <div data-aos="fade-left">
             <img
               src="images/technick-philosophy.png"
-              alt="TechNickAI Philosophy Diagram"
+              alt="TechNickAI Philosophy Diagram showing the intersection of passion, skill, purpose, and value"
+              width="1000"
+              height="1000"
               loading="lazy"
               class="rounded-3xl shadow-xl w-full" />
           </div>
@@ -469,7 +480,10 @@
             class="bg-warm-cream rounded-3xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-warm-amber/20">
             <img
               src="images/projects/heartcentered-ai.jpeg"
-              alt="HeartCentered.AI"
+              alt="HeartCentered.AI platform interface"
+              width="900"
+              height="821"
+              loading="lazy"
               class="w-full h-48 object-cover rounded-2xl mb-4" />
             <h3 class="text-xl font-bold mb-2 text-warm-charcoal">HeartCentered.AI</h3>
             <p class="text-warm-charcoal/70 mb-4">
@@ -480,8 +494,8 @@
               href="https://heartcentered.ai/"
               target="_blank"
               class="text-warm-blue font-semibold hover:text-warm-amber transition-colors inline-flex items-center"
-              >Learn More
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              >Explore HeartCentered.AI
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </a>
@@ -494,7 +508,10 @@
             class="bg-warm-cream rounded-3xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-warm-amber/20">
             <img
               src="images/projects/aicodebot.webp"
-              alt="AICodeBot"
+              alt="AICodeBot terminal-based coding assistant"
+              width="900"
+              height="523"
+              loading="lazy"
               class="w-full h-48 object-cover rounded-2xl mb-4" />
             <h3 class="text-xl font-bold mb-2 text-warm-charcoal">AICodeBot</h3>
             <p class="text-warm-charcoal/70 mb-4">
@@ -505,8 +522,8 @@
               href="https://github.com/TechNickAI/AICodeBot"
               target="_blank"
               class="text-warm-blue font-semibold hover:text-warm-amber transition-colors inline-flex items-center"
-              >Learn More
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              >View AICodeBot on GitHub
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </a>
@@ -519,7 +536,10 @@
             class="bg-warm-cream rounded-3xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-warm-amber/20">
             <img
               src="images/projects/carmenta.png"
-              alt="Carmenta AI"
+              alt="Carmenta unified AI platform with memory and voice"
+              width="900"
+              height="900"
+              loading="lazy"
               class="w-full h-48 object-cover rounded-2xl mb-4" />
             <h3 class="text-xl font-bold mb-2 text-warm-charcoal">Carmenta</h3>
             <p class="text-warm-charcoal/70 mb-4">
@@ -530,8 +550,8 @@
               href="https://carmenta.ai"
               target="_blank"
               class="text-warm-blue font-semibold hover:text-warm-amber transition-colors inline-flex items-center"
-              >Learn More
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              >Try Carmenta AI
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </a>
@@ -544,7 +564,10 @@
             class="bg-warm-cream rounded-3xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-warm-amber/20">
             <img
               src="images/projects/goddess-guide.png"
-              alt="The Goddess Guide"
+              alt="The Goddess Guide empowerment platform"
+              width="900"
+              height="750"
+              loading="lazy"
               class="w-full h-48 object-cover rounded-2xl mb-4" />
             <h3 class="text-xl font-bold mb-2 text-warm-charcoal">The Goddess Guide</h3>
             <p class="text-warm-charcoal/70 mb-4">
@@ -555,8 +578,8 @@
               href="https://rebrand.ly/goddess-guide"
               target="_blank"
               class="text-warm-blue font-semibold hover:text-warm-amber transition-colors inline-flex items-center"
-              >Learn More
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              >Explore The Goddess Guide
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </a>
@@ -569,7 +592,10 @@
             class="bg-warm-cream rounded-3xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-warm-amber/20">
             <img
               src="images/projects/heart-piece.png"
-              alt="The Heartpiece Burning Man Installation"
+              alt="The Heartpiece interactive Burning Man art installation"
+              width="900"
+              height="891"
+              loading="lazy"
               class="w-full h-48 object-cover rounded-2xl mb-4" />
             <h3 class="text-xl font-bold mb-2 text-warm-charcoal">The Heartpiece</h3>
             <p class="text-warm-charcoal/70 mb-4">
@@ -580,8 +606,8 @@
               href="https://photos.app.goo.gl/pHJkCWTa2cE31zsD7"
               target="_blank"
               class="text-warm-blue font-semibold hover:text-warm-amber transition-colors inline-flex items-center"
-              >Learn More
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              >View Heartpiece Photos
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </a>
@@ -594,7 +620,10 @@
             class="bg-warm-cream rounded-3xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-warm-amber/20">
             <img
               src="images/projects/github-portfolio.png"
-              alt="GitHub Portfolio"
+              alt="Nick Sullivan's GitHub open source contributions"
+              width="900"
+              height="701"
+              loading="lazy"
               class="w-full h-48 object-cover rounded-2xl mb-4" />
             <h3 class="text-xl font-bold mb-2 text-warm-charcoal">Open Source Contributions</h3>
             <p class="text-warm-charcoal/70 mb-4">
@@ -647,7 +676,10 @@
           <div data-aos="fade-right">
             <img
               src="images/core-values.png"
-              alt="Core Values"
+              alt="Nick Sullivan's core values: heart-centered leadership, innovation with purpose, continuous growth, and authentic collaboration"
+              width="1000"
+              height="1256"
+              loading="lazy"
               class="rounded-3xl shadow-xl w-full" />
           </div>
           <div data-aos="fade-left" class="space-y-6">
@@ -907,6 +939,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-warm-charcoal text-white py-12">
