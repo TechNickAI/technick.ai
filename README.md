@@ -48,3 +48,5 @@ the `main` branch on GitHub.
 
 _This site is a living reflection of Nick's heart-centered approach to technology and
 life, built with 💜._
+
+<!-- Test commit from Carmenta AI Server - delete this line after verifying -->
