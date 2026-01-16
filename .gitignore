@@ -2,6 +2,3 @@
 .DS_Store
 .env
 .playwright-mcp
-
-# Private job search strategy (moved to ~/knowledge/)
-knowledge/job-search/
