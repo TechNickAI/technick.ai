@@ -328,8 +328,8 @@
       <section class="py-12 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-8" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-warm-charcoal">GitHub Commits (2011–Present)</h2>
-            <p class="text-warm-charcoal/60 text-sm">Cumulative commits across all repositories</p>
+            <h2 class="text-2xl font-bold text-warm-charcoal">The AI Productivity Explosion</h2>
+            <p class="text-warm-charcoal/60 text-sm">17,700+ commits across 130 repositories. Notice the hockey stick when AI tools arrived.</p>
           </div>
           <div id="chartContainer" class="bg-warm-cream rounded-2xl p-6 border border-warm-amber/20 relative" data-aos="fade-up">
             <!-- Loading state -->
@@ -984,10 +984,12 @@
         .then(data => {
           if (!data) return; // Error occurred
 
-          // Display last updated date
+          // Display last updated date in human-friendly format
           if (data.updated) {
             const updatedEl = document.getElementById('lastUpdated');
-            updatedEl.textContent = 'Data last updated: ' + data.updated;
+            const d = new Date(data.updated + 'T00:00:00');
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            updatedEl.textContent = 'Updated ' + d.toLocaleDateString('en-US', options);
           }
 
           const labels = [];
