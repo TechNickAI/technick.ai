@@ -54,22 +54,26 @@ def get_monthly_commits(email: str, year: int, month: int) -> int | None:
     return None
 
 
-def get_repo_count() -> int:
+def get_repo_count() -> int | None:
     """Get total repos across personal and orgs"""
     total = 0
 
     # Personal repos
     personal = gh_api("users/TechNickAI/repos?per_page=100")
-    if personal:
-        total += len(personal)
+    if personal is None:
+        return None  # Rate limited or error
+    total += len(personal)
 
     # Org repos
     orgs = gh_api("user/orgs")
-    if orgs:
-        for org in orgs:
-            org_repos = gh_api(f"orgs/{org['login']}/repos?per_page=100")
-            if org_repos:
-                total += len(org_repos)
+    if orgs is None:
+        return None  # Rate limited or error
+
+    for org in orgs:
+        org_repos = gh_api(f"orgs/{org['login']}/repos?per_page=100")
+        if org_repos is None:
+            return None  # Rate limited or error
+        total += len(org_repos)
 
     return total
 
@@ -102,9 +106,13 @@ def main():
     else:
         print(f"Total commits: {total_commits}")
 
-    # Get repo count
+    # Get repo count (preserve existing if rate limited)
     repos = get_repo_count()
-    print(f"Total repos: {repos}")
+    if repos is None:
+        repos = existing.get("repos", 0)
+        print(f"Using cached repos: {repos}")
+    else:
+        print(f"Total repos: {repos}")
 
     # Get monthly data, resuming from existing
     existing_months = existing.get("by_month", {})
