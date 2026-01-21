@@ -95,8 +95,8 @@ def main():
             print(f"  {email}: rate limited or error")
             rate_limited_totals = True
 
-    # Preserve existing total if we couldn't get new counts
-    if rate_limited_totals and total_commits == 0:
+    # Preserve existing total if ANY email was rate limited (avoid partial data)
+    if rate_limited_totals:
         total_commits = existing.get("commits", 0)
         print(f"Using cached commits: {total_commits}")
     else:

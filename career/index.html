@@ -331,8 +331,20 @@
             <h2 class="text-2xl font-bold text-warm-charcoal">GitHub Commits (2011–Present)</h2>
             <p class="text-warm-charcoal/60 text-sm">Cumulative commits across all repositories</p>
           </div>
-          <div class="bg-warm-cream rounded-2xl p-6 border border-warm-amber/20" data-aos="fade-up">
-            <canvas id="commitsChart" height="200"></canvas>
+          <div id="chartContainer" class="bg-warm-cream rounded-2xl p-6 border border-warm-amber/20" data-aos="fade-up">
+            <!-- Loading state -->
+            <div id="chartLoader" class="flex items-center justify-center h-[200px]">
+              <div class="text-warm-charcoal/50 text-center">
+                <svg class="animate-spin h-8 w-8 mx-auto mb-2" viewBox="0 0 24 24" fill="none">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <p class="text-sm">Loading commit data...</p>
+              </div>
+            </div>
+            <canvas id="commitsChart" height="200" class="hidden" role="img" aria-label="Line chart showing cumulative GitHub commits from 2011 to present, with milestone annotations for AICodeBot, Cursor, Claude Code, and ai-coding-config"></canvas>
+            <!-- Screen reader fallback -->
+            <div class="sr-only" id="chartA11y">Total commits: 17,715 across 130 repositories. Key milestones: AICodeBot (July 2023), Cursor (January 2025), Claude Code (November 2025), ai-coding-config (December 2025).</div>
           </div>
           <p class="text-center text-warm-charcoal/50 text-xs mt-4" data-aos="fade-up">
             My coding career began in 1998. This chart shows GitHub activity only—pre-GitHub work not included.
@@ -906,22 +918,39 @@
         .then(r => r.json())
         .catch(err => {
           console.error('Failed to load stats:', err);
-          return { by_month: {} }; // Empty fallback, chart will show zeros
+          // Show error state (static content, no user input)
+          const loader = document.getElementById('chartLoader');
+          loader.className = 'flex items-center justify-center h-[200px] text-center';
+          loader.textContent = 'Unable to load commit data. Please refresh to try again.';
+          return null;
         })
         .then(data => {
+          if (!data) return; // Error occurred
+
           const labels = [];
           const values = [];
 
-          // Build complete monthly timeline from 2011-01 to 2026-01, filling gaps with 0
+          // Build complete monthly timeline dynamically
           const byMonth = data.by_month || {};
-          for (let y = 2011; y <= 2026; y++) {
-            const maxMonth = (y === 2026) ? 1 : 12;
+          const now = new Date();
+          const endYear = now.getFullYear();
+          const endMonth = now.getMonth() + 1;
+
+          for (let y = 2011; y <= endYear; y++) {
+            const maxMonth = (y === endYear) ? endMonth : 12;
             for (let m = 1; m <= maxMonth; m++) {
               const key = `${y}-${String(m).padStart(2, '0')}`;
               // Show year label only in January
               labels.push(m === 1 ? String(y) : '');
               values.push(byMonth[key] || 0);
             }
+          }
+
+          // Validate we have meaningful data
+          const totalCommits = values.reduce((sum, v) => sum + v, 0);
+          if (totalCommits === 0) {
+            document.getElementById('chartLoader').textContent = 'No commit data available';
+            return;
           }
 
           // Calculate cumulative totals
@@ -939,6 +968,13 @@
             claudeCode: getIndex(2025, 11),     // Nov 2025 - Claude Code
             aiCodingConfig: getIndex(2025, 12)  // Dec 2025 - ai-coding-config
           };
+
+          // Hide annotations on mobile for readability
+          const isMobile = window.innerWidth < 768;
+
+          // Show chart, hide loader
+          document.getElementById('chartLoader').classList.add('hidden');
+          document.getElementById('commitsChart').classList.remove('hidden');
 
           new Chart(document.getElementById('commitsChart'), {
             type: 'line',
@@ -969,7 +1005,7 @@
                   }
                 },
                 annotation: {
-                  annotations: {
+                  annotations: isMobile ? {} : {
                     aiCodeBot: {
                       type: 'line',
                       xMin: milestones.aiCodeBot,
