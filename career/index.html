@@ -901,11 +901,12 @@
         once: true,
       });
 
-      // Commits chart - fetches from stats.json with inline fallback for local dev
+      // Commits chart - yearly data showing the hockey stick
       const fallbackData = {
-        by_month: {
-          "2011-05": 29, "2011-06": 13, "2011-12": 78, "2012-01": 19,
-          "2023-06": 105, "2023-07": 198, "2024-08": 299, "2025-01": 189
+        by_year: {
+          "2011": 120, "2012": 396, "2013": 779, "2014": 2675, "2015": 1178,
+          "2016": 151, "2017": 1212, "2018": 51, "2019": 571, "2020": 573,
+          "2021": 550, "2022": 897, "2023": 1294, "2024": 977, "2025": 5907
         }
       };
 
@@ -916,21 +917,11 @@
           const labels = [];
           const values = [];
 
-          // Use monthly data if available, otherwise yearly
-          if (data.by_month && Object.keys(data.by_month).length > 20) {
-            // Use monthly data - format as "MMM 'YY" for readability
-            Object.keys(data.by_month).sort().forEach(month => {
-              const [year, m] = month.split('-');
-              const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-              labels.push(monthNames[parseInt(m)-1] + " '" + year.slice(2));
-              values.push(data.by_month[month]);
-            });
-          } else if (data.by_year) {
-            Object.keys(data.by_year).sort().forEach(year => {
-              labels.push(year);
-              values.push(data.by_year[year]);
-            });
-          }
+          // Use yearly data
+          Object.keys(data.by_year).sort().forEach(year => {
+            labels.push(year);
+            values.push(data.by_year[year]);
+          });
 
           // Calculate cumulative totals
           let cumulative = 0;
@@ -939,8 +930,8 @@
             return cumulative;
           });
 
-          // Find index for June 2023 annotation (AI embrace point)
-          const aiStartIndex = labels.findIndex(l => l.includes("Jun '23") || l === "2023");
+          // AI era starts at 2023 (index 12 in 2011-2025 range)
+          const aiStartIndex = labels.indexOf('2023');
 
           new Chart(document.getElementById('commitsChart'), {
             type: 'line',
