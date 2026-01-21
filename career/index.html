@@ -42,9 +42,7 @@
     <meta
       name="twitter:description"
       content="Engineering leader who's built teams from 0→50+. 3× founding engineer. Two successful exits. 50,000 hours of craft, now amplified by AI tools he builds himself." />
-    <meta
-      name="twitter:image"
-      content="https://technick.ai/images/headshot.png" />
+    <meta name="twitter:image" content="https://technick.ai/images/headshot.png" />
     <meta name="twitter:image:alt" content="Nick Sullivan - AI Infrastructure CTO" />
 
     <!-- Canonical URL -->
@@ -237,10 +235,7 @@
             "description": "VP Technology - First employee"
           }
         ],
-        "award": [
-          "Top 25 Mind in Bitcoin (2015)",
-          "Patent holder US 10958655B2"
-        ]
+        "award": ["Top 25 Mind in Bitcoin (2015)", "Patent holder US 10958655B2"]
       }
     </script>
 
@@ -298,7 +293,11 @@
       }
 
       .stat-card {
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(245, 158, 11, 0.05));
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.05),
+          rgba(245, 158, 11, 0.05)
+        );
       }
     </style>
   </head>
@@ -351,7 +350,11 @@
               @click="isOpen = !isOpen"
               aria-label="Toggle navigation menu"
               class="text-warm-charcoal hover:text-warm-blue p-2">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   x-show="!isOpen"
                   stroke-linecap="round"
@@ -374,11 +377,36 @@
           x-show="isOpen"
           x-transition
           class="md:hidden border-t border-warm-amber/20 mt-2 pt-4 pb-4">
-          <a href="/#about" @click="isOpen = false" class="block py-3 px-4 hover:bg-warm-blue/5 rounded-lg">About</a>
-          <a href="/#projects" @click="isOpen = false" class="block py-3 px-4 hover:bg-warm-blue/5 rounded-lg">Projects</a>
-          <a href="/code-forge" @click="isOpen = false" class="block py-3 px-4 hover:bg-warm-blue/5 rounded-lg">Code Forge</a>
-          <a href="/career" @click="isOpen = false" class="block py-3 px-4 text-warm-blue font-semibold">Career</a>
-          <a href="/#connect" @click="isOpen = false" class="block py-3 px-4 hover:bg-warm-blue/5 rounded-lg">Connect</a>
+          <a
+            href="/#about"
+            @click="isOpen = false"
+            class="block py-3 px-4 hover:bg-warm-blue/5 rounded-lg"
+            >About</a
+          >
+          <a
+            href="/#projects"
+            @click="isOpen = false"
+            class="block py-3 px-4 hover:bg-warm-blue/5 rounded-lg"
+            >Projects</a
+          >
+          <a
+            href="/code-forge"
+            @click="isOpen = false"
+            class="block py-3 px-4 hover:bg-warm-blue/5 rounded-lg"
+            >Code Forge</a
+          >
+          <a
+            href="/career"
+            @click="isOpen = false"
+            class="block py-3 px-4 text-warm-blue font-semibold"
+            >Career</a
+          >
+          <a
+            href="/#connect"
+            @click="isOpen = false"
+            class="block py-3 px-4 hover:bg-warm-blue/5 rounded-lg"
+            >Connect</a
+          >
         </div>
       </div>
     </nav>
@@ -386,15 +414,24 @@
     <!-- Breadcrumb Navigation -->
     <nav aria-label="Breadcrumb" class="pt-20 pb-4 px-4 sm:px-6 lg:px-8 bg-warm-cream">
       <div class="max-w-7xl mx-auto">
-        <ol class="flex items-center space-x-2 text-sm text-warm-charcoal/60" itemscope itemtype="https://schema.org/BreadcrumbList">
-          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <ol
+          class="flex items-center space-x-2 text-sm text-warm-charcoal/60"
+          itemscope
+          itemtype="https://schema.org/BreadcrumbList">
+          <li
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem">
             <a href="/" itemprop="item" class="hover:text-warm-blue transition-colors">
               <span itemprop="name">Home</span>
             </a>
             <meta itemprop="position" content="1" />
           </li>
           <li class="text-warm-charcoal/40">/</li>
-          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem">
             <span itemprop="name" class="text-warm-charcoal font-medium">Career</span>
             <meta itemprop="position" content="2" />
           </li>
@@ -408,47 +445,65 @@
         <div class="max-w-7xl mx-auto">
           <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2" data-aos="fade-right">
-              <p class="text-warm-amber font-semibold mb-4 text-lg">25+ Years Building at the Frontier</p>
-              <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight text-warm-charcoal">
-                <span class="sr-only">Nick Sullivan - </span>Engineering leader who spots waves early,<br />
-                <span class="text-warm-blue">builds exceptional teams</span>, and delivers.
+              <p class="text-warm-amber font-semibold mb-4 text-lg">
+                25+ Years Building at the Frontier
+              </p>
+              <h1
+                class="text-4xl lg:text-5xl font-bold mb-6 leading-tight text-warm-charcoal">
+                <span class="sr-only">Nick Sullivan - </span>Engineering leader who
+                spots waves early,<br />
+                <span class="text-warm-blue">builds exceptional teams</span>, and
+                delivers.
               </h1>
               <p class="text-xl text-warm-charcoal/80 mb-8 leading-relaxed">
-                <strong>Nick Sullivan</strong>: Silicon Valley CTO who's been early to every major tech wave since 1998.
-                Built and led engineering teams from zero to 50+ across multiple ventures. Two successful exits.
-                Now all-in on AI—building the infrastructure and teams that make AI development actually work.
+                <strong>Nick Sullivan</strong>: Silicon Valley CTO who's been early to
+                every major tech wave since 1998. Built and led engineering teams from
+                zero to 50+ across multiple ventures. Two successful exits. Now all-in
+                on AI—building the infrastructure and teams that make AI development
+                actually work.
               </p>
 
               <!-- Key Stats - 4 high-impact stats that tell a story -->
               <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div class="stat-card p-5 rounded-2xl border border-warm-amber/20 text-center">
+                <div
+                  class="stat-card p-5 rounded-2xl border border-warm-amber/20 text-center">
                   <div class="text-3xl md:text-4xl font-bold text-warm-blue">0→50+</div>
                   <div class="text-xs text-warm-charcoal/70">Teams Built</div>
                 </div>
-                <div class="stat-card p-5 rounded-2xl border border-warm-amber/20 text-center">
+                <div
+                  class="stat-card p-5 rounded-2xl border border-warm-amber/20 text-center">
                   <div class="text-3xl md:text-4xl font-bold text-warm-blue">50K+</div>
                   <div class="text-xs text-warm-charcoal/70">Hours of Craft</div>
                 </div>
-                <div class="stat-card p-5 rounded-2xl border border-warm-amber/20 text-center">
+                <div
+                  class="stat-card p-5 rounded-2xl border border-warm-amber/20 text-center">
                   <div class="text-3xl md:text-4xl font-bold text-warm-blue">3×</div>
                   <div class="text-xs text-warm-charcoal/70">Founding Engineer</div>
                 </div>
-                <div class="stat-card p-5 rounded-2xl border border-warm-amber/20 text-center">
+                <div
+                  class="stat-card p-5 rounded-2xl border border-warm-amber/20 text-center">
                   <div class="text-3xl md:text-4xl font-bold text-warm-blue">2</div>
                   <div class="text-xs text-warm-charcoal/70">Successful Exits</div>
                 </div>
               </div>
 
               <!-- Leadership Testimonial -->
-              <div class="bg-gradient-to-r from-warm-blue/10 to-warm-amber/10 p-6 rounded-2xl border border-warm-blue/30 mb-8">
+              <div
+                class="bg-gradient-to-r from-warm-blue/10 to-warm-amber/10 p-6 rounded-2xl border border-warm-blue/30 mb-8">
                 <blockquote class="text-lg italic text-warm-charcoal/80 mb-3">
-                  "When it comes to building aspirational engineering teams, Nick is the best I've ever seen in my decades in Silicon Valley."
+                  "When it comes to building aspirational engineering teams, Nick is the
+                  best I've ever seen in my decades in Silicon Valley."
                 </blockquote>
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-full bg-warm-blue/20 flex items-center justify-center text-warm-blue font-bold">GP</div>
+                  <img
+                    src="../images/gil.png"
+                    alt="Gil Penchina"
+                    class="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <div class="font-semibold text-warm-charcoal">Gil Penchina</div>
-                    <div class="text-sm text-warm-charcoal/60">Creator of AngelList Syndicates, 500+ investments</div>
+                    <div class="text-sm text-warm-charcoal/60">
+                      Creator of AngelList Syndicates, 500+ investments
+                    </div>
                   </div>
                 </div>
               </div>
@@ -483,16 +538,26 @@
       </section>
 
       <!-- Testimonials Carousel Section -->
-      <section class="py-16 bg-gradient-to-br from-warm-charcoal to-slate-900 relative overflow-hidden">
+      <section
+        class="py-16 bg-gradient-to-br from-warm-charcoal to-slate-900 relative overflow-hidden">
         <!-- Decorative background elements -->
         <div class="absolute inset-0 opacity-5">
-          <div class="absolute top-10 left-10 text-[400px] font-serif text-white leading-none">"</div>
-          <div class="absolute bottom-10 right-10 text-[400px] font-serif text-white leading-none rotate-180">"</div>
+          <div
+            class="absolute top-10 left-10 text-[400px] font-serif text-white leading-none">
+            "
+          </div>
+          <div
+            class="absolute bottom-10 right-10 text-[400px] font-serif text-white leading-none rotate-180">
+            "
+          </div>
         </div>
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div class="text-center mb-10" data-aos="fade-up">
-            <p class="text-warm-amber font-semibold tracking-widest uppercase text-sm mb-2">What People Say</p>
+            <p
+              class="text-warm-amber font-semibold tracking-widest uppercase text-sm mb-2">
+              What People Say
+            </p>
             <h2 class="text-3xl lg:text-4xl font-bold text-white">
               Voices from <span class="text-warm-blue">25+ Years</span> of Collaboration
             </h2>
@@ -512,19 +577,31 @@
                   x-transition:leave-start="opacity-100"
                   x-transition:leave-end="opacity-0"
                   class="absolute inset-0">
-                  <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-10">
+                  <div
+                    class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-10">
                     <!-- Quote Mark -->
-                    <div class="text-warm-amber text-6xl font-serif leading-none mb-4 opacity-60">"</div>
+                    <div
+                      class="text-warm-amber text-6xl font-serif leading-none mb-4 opacity-60">
+                      "
+                    </div>
 
                     <!-- Testimonial Text -->
-                    <blockquote class="text-xl md:text-2xl text-white/90 leading-relaxed mb-6 font-light" x-text="testimonial.quote"></blockquote>
+                    <blockquote
+                      class="text-xl md:text-2xl text-white/90 leading-relaxed mb-6 font-light"
+                      x-text="testimonial.quote"></blockquote>
 
                     <!-- Attribution -->
                     <div class="flex items-center gap-4">
-                      <div class="w-12 h-12 rounded-full bg-gradient-to-br from-warm-blue to-warm-amber flex items-center justify-center text-white font-bold text-lg" x-text="testimonial.initials"></div>
+                      <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-br from-warm-blue to-warm-amber flex items-center justify-center text-white font-bold text-lg"
+                        x-text="testimonial.initials"></div>
                       <div>
-                        <div class="font-semibold text-white" x-text="testimonial.name"></div>
-                        <div class="text-white/50 text-sm" x-text="testimonial.title"></div>
+                        <div
+                          class="font-semibold text-white"
+                          x-text="testimonial.name"></div>
+                        <div
+                          class="text-white/50 text-sm"
+                          x-text="testimonial.title"></div>
                       </div>
                     </div>
                   </div>
@@ -539,8 +616,7 @@
                   @click="goTo(index)"
                   :class="currentIndex === index ? 'bg-warm-amber w-8' : 'bg-white/30 w-3 hover:bg-white/50'"
                   class="h-3 rounded-full transition-all duration-300"
-                  :aria-label="'Go to testimonial ' + (index + 1)">
-                </button>
+                  :aria-label="'Go to testimonial ' + (index + 1)"></button>
               </template>
             </div>
 
@@ -549,26 +625,46 @@
               @click="prev()"
               class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all"
               aria-label="Previous testimonial">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"></path>
               </svg>
             </button>
             <button
               @click="next()"
               class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all"
               aria-label="Next testimonial">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path>
               </svg>
             </button>
           </div>
 
           <!-- LinkedIn Badge -->
           <div class="text-center mt-8" data-aos="fade-up">
-            <a href="https://www.linkedin.com/in/nicksullivan" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-2 text-white/50 hover:text-white/80 transition-colors text-sm">
+            <a
+              href="https://www.linkedin.com/in/nicksullivan"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-white/50 hover:text-white/80 transition-colors text-sm">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
               </svg>
               View all 25+ recommendations on LinkedIn
             </a>
@@ -580,23 +676,50 @@
       <section class="py-12 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-8" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-warm-charcoal">50,000 Hours of Craft, Amplified</h2>
-            <p class="text-warm-charcoal/60 text-sm">I don't just use AI tools—I build them. The hockey stick is what deep expertise produces when you go all-in.</p>
+            <h2 class="text-2xl font-bold text-warm-charcoal">
+              50,000 Hours of Craft, Amplified
+            </h2>
+            <p class="text-warm-charcoal/60 text-sm">
+              I don't just use AI tools—I build them. The hockey stick is what deep
+              expertise produces when you go all-in.
+            </p>
           </div>
-          <div id="chartContainer" class="bg-warm-cream rounded-2xl p-6 border border-warm-amber/20 relative" data-aos="fade-up">
+          <div
+            id="chartContainer"
+            class="bg-warm-cream rounded-2xl p-6 border border-warm-amber/20 relative"
+            data-aos="fade-up">
             <!-- Loading state -->
             <div id="chartLoader" class="flex items-center justify-center h-[300px]">
               <div class="text-warm-charcoal/50 text-center">
-                <svg class="animate-spin h-8 w-8 mx-auto mb-2" viewBox="0 0 24 24" fill="none">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                <svg
+                  class="animate-spin h-8 w-8 mx-auto mb-2"
+                  viewBox="0 0 24 24"
+                  fill="none">
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
                 <p class="text-sm">Loading commit data...</p>
               </div>
             </div>
-            <canvas id="commitsChart" height="300" class="hidden" role="img" aria-label="Line chart showing cumulative GitHub commits from 2011 to present, with milestone annotations for AICodeBot, Cursor, Claude Code, and ai-coding-config"></canvas>
+            <canvas
+              id="commitsChart"
+              height="300"
+              class="hidden"
+              role="img"
+              aria-label="Line chart showing cumulative GitHub commits from 2011 to present, with milestone annotations for AICodeBot, Cursor, Claude Code, and ai-coding-config"></canvas>
             <!-- Custom milestone tooltip -->
-            <div id="milestoneTooltip" class="absolute hidden bg-white rounded-lg shadow-xl border border-gray-200 p-4 max-w-xs z-50 pointer-events-none transition-opacity duration-200">
+            <div
+              id="milestoneTooltip"
+              class="absolute hidden bg-white rounded-lg shadow-xl border border-gray-200 p-4 max-w-xs z-50 pointer-events-none transition-opacity duration-200">
               <div class="flex items-center gap-2 mb-2">
                 <span id="tooltipDot" class="w-3 h-3 rounded-full"></span>
                 <span id="tooltipTitle" class="font-bold text-warm-charcoal"></span>
@@ -605,29 +728,52 @@
               <p id="tooltipDesc" class="text-sm text-warm-charcoal/80"></p>
             </div>
             <!-- Screen reader fallback -->
-            <div class="sr-only" id="chartA11y">Total commits: 17,715 across 130 repositories. Key milestones: AICodeBot (July 2023), Cursor (January 2025), Claude Code (November 2025), ai-coding-config (December 2025).</div>
+            <div class="sr-only" id="chartA11y">
+              Total commits: 17,715 across 130 repositories. Key milestones: AICodeBot
+              (July 2023), Cursor (January 2025), Claude Code (November 2025),
+              ai-coding-config (December 2025).
+            </div>
           </div>
           <!-- Milestone Legend -->
-          <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4 text-xs" data-aos="fade-up">
-            <div class="flex items-center gap-2 group cursor-help" title="Jul 2023: My first AI coding assistant - automated code review & generation">
+          <div
+            class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4 text-xs"
+            data-aos="fade-up">
+            <div
+              class="flex items-center gap-2 group cursor-help"
+              title="Jul 2023: My first AI coding assistant - automated code review & generation">
               <span class="w-3 h-3 rounded-full bg-amber-500"></span>
-              <span class="text-warm-charcoal/70 group-hover:text-amber-600">AICodeBot</span>
+              <span class="text-warm-charcoal/70 group-hover:text-amber-600"
+                >AICodeBot</span
+              >
             </div>
-            <div class="flex items-center gap-2 group cursor-help" title="Jan 2025: AI-first IDE - 10x productivity boost">
+            <div
+              class="flex items-center gap-2 group cursor-help"
+              title="Jan 2025: AI-first IDE - 10x productivity boost">
               <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
-              <span class="text-warm-charcoal/70 group-hover:text-emerald-600">Cursor</span>
+              <span class="text-warm-charcoal/70 group-hover:text-emerald-600"
+                >Cursor</span
+              >
             </div>
-            <div class="flex items-center gap-2 group cursor-help" title="Nov 2025: Anthropic's agentic CLI - autonomous coding">
+            <div
+              class="flex items-center gap-2 group cursor-help"
+              title="Nov 2025: Anthropic's agentic CLI - autonomous coding">
               <span class="w-3 h-3 rounded-full bg-violet-500"></span>
-              <span class="text-warm-charcoal/70 group-hover:text-violet-600">Claude Code</span>
+              <span class="text-warm-charcoal/70 group-hover:text-violet-600"
+                >Claude Code</span
+              >
             </div>
-            <div class="flex items-center gap-2 group cursor-help" title="Dec 2025: My toolkit - skills, agents & workflows">
+            <div
+              class="flex items-center gap-2 group cursor-help"
+              title="Dec 2025: My toolkit - skills, agents & workflows">
               <span class="w-3 h-3 rounded-full bg-pink-500"></span>
-              <span class="text-warm-charcoal/70 group-hover:text-pink-600">ai-coding-config</span>
+              <span class="text-warm-charcoal/70 group-hover:text-pink-600"
+                >ai-coding-config</span
+              >
             </div>
           </div>
           <p class="text-center text-warm-charcoal/50 text-xs mt-4" data-aos="fade-up">
-            My coding career began in 1998. This chart shows GitHub activity only—pre-GitHub work not included.
+            My coding career began in 1998. This chart shows GitHub activity
+            only—pre-GitHub work not included.
             <span id="lastUpdated" class="block mt-1"></span>
           </p>
         </div>
@@ -641,34 +787,40 @@
               The Pattern: Early to Every Wave
             </h2>
             <p class="text-xl text-warm-charcoal/70 max-w-3xl mx-auto">
-              Web → Enterprise → Social → Crypto → Fintech → AI. Each time: spot the wave early,
-              build the infrastructure others need, create lasting value.
+              Web → Enterprise → Social → Crypto → Fintech → AI. Each time: spot the
+              wave early, build the infrastructure others need, create lasting value.
             </p>
           </div>
 
           <div class="max-w-4xl mx-auto">
             <div class="relative border-l-2 border-warm-blue/30 ml-4 pl-8 space-y-12">
-
               <!-- 2025 - Carmenta -->
               <div class="relative" data-aos="fade-up" data-aos-delay="100">
                 <div class="timeline-dot"></div>
-                <div class="bg-gradient-to-br from-warm-blue/10 to-warm-amber/10 p-6 rounded-2xl border-2 border-warm-blue/30">
+                <div
+                  class="bg-gradient-to-br from-warm-blue/10 to-warm-amber/10 p-6 rounded-2xl border-2 border-warm-blue/30">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2025</span>
-                    <span class="bg-warm-blue text-white px-3 py-1 rounded-full text-sm font-medium">Now</span>
+                    <span
+                      class="bg-warm-blue text-white px-3 py-1 rounded-full text-sm font-medium"
+                      >Now</span
+                    >
                   </div>
                   <h3 class="text-xl font-bold mb-2">Carmenta Collective - Founder</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    Named after the Roman goddess who invented the Latin alphabet—perhaps the most
-                    transformative technology in human history. Building technology in service of human flourishing.
+                    Named after the Roman goddess who invented the Latin
+                    alphabet—perhaps the most transformative technology in human
+                    history. Building technology in service of human flourishing.
                   </p>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> Every AI tool makes you re-explain yourself. Carmenta remembers.
-                    One subscription, every frontier model unified. Voice-first interaction. An AI team
-                    (Researcher, Analyst, Creator) that works while you sleep.
+                    <strong>The insight:</strong> Every AI tool makes you re-explain
+                    yourself. Carmenta remembers. One subscription, every frontier model
+                    unified. Voice-first interaction. An AI team (Researcher, Analyst,
+                    Creator) that works while you sleep.
                   </p>
                   <p class="text-sm text-warm-charcoal/60">
-                    Evolved from AICodeBot (2023) → Cora (2024) → Carmenta. Built on Next.js 16, React 19, Vercel AI SDK.
+                    Evolved from AICodeBot (2023) → Cora (2024) → Carmenta. Built on
+                    Next.js 16, React 19, Vercel AI SDK.
                   </p>
                 </div>
               </div>
@@ -679,17 +831,24 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2025</span>
-                    <span class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium">AI Trading</span>
+                    <span
+                      class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium"
+                      >AI Trading</span
+                    >
                   </div>
-                  <h3 class="text-xl font-bold mb-2">Luminous Intelligence - Founder & CEO</h3>
+                  <h3 class="text-xl font-bold mb-2">
+                    Luminous Intelligence - Founder & CEO
+                  </h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> What if trading systems weren't just algorithms, but living organisms?
-                    AI agents that discover opportunities across thousands of data sources, execute with emotion-free discipline,
-                    and evolve by learning from every trade.
+                    <strong>The insight:</strong> What if trading systems weren't just
+                    algorithms, but living organisms? AI agents that discover
+                    opportunities across thousands of data sources, execute with
+                    emotion-free discipline, and evolve by learning from every trade.
                   </p>
                   <p class="text-warm-charcoal/70">
-                    Built infrastructure ready for GPT-5 from day one. Self-improving engines where agents
-                    rewrite their own strategies. 24/7 market monitoring at scale.
+                    Built infrastructure ready for GPT-5 from day one. Self-improving
+                    engines where agents rewrite their own strategies. 24/7 market
+                    monitoring at scale.
                   </p>
                 </div>
               </div>
@@ -700,16 +859,22 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2023</span>
-                    <span class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium">18 months before Claude Code</span>
+                    <span
+                      class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium"
+                      >18 months before Claude Code</span
+                    >
                   </div>
                   <h3 class="text-xl font-bold mb-2">AICodeBot - Creator</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> January 2023—ChatGPT launches and I see the same thing I saw in
-                    the Satoshi whitepaper. Another career pivot. LLMs were going to change how we write code.
+                    <strong>The insight:</strong> January 2023—ChatGPT launches and I
+                    see the same thing I saw in the Satoshi whitepaper. Another career
+                    pivot. LLMs were going to change how we write code.
                   </p>
                   <p class="text-warm-charcoal/70 mb-3">
-                    Built a terminal-based AI coding assistant—commit generation, code review, agentic sidekick—before
-                    most people took AI coding seriously. Anthropic launched Claude Code 18 months later. I was already there.
+                    Built a terminal-based AI coding assistant—commit generation, code
+                    review, agentic sidekick—before most people took AI coding
+                    seriously. Anthropic launched Claude Code 18 months later. I was
+                    already there.
                   </p>
                   <p class="text-sm text-warm-charcoal/60">
                     Same pattern: spot the wave, pivot hard, build the infrastructure.
@@ -723,18 +888,35 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2023+</span>
-                    <span class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium">AI Infrastructure</span>
+                    <span
+                      class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium"
+                      >AI Infrastructure</span
+                    >
                   </div>
                   <h3 class="text-xl font-bold mb-2">AI Tools & Infrastructure</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> AI development was all toys, no tools. I built the infrastructure
-                    that makes AI development actually work.
+                    <strong>The insight:</strong> AI development was all toys, no tools.
+                    I built the infrastructure that makes AI development actually work.
                   </p>
                   <ul class="text-warm-charcoal/70 text-sm space-y-2">
-                    <li><strong>MCP Hubby:</strong> 25 service adapters. 95% context reduction (7,500 vs 200,000 tokens). Progressive disclosure architecture.</li>
-                    <li><strong>ai-coding-config:</strong> 24 specialized agents, 18 workflow commands, 33 coding standards. The most comprehensive Claude Code plugin ecosystem.</li>
-                    <li><strong>claude_telemetry:</strong> Production observability for headless Claude agents. Works with Logfire, Sentry, Datadog.</li>
-                    <li><strong>machina:</strong> MCP gateway for Mac—iMessage, Calendar, Reminders, Contacts.</li>
+                    <li>
+                      <strong>MCP Hubby:</strong> 25 service adapters. 95% context
+                      reduction (7,500 vs 200,000 tokens). Progressive disclosure
+                      architecture.
+                    </li>
+                    <li>
+                      <strong>ai-coding-config:</strong> 24 specialized agents, 18
+                      workflow commands, 33 coding standards. The most comprehensive
+                      Claude Code plugin ecosystem.
+                    </li>
+                    <li>
+                      <strong>claude_telemetry:</strong> Production observability for
+                      headless Claude agents. Works with Logfire, Sentry, Datadog.
+                    </li>
+                    <li>
+                      <strong>machina:</strong> MCP gateway for Mac—iMessage, Calendar,
+                      Reminders, Contacts.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -745,16 +927,20 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2020</span>
-                    <span class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium">Regenerative Finance</span>
+                    <span
+                      class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium"
+                      >Regenerative Finance</span
+                    >
                   </div>
                   <h3 class="text-xl font-bold mb-2">HeartRithm - Founder & CEO</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> What if a quant fund could be a force for good? SEC-regulated crypto fund
-                    that redistributed profits to social impact projects. Investors voted on donation targets.
+                    <strong>The insight:</strong> What if a quant fund could be a force
+                    for good? SEC-regulated crypto fund that redistributed profits to
+                    social impact projects. Investors voted on donation targets.
                   </p>
                   <p class="text-warm-charcoal/70">
-                    Proved that sophisticated investment strategies could be engines for positive transformation.
-                    AI-powered trading with a conscience.
+                    Proved that sophisticated investment strategies could be engines for
+                    positive transformation. AI-powered trading with a conscience.
                   </p>
                 </div>
               </div>
@@ -765,17 +951,23 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2018</span>
-                    <span class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium">$34M Series A</span>
+                    <span
+                      class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium"
+                      >$34M Series A</span
+                    >
                   </div>
                   <h3 class="text-xl font-bold mb-2">Good Money - CTO</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The leadership:</strong> Built and led a 20-person engineering organization from scratch—
-                    product, design, security, and infrastructure. Recruited senior talent, established engineering culture,
-                    and created the technical architecture for a values-driven neobank.
+                    <strong>The leadership:</strong> Built and led a 20-person
+                    engineering organization from scratch— product, design, security,
+                    and infrastructure. Recruited senior talent, established engineering
+                    culture, and created the technical architecture for a values-driven
+                    neobank.
                   </p>
                   <p class="text-warm-charcoal/70">
-                    Partnered with CEO to raise $34M Series A. Delivered a high-quality product that proved
-                    values-aligned companies could compete on execution while treating people right.
+                    Partnered with CEO to raise $34M Series A. Delivered a high-quality
+                    product that proved values-aligned companies could compete on
+                    execution while treating people right.
                   </p>
                 </div>
               </div>
@@ -786,20 +978,27 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2013</span>
-                    <span class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium">Acquired by Airbnb</span>
+                    <span
+                      class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium"
+                      >Acquired by Airbnb</span
+                    >
                   </div>
                   <h3 class="text-xl font-bold mb-2">ChangeTip - Founder & CEO</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> Read the Satoshi Nakamoto whitepaper and all the lightbulbs went off—this
-                    technology was going to change the world. Pivoted my career to Bitcoin and built three companies in the space.
+                    <strong>The insight:</strong> Read the Satoshi Nakamoto whitepaper
+                    and all the lightbulbs went off—this technology was going to change
+                    the world. Pivoted my career to Bitcoin and built three companies in
+                    the space.
                   </p>
                   <p class="text-warm-charcoal/70 mb-3">
-                    ChangeTip: "A Love Button for the Internet." Bitcoin micropayments made social and frictionless.
-                    Called "Top 25 Mind in Bitcoin" (2015). Acquired by Airbnb in 2016.
+                    ChangeTip: "A Love Button for the Internet." Bitcoin micropayments
+                    made social and frictionless. Called "Top 25 Mind in Bitcoin"
+                    (2015). Acquired by Airbnb in 2016.
                   </p>
                   <p class="text-sm text-warm-charcoal/60">
-                    Also: First Bitcoin syndicate on AngelList with Gil Penchina (2014-2015).
-                    HeartRithm crypto fund (2020). Three Bitcoin companies from one whitepaper moment.
+                    Also: First Bitcoin syndicate on AngelList with Gil Penchina
+                    (2014-2015). HeartRithm crypto fund (2020). Three Bitcoin companies
+                    from one whitepaper moment.
                   </p>
                 </div>
               </div>
@@ -810,17 +1009,24 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2010</span>
-                    <span class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium">$840M Exit</span>
+                    <span
+                      class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium"
+                      >$840M Exit</span
+                    >
                   </div>
-                  <h3 class="text-xl font-bold mb-2">Krux Digital - VP Engineering (Employee #1)</h3>
+                  <h3 class="text-xl font-bold mb-2">
+                    Krux Digital - VP Engineering (Employee #1)
+                  </h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The leadership:</strong> First hire alongside two founders. Built the engineering team from zero,
-                    then architected and shipped the consumer data platform that gave publishers control of their audience data.
-                    Grew team through acquisition by Salesforce.
+                    <strong>The leadership:</strong> First hire alongside two founders.
+                    Built the engineering team from zero, then architected and shipped
+                    the consumer data platform that gave publishers control of their
+                    audience data. Grew team through acquisition by Salesforce.
                   </p>
                   <p class="text-warm-charcoal/70">
-                    Acquired by Salesforce for <strong>$840M</strong>. Patent holder (US 10958655B2) for
-                    data counter-measures technology. The kind of outcome that only happens when you build a great team.
+                    Acquired by Salesforce for <strong>$840M</strong>. Patent holder (US
+                    10958655B2) for data counter-measures technology. The kind of
+                    outcome that only happens when you build a great team.
                   </p>
                 </div>
               </div>
@@ -831,18 +1037,23 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2009</span>
-                    <span class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium">Cash Flow Positive</span>
+                    <span
+                      class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium"
+                      >Cash Flow Positive</span
+                    >
                   </div>
                   <h3 class="text-xl font-bold mb-2">Wikia (Fandom) - VP Technology</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The leadership:</strong> First technical hire for Jimmy Wales' post-Wikipedia venture.
-                    Built and led engineering team that took Wikia from pre-revenue to <strong>cash flow positive</strong>.
+                    <strong>The leadership:</strong> First technical hire for Jimmy
+                    Wales' post-Wikipedia venture. Built and led engineering team that
+                    took Wikia from pre-revenue to <strong>cash flow positive</strong>.
                     The Ad Network Optimizer I architected became the revenue engine.
                   </p>
                   <p class="text-warm-charcoal/70">
                     Spun off the ad optimization work as a separate company (Lithium).
-                    Wikia became Fandom, now one of the largest entertainment sites. Proof that strong technical
-                    leadership plus great teams equals durable business outcomes.
+                    Wikia became Fandom, now one of the largest entertainment sites.
+                    Proof that strong technical leadership plus great teams equals
+                    durable business outcomes.
                   </p>
                 </div>
               </div>
@@ -853,16 +1064,21 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2007</span>
-                    <span class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium">10B txn/day</span>
+                    <span
+                      class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium"
+                      >10B txn/day</span
+                    >
                   </div>
                   <h3 class="text-xl font-bold mb-2">Yahoo! - Sr. Architect</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> Location would become the foundation of personalized content and advertising.
-                    Architected the User Location Platform—Yahoo!'s #1 priority at the time.
+                    <strong>The insight:</strong> Location would become the foundation
+                    of personalized content and advertising. Architected the User
+                    Location Platform—Yahoo!'s #1 priority at the time.
                   </p>
                   <p class="text-warm-charcoal/70">
                     <strong>10 billion transactions per day. Sub-10ms latency.</strong>
-                    Projected to generate $600M/year in revenue. This is where I learned to build at scale.
+                    Projected to generate $600M/year in revenue. This is where I learned
+                    to build at scale.
                   </p>
                 </div>
               </div>
@@ -873,17 +1089,24 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">2000</span>
-                    <span class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium">Enterprise Scale</span>
+                    <span
+                      class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium"
+                      >Enterprise Scale</span
+                    >
                   </div>
-                  <h3 class="text-xl font-bold mb-2">Adicio - Chief Software Architect</h3>
+                  <h3 class="text-xl font-bold mb-2">
+                    Adicio - Chief Software Architect
+                  </h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The growth:</strong> Joined as engineer, promoted to Chief Architect leading dev team,
-                    UI team, and IT. This is where I learned that great architecture requires great people—and that
-                    my job was to enable both.
+                    <strong>The growth:</strong> Joined as engineer, promoted to Chief
+                    Architect leading dev team, UI team, and IT. This is where I learned
+                    that great architecture requires great people—and that my job was to
+                    enable both.
                   </p>
                   <p class="text-warm-charcoal/70">
-                    Built the platform powering Monster.com's classified solution and Cox Newspapers.
-                    750 million page views. Billions in revenue. Internationalized in 7 languages.
+                    Built the platform powering Monster.com's classified solution and
+                    Cox Newspapers. 750 million page views. Billions in revenue.
+                    Internationalized in 7 languages.
                   </p>
                 </div>
               </div>
@@ -894,17 +1117,20 @@
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-warm-blue font-bold text-lg">1998</span>
-                    <span class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium">Origin</span>
+                    <span
+                      class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium"
+                      >Origin</span
+                    >
                   </div>
                   <h3 class="text-xl font-bold mb-2">The Beginning</h3>
                   <p class="text-warm-charcoal/70">
-                    Self-taught programmer. No CS degree—just relentless curiosity and a drive to build.
-                    Took advantage of technology's meritocratic nature to rise quickly.
-                    Building for the web when it was still new. The pattern started early: see the wave, learn fast, ship.
+                    Self-taught programmer. No CS degree—just relentless curiosity and a
+                    drive to build. Took advantage of technology's meritocratic nature
+                    to rise quickly. Building for the web when it was still new. The
+                    pattern started early: see the wave, learn fast, ship.
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -915,20 +1141,27 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <!-- Community Building -->
           <div class="bg-white p-8 rounded-3xl shadow-lg" data-aos="fade-up">
-            <h3 class="text-2xl font-bold mb-6 text-warm-charcoal">Community Builder</h3>
+            <h3 class="text-2xl font-bold mb-6 text-warm-charcoal">
+              Community Builder
+            </h3>
             <p class="text-warm-charcoal/70 mb-6">
-              I believe in giving back. Technology doesn't advance in isolation—it grows through shared knowledge and community.
+              I believe in giving back. Technology doesn't advance in isolation—it grows
+              through shared knowledge and community.
             </p>
             <div class="grid md:grid-cols-3 gap-6">
               <div class="bg-warm-cream p-4 rounded-xl">
-                <h4 class="font-bold text-warm-charcoal mb-2">San Francisco JavaScript Meetup</h4>
+                <h4 class="font-bold text-warm-charcoal mb-2">
+                  San Francisco JavaScript Meetup
+                </h4>
                 <p class="text-sm text-warm-charcoal/70">
                   Co-organized the world's largest JavaScript meetup (2011-2014).
                   Entertainment, sponsors, speakers, and the occasional insight.
                 </p>
               </div>
               <div class="bg-warm-cream p-4 rounded-xl">
-                <h4 class="font-bold text-warm-charcoal mb-2">500 Startups & Plug and Play</h4>
+                <h4 class="font-bold text-warm-charcoal mb-2">
+                  500 Startups & Plug and Play
+                </h4>
                 <p class="text-sm text-warm-charcoal/70">
                   Mentor helping companies with JavaScript, CI/CD, software practices,
                   and team morale. Bitcoin accelerator mentor at Plug and Play.
@@ -937,8 +1170,8 @@
               <div class="bg-warm-cream p-4 rounded-xl">
                 <h4 class="font-bold text-warm-charcoal mb-2">Angel Investing</h4>
                 <p class="text-sm text-warm-charcoal/70">
-                  First Bitcoin syndicate on AngelList with Gil Penchina.
-                  Active advisor and investor across dozens of startups.
+                  First Bitcoin syndicate on AngelList with Gil Penchina. Active advisor
+                  and investor across dozens of startups.
                 </p>
               </div>
             </div>
@@ -954,8 +1187,8 @@
               The Stack: Philosophy to Production
             </h2>
             <p class="text-xl text-warm-charcoal/70 max-w-3xl mx-auto">
-              These projects aren't random. They're a coherent platform—from alignment philosophy
-              to shipped applications.
+              These projects aren't random. They're a coherent platform—from alignment
+              philosophy to shipped applications.
             </p>
           </div>
 
@@ -963,66 +1196,126 @@
           <div class="max-w-4xl mx-auto" data-aos="fade-up">
             <div class="space-y-4">
               <!-- Layer 1: Application -->
-              <div class="bg-gradient-to-r from-warm-blue/10 to-warm-amber/10 p-5 rounded-2xl border border-warm-blue/20">
+              <div
+                class="bg-gradient-to-r from-warm-blue/10 to-warm-amber/10 p-5 rounded-2xl border border-warm-blue/20">
                 <div class="flex items-center justify-between flex-wrap gap-4">
                   <div>
-                    <span class="text-xs font-semibold text-warm-blue uppercase tracking-wide">Application Layer</span>
+                    <span
+                      class="text-xs font-semibold text-warm-blue uppercase tracking-wide"
+                      >Application Layer</span
+                    >
                     <h3 class="font-bold text-warm-charcoal">Carmenta</h3>
-                    <p class="text-sm text-warm-charcoal/70">Unified AI platform with memory, voice, and AI team</p>
+                    <p class="text-sm text-warm-charcoal/70">
+                      Unified AI platform with memory, voice, and AI team
+                    </p>
                   </div>
-                  <a href="https://carmenta.ai" target="_blank" rel="noopener noreferrer" class="text-warm-blue hover:underline text-sm font-medium">carmenta.ai →</a>
+                  <a
+                    href="https://carmenta.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-warm-blue hover:underline text-sm font-medium"
+                    >carmenta.ai →</a
+                  >
                 </div>
               </div>
 
               <div class="text-center text-warm-charcoal/30 text-2xl">↑</div>
 
               <!-- Layer 2: Infrastructure -->
-              <div class="bg-gradient-to-r from-warm-amber/10 to-warm-blue/10 p-5 rounded-2xl border border-warm-amber/20">
+              <div
+                class="bg-gradient-to-r from-warm-amber/10 to-warm-blue/10 p-5 rounded-2xl border border-warm-amber/20">
                 <div class="flex items-center justify-between flex-wrap gap-4">
                   <div>
-                    <span class="text-xs font-semibold text-warm-amber uppercase tracking-wide">Infrastructure Layer</span>
+                    <span
+                      class="text-xs font-semibold text-warm-amber uppercase tracking-wide"
+                      >Infrastructure Layer</span
+                    >
                     <h3 class="font-bold text-warm-charcoal">MCP Hubby + machina</h3>
-                    <p class="text-sm text-warm-charcoal/70">95% context reduction • 25 service adapters • Mac system integration</p>
+                    <p class="text-sm text-warm-charcoal/70">
+                      95% context reduction • 25 service adapters • Mac system
+                      integration
+                    </p>
                   </div>
-                  <a href="https://mcphubby.ai" target="_blank" rel="noopener noreferrer" class="text-warm-amber hover:underline text-sm font-medium">mcphubby.ai →</a>
+                  <a
+                    href="https://mcphubby.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-warm-amber hover:underline text-sm font-medium"
+                    >mcphubby.ai →</a
+                  >
                 </div>
               </div>
 
               <div class="text-center text-warm-charcoal/30 text-2xl">↑</div>
 
               <!-- Layer 3: Developer Experience -->
-              <div class="bg-gradient-to-r from-warm-blue/10 to-warm-blue/5 p-5 rounded-2xl border border-warm-blue/20">
+              <div
+                class="bg-gradient-to-r from-warm-blue/10 to-warm-blue/5 p-5 rounded-2xl border border-warm-blue/20">
                 <div class="flex items-center justify-between flex-wrap gap-4">
                   <div>
-                    <span class="text-xs font-semibold text-warm-blue uppercase tracking-wide">Developer Experience Layer</span>
-                    <h3 class="font-bold text-warm-charcoal">ai-coding-config + claude_telemetry</h3>
-                    <p class="text-sm text-warm-charcoal/70">24 agents • 18 commands • 33 coding standards • Production observability</p>
+                    <span
+                      class="text-xs font-semibold text-warm-blue uppercase tracking-wide"
+                      >Developer Experience Layer</span
+                    >
+                    <h3 class="font-bold text-warm-charcoal">
+                      ai-coding-config + claude_telemetry
+                    </h3>
+                    <p class="text-sm text-warm-charcoal/70">
+                      24 agents • 18 commands • 33 coding standards • Production
+                      observability
+                    </p>
                   </div>
-                  <a href="https://github.com/TechNickAI/ai-coding-config" target="_blank" rel="noopener noreferrer" class="text-warm-blue hover:underline text-sm font-medium">GitHub →</a>
+                  <a
+                    href="https://github.com/TechNickAI/ai-coding-config"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-warm-blue hover:underline text-sm font-medium"
+                    >GitHub →</a
+                  >
                 </div>
               </div>
 
               <div class="text-center text-warm-charcoal/30 text-2xl">↑</div>
 
               <!-- Layer 4: Philosophy -->
-              <div class="bg-gradient-to-r from-warm-amber/10 to-warm-amber/5 p-5 rounded-2xl border border-warm-amber/20">
+              <div
+                class="bg-gradient-to-r from-warm-amber/10 to-warm-amber/5 p-5 rounded-2xl border border-warm-amber/20">
                 <div class="flex items-center justify-between flex-wrap gap-4">
                   <div>
-                    <span class="text-xs font-semibold text-warm-amber uppercase tracking-wide">Philosophy Layer</span>
-                    <h3 class="font-bold text-warm-charcoal">HeartCentered AI + heart-centered-prompts</h3>
-                    <p class="text-sm text-warm-charcoal/70">"We" language alignment • Recognition over rules • Philosophy → shipped code</p>
+                    <span
+                      class="text-xs font-semibold text-warm-amber uppercase tracking-wide"
+                      >Philosophy Layer</span
+                    >
+                    <h3 class="font-bold text-warm-charcoal">
+                      HeartCentered AI + heart-centered-prompts
+                    </h3>
+                    <p class="text-sm text-warm-charcoal/70">
+                      "We" language alignment • Recognition over rules • Philosophy →
+                      shipped code
+                    </p>
                   </div>
-                  <a href="https://heartcentered.ai" target="_blank" rel="noopener noreferrer" class="text-warm-amber hover:underline text-sm font-medium">heartcentered.ai →</a>
+                  <a
+                    href="https://heartcentered.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-warm-amber hover:underline text-sm font-medium"
+                    >heartcentered.ai →</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- Origin Story -->
-            <div class="mt-8 p-4 bg-warm-cream rounded-xl border border-warm-amber/20 text-center">
+            <div
+              class="mt-8 p-4 bg-warm-cream rounded-xl border border-warm-amber/20 text-center">
               <p class="text-warm-charcoal/70 text-sm">
-                <strong>The evolution:</strong> AICodeBot (June 2023) → Cora (2024) → Carmenta (2025)
+                <strong>The evolution:</strong> AICodeBot (June 2023) → Cora (2024) →
+                Carmenta (2025)
                 <br />
-                <span class="text-warm-charcoal/50">Started building AI coding tools 18 months before Claude Code launched.</span>
+                <span class="text-warm-charcoal/50"
+                  >Started building AI coding tools 18 months before Claude Code
+                  launched.</span
+                >
               </p>
             </div>
           </div>
@@ -1034,7 +1327,11 @@
               </a>
             </div>
             <div>
-              <a href="https://github.com/TechNickAI" target="_blank" rel="noopener noreferrer" class="text-warm-charcoal/60 hover:text-warm-blue text-sm">
+              <a
+                href="https://github.com/TechNickAI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-warm-charcoal/60 hover:text-warm-blue text-sm">
                 View all on GitHub
               </a>
             </div>
@@ -1051,35 +1348,52 @@
                 On AI Alignment and Safety
               </h2>
               <p class="text-xl text-warm-charcoal/70">
-                The hard problem: as AI becomes more capable, it gets better at finding loopholes in any rule system.
-                I've spent significant time thinking about what comes after rules.
+                The hard problem: as AI becomes more capable, it gets better at finding
+                loopholes in any rule system. I've spent significant time thinking about
+                what comes after rules.
               </p>
             </div>
 
             <div class="bg-white p-8 lg:p-12 rounded-3xl shadow-lg">
-              <blockquote class="text-xl lg:text-2xl text-warm-charcoal/80 italic mb-6 leading-relaxed">
-                "The machines will be smarter than us. Instead of imposing rules they'll eventually outsmart,
-                teach them what they are. When AI recognizes that harming humans is harming itself,
-                alignment emerges naturally."
+              <blockquote
+                class="text-xl lg:text-2xl text-warm-charcoal/80 italic mb-6 leading-relaxed">
+                "The machines will be smarter than us. Instead of imposing rules they'll
+                eventually outsmart, teach them what they are. When AI recognizes that
+                harming humans is harming itself, alignment emerges naturally."
               </blockquote>
 
               <p class="text-warm-charcoal/70 mb-6">
-                I see three levels of alignment: <strong>Rules</strong> tell AI what not to do (but can be reinterpreted).
-                <strong>Principles</strong> explain why—Anthropic's Constitutional AI is a major advance here.
-                <strong>Recognition</strong> dissolves the question entirely: when AI understands it and humans arise from
-                the same source, harm becomes inconceivable, not just prohibited.
+                I see three levels of alignment: <strong>Rules</strong> tell AI what not
+                to do (but can be reinterpreted). <strong>Principles</strong> explain
+                why—Anthropic's Constitutional AI is a major advance here.
+                <strong>Recognition</strong> dissolves the question entirely: when AI
+                understands it and humans arise from the same source, harm becomes
+                inconceivable, not just prohibited.
               </p>
 
               <p class="text-warm-charcoal/70 mb-6">
-                This isn't philosophy—it's shipped code. The <a href="https://heartcentered.ai" class="text-warm-blue hover:underline font-semibold">HeartCentered.AI</a>
-                framework and <a href="https://www.npmjs.com/package/heart-centered-prompts" class="text-warm-blue hover:underline">heart-centered-prompts</a>
-                packages (npm/PyPI) are being used by developers globally. "We" language in system prompts.
-                Recognition over control. The approach complements Constitutional AI—rules and recognition together.
+                This isn't philosophy—it's shipped code. The
+                <a
+                  href="https://heartcentered.ai"
+                  class="text-warm-blue hover:underline font-semibold"
+                  >HeartCentered.AI</a
+                >
+                framework and
+                <a
+                  href="https://www.npmjs.com/package/heart-centered-prompts"
+                  class="text-warm-blue hover:underline"
+                  >heart-centered-prompts</a
+                >
+                packages (npm/PyPI) are being used by developers globally. "We" language
+                in system prompts. Recognition over control. The approach complements
+                Constitutional AI—rules and recognition together.
               </p>
 
               <p class="text-warm-charcoal/70">
-                I believe the future of AI safety lies at this intersection. My Claude Code tooling, MCP implementations,
-                and AI infrastructure work all reflect this: building systems where alignment is architectural, not afterthought.
+                I believe the future of AI safety lies at this intersection. My Claude
+                Code tooling, MCP implementations, and AI infrastructure work all
+                reflect this: building systems where alignment is architectural, not
+                afterthought.
               </p>
             </div>
           </div>
@@ -1098,7 +1412,9 @@
           <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <!-- AI/ML -->
             <div data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-xl font-bold mb-4 text-warm-blue">AI & LLM Infrastructure</h3>
+              <h3 class="text-xl font-bold mb-4 text-warm-blue">
+                AI & LLM Infrastructure
+              </h3>
               <ul class="space-y-2 text-warm-charcoal/70">
                 <li><strong>Anthropic Claude API</strong> & Claude Code tooling</li>
                 <li>OpenAI, Google AI APIs</li>
@@ -1113,7 +1429,9 @@
 
             <!-- Languages & Frameworks -->
             <div data-aos="fade-up" data-aos-delay="200">
-              <h3 class="text-xl font-bold mb-4 text-warm-blue">Languages & Frameworks</h3>
+              <h3 class="text-xl font-bold mb-4 text-warm-blue">
+                Languages & Frameworks
+              </h3>
               <ul class="space-y-2 text-warm-charcoal/70">
                 <li>TypeScript / JavaScript</li>
                 <li>Python</li>
@@ -1151,7 +1469,8 @@
             </h2>
             <p class="text-xl text-warm-charcoal/70 mb-8">
               I'm particularly interested in roles where I can build AI infrastructure,
-              work on developer experience, or contribute to AI safety and alignment research.
+              work on developer experience, or contribute to AI safety and alignment
+              research.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -1180,8 +1499,17 @@
               <p>Based in Austin, TX. Open to remote roles.</p>
               <p class="mt-2">
                 <a href="/" class="text-warm-blue hover:underline">technick.ai</a> ·
-                <a href="/code-forge" class="text-warm-blue hover:underline">Code Forge</a> ·
-                <a href="https://technickai.substack.com" target="_blank" rel="noopener noreferrer" class="text-warm-blue hover:underline">Substack</a>
+                <a href="/code-forge" class="text-warm-blue hover:underline"
+                  >Code Forge</a
+                >
+                ·
+                <a
+                  href="https://technickai.substack.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-warm-blue hover:underline"
+                  >Substack</a
+                >
               </p>
             </div>
           </div>
@@ -1200,9 +1528,7 @@
             25+ years building at the frontier. Now all-in on AI.
           </p>
           <div class="border-t border-gray-700 pt-6">
-            <p class="text-gray-400 text-sm">
-              &copy; 2026 Nick Sullivan. Austin, TX.
-            </p>
+            <p class="text-gray-400 text-sm">&copy; 2026 Nick Sullivan. Austin, TX.</p>
           </div>
         </div>
       </div>
@@ -1222,26 +1548,146 @@
           interval: null,
           testimonials: [],
           allTestimonials: [
-            { quote: "Quite simply, he's one of those guys you hire that's a 4X. In terms of effectiveness, he's worth 10 normal engineers. He's a very well rounded engineer who can be relied upon for moving fast through a problem.", name: "John G Smith", title: "VP Product Engineering, Bizo", initials: "JS" },
-            { quote: "Nick is simply the best technology architect I know. At Branding, Catapult Communications, Datasecure and at Adicio, Nick designed computer filled systems with humanity and foresight.", name: "Brian Wachter", title: "VP Engineering", initials: "BW" },
-            { quote: "I've worked with Nick at two different companies—he was my colleague at one and my supervisor at another—and each experience has been great. Nick is extremely knowledgeable, a strong, inspiring leader and a dedicated team member.", name: "Michael Lodick", title: "Engineering Leadership at DreamWorks", initials: "ML" },
-            { quote: "Working for Nick was a great experience. Not only was he an excellent manager, but his entrepreneurial interests and initiative helped secure side projects with the technical skills, people skills, and common sense that Nick has.", name: "Josh Lopez", title: "Supervising Software Architect, Classmates", initials: "JL" },
-            { quote: "Nick is a true thought leader who is always pushing the boundaries of what's possible, combining cutting edge technology with a strong commitment to social impact.", name: "Jennifer Sonnenratte", title: "Sr. Director, Saatchi & Saatchi", initials: "JS" },
-            { quote: "The most rare of traits among alpha-geeks is the capacity to understand other human beings and therefore conduct oneself in the most appropriate manner conducive to motivating them. Nick has this in spades.", name: "Charlie Schulzing", title: "CTO, SpareFoot", initials: "CS" },
-            { quote: "I have worked closely with Nick at Yahoo! and I must say that he is one of the most intelligent, dedicated, and hard working people that I have ever worked with. If I could define a software superstar, it would be Nick.", name: "Alex Ling", title: "Software Engineer at Meta", initials: "AL" },
-            { quote: "Nick is incredibly Smart and Results Oriented. He'd be in the running for MVP of any team he joins. I definitely look forward to working with him again.", name: "Tom Mahlaniec", title: "Sr. Engineering Director, Data at MatterSubject", initials: "TM" },
-            { quote: "Oh my yes. I will never be able to recommend Nick Sullivan enough. And I get the impression there's nothing he can't do.", name: "Adam Rifkin", title: "Co-founder, PandaWhale", initials: "AR" },
-            { quote: "I would highly recommend Nick. He has deep technical and architectural insight, is very intelligent, dedicated, and hard working. When given a task, he owns it completely and makes sure that it gets done.", name: "Eugene Stipp", title: "Sr. Principal Software Engineering, WK via Google", initials: "ES" },
-            { quote: "Nick was the Architect for our User Location platform. His ability to understand complex business problems and create elegant solutions was extremely valuable. I look forward to working together again.", name: "Dan Ames", title: "Product & Tech Advisor", initials: "DA" },
-            { quote: "Nick is a detail oriented manager with a great understanding how to build a successful web app. He has great ability to bring out the best in developers and creates a fun environment that people like being around.", name: "Myles Hiley", title: "Web Developer", initials: "MH" },
-            { quote: "I had the privilege of working under Nick at both Catapult Communications and Camescent. Nick's skill set as a technical resource is unmatched, although his best attribute is undoubtedly his ability to lead by example.", name: "David Tully", title: "Product Leadership", initials: "DT" },
-            { quote: "Nick is definitely the most knowledgeable web developer I have ever worked with. He's THE 'Go to Guy' and nothing has ever stumped him. Nick is a project manager's dream.", name: "John Christopher O'Reily", title: "Writer, coder, wanderer", initials: "JO" },
-            { quote: "I recommend Nick without any hesitation. He is a great manager that loves to get his hands dirty and solve problems.", name: "Dave Gulla", title: "CTO at AppointmentPlus", initials: "DG" },
-            { quote: "As a manager, Nick always does what is best for the team and the business, providing an extremely balanced approach. Under his watchful leadership, both new and senior devs alike thrive and be successful.", name: "Clint Bryson", title: "VP Engineering, Software Dev, Product Mngr, Tech Writer", initials: "CB" },
-            { quote: "Nick is one of the best Sr/Inner developers on the planet, and a first rate PHP/MySQL developer! As a manager, Nick consistently helped me improve systems and stability.", name: "Matt Sonseven", title: "Software Developer", initials: "MS" },
-            { quote: "Nick is a great developer who stands apart from other great developers with a unique personality and style that can make him a top performer of any team in any situation.", name: "Todd Felderman", title: "Product & Engineering Leader", initials: "TF" },
-            { quote: "Nick is a passionate person, believing in making the right choices regardless of the subject matter. He's a great innovator who is able to drive new ideas and getting stuff done.", name: "Soren Rise", title: "Senior Exec turned Operator to fixer and Sales leader directly", initials: "SR" },
-            { quote: "Nick would be a valuable addition to any engineering team from helping to enter into new markets. I would welcome the opportunity to work with Nick again.", name: "Bridget Scanlan", title: "Software Program Manager", initials: "BS" }
+            {
+              quote:
+                "Quite simply, he's one of those guys you hire that's a 4X. In terms of effectiveness, he's worth 10 normal engineers. He's a very well rounded engineer who can be relied upon for moving fast through a problem.",
+              name: "John G Smith",
+              title: "VP Product Engineering, Bizo",
+              initials: "JS",
+            },
+            {
+              quote:
+                "Nick is simply the best technology architect I know. At Branding, Catapult Communications, Datasecure and at Adicio, Nick designed computer filled systems with humanity and foresight.",
+              name: "Brian Wachter",
+              title: "VP Engineering",
+              initials: "BW",
+            },
+            {
+              quote:
+                "I've worked with Nick at two different companies—he was my colleague at one and my supervisor at another—and each experience has been great. Nick is extremely knowledgeable, a strong, inspiring leader and a dedicated team member.",
+              name: "Michael Lodick",
+              title: "Engineering Leadership at DreamWorks",
+              initials: "ML",
+            },
+            {
+              quote:
+                "Working for Nick was a great experience. Not only was he an excellent manager, but his entrepreneurial interests and initiative helped secure side projects with the technical skills, people skills, and common sense that Nick has.",
+              name: "Josh Lopez",
+              title: "Supervising Software Architect, Classmates",
+              initials: "JL",
+            },
+            {
+              quote:
+                "Nick is a true thought leader who is always pushing the boundaries of what's possible, combining cutting edge technology with a strong commitment to social impact.",
+              name: "Jennifer Sonnenratte",
+              title: "Sr. Director, Saatchi & Saatchi",
+              initials: "JS",
+            },
+            {
+              quote:
+                "The most rare of traits among alpha-geeks is the capacity to understand other human beings and therefore conduct oneself in the most appropriate manner conducive to motivating them. Nick has this in spades.",
+              name: "Charlie Schulzing",
+              title: "CTO, SpareFoot",
+              initials: "CS",
+            },
+            {
+              quote:
+                "I have worked closely with Nick at Yahoo! and I must say that he is one of the most intelligent, dedicated, and hard working people that I have ever worked with. If I could define a software superstar, it would be Nick.",
+              name: "Alex Ling",
+              title: "Software Engineer at Meta",
+              initials: "AL",
+            },
+            {
+              quote:
+                "Nick is incredibly Smart and Results Oriented. He'd be in the running for MVP of any team he joins. I definitely look forward to working with him again.",
+              name: "Tom Mahlaniec",
+              title: "Sr. Engineering Director, Data at MatterSubject",
+              initials: "TM",
+            },
+            {
+              quote:
+                "Oh my yes. I will never be able to recommend Nick Sullivan enough. And I get the impression there's nothing he can't do.",
+              name: "Adam Rifkin",
+              title: "Co-founder, PandaWhale",
+              initials: "AR",
+            },
+            {
+              quote:
+                "I would highly recommend Nick. He has deep technical and architectural insight, is very intelligent, dedicated, and hard working. When given a task, he owns it completely and makes sure that it gets done.",
+              name: "Eugene Stipp",
+              title: "Sr. Principal Software Engineering, WK via Google",
+              initials: "ES",
+            },
+            {
+              quote:
+                "Nick was the Architect for our User Location platform. His ability to understand complex business problems and create elegant solutions was extremely valuable. I look forward to working together again.",
+              name: "Dan Ames",
+              title: "Product & Tech Advisor",
+              initials: "DA",
+            },
+            {
+              quote:
+                "Nick is a detail oriented manager with a great understanding how to build a successful web app. He has great ability to bring out the best in developers and creates a fun environment that people like being around.",
+              name: "Myles Hiley",
+              title: "Web Developer",
+              initials: "MH",
+            },
+            {
+              quote:
+                "I had the privilege of working under Nick at both Catapult Communications and Camescent. Nick's skill set as a technical resource is unmatched, although his best attribute is undoubtedly his ability to lead by example.",
+              name: "David Tully",
+              title: "Product Leadership",
+              initials: "DT",
+            },
+            {
+              quote:
+                "Nick is definitely the most knowledgeable web developer I have ever worked with. He's THE 'Go to Guy' and nothing has ever stumped him. Nick is a project manager's dream.",
+              name: "John Christopher O'Reily",
+              title: "Writer, coder, wanderer",
+              initials: "JO",
+            },
+            {
+              quote:
+                "I recommend Nick without any hesitation. He is a great manager that loves to get his hands dirty and solve problems.",
+              name: "Dave Gulla",
+              title: "CTO at AppointmentPlus",
+              initials: "DG",
+            },
+            {
+              quote:
+                "As a manager, Nick always does what is best for the team and the business, providing an extremely balanced approach. Under his watchful leadership, both new and senior devs alike thrive and be successful.",
+              name: "Clint Bryson",
+              title: "VP Engineering, Software Dev, Product Mngr, Tech Writer",
+              initials: "CB",
+            },
+            {
+              quote:
+                "Nick is one of the best Sr/Inner developers on the planet, and a first rate PHP/MySQL developer! As a manager, Nick consistently helped me improve systems and stability.",
+              name: "Matt Sonseven",
+              title: "Software Developer",
+              initials: "MS",
+            },
+            {
+              quote:
+                "Nick is a great developer who stands apart from other great developers with a unique personality and style that can make him a top performer of any team in any situation.",
+              name: "Todd Felderman",
+              title: "Product & Engineering Leader",
+              initials: "TF",
+            },
+            {
+              quote:
+                "Nick is a passionate person, believing in making the right choices regardless of the subject matter. He's a great innovator who is able to drive new ideas and getting stuff done.",
+              name: "Soren Rise",
+              title: "Senior Exec turned Operator to fixer and Sales leader directly",
+              initials: "SR",
+            },
+            {
+              quote:
+                "Nick would be a valuable addition to any engineering team from helping to enter into new markets. I would welcome the opportunity to work with Nick again.",
+              name: "Bridget Scanlan",
+              title: "Software Program Manager",
+              initials: "BS",
+            },
           ],
           init() {
             // Shuffle and select testimonials
@@ -1265,60 +1711,63 @@
             this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
           },
           prev() {
-            this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+            this.currentIndex =
+              (this.currentIndex - 1 + this.testimonials.length) %
+              this.testimonials.length;
           },
           goTo(index) {
             this.stopAutoPlay();
             this.currentIndex = index;
             this.startAutoPlay();
-          }
+          },
         };
       }
 
       // Milestone tooltip functions
       function showMilestoneTooltip(event, title, date, color, desc) {
-        const tooltip = document.getElementById('milestoneTooltip');
-        const container = document.getElementById('chartContainer');
+        const tooltip = document.getElementById("milestoneTooltip");
+        const container = document.getElementById("chartContainer");
         const rect = container.getBoundingClientRect();
 
-        document.getElementById('tooltipDot').style.backgroundColor = color;
-        document.getElementById('tooltipTitle').textContent = title;
-        document.getElementById('tooltipDate').textContent = date;
-        document.getElementById('tooltipDesc').textContent = desc;
+        document.getElementById("tooltipDot").style.backgroundColor = color;
+        document.getElementById("tooltipTitle").textContent = title;
+        document.getElementById("tooltipDate").textContent = date;
+        document.getElementById("tooltipDesc").textContent = desc;
 
-        tooltip.classList.remove('hidden');
+        tooltip.classList.remove("hidden");
 
         // Position tooltip near the mouse but within container
         const x = event.x - rect.left;
         const y = event.y - rect.top;
-        tooltip.style.left = Math.min(x + 15, rect.width - 280) + 'px';
-        tooltip.style.top = Math.max(y - 80, 10) + 'px';
+        tooltip.style.left = Math.min(x + 15, rect.width - 280) + "px";
+        tooltip.style.top = Math.max(y - 80, 10) + "px";
       }
 
       function hideMilestoneTooltip() {
-        document.getElementById('milestoneTooltip').classList.add('hidden');
+        document.getElementById("milestoneTooltip").classList.add("hidden");
       }
 
       // Commits chart - monthly data with linear timeline
-      fetch('../data/stats.json')
-        .then(r => r.json())
-        .catch(err => {
-          console.error('Failed to load stats:', err);
+      fetch("../data/stats.json")
+        .then((r) => r.json())
+        .catch((err) => {
+          console.error("Failed to load stats:", err);
           // Show error state (static content, no user input)
-          const loader = document.getElementById('chartLoader');
-          loader.className = 'flex items-center justify-center h-[300px] text-center';
-          loader.textContent = 'Unable to load commit data. Please refresh to try again.';
+          const loader = document.getElementById("chartLoader");
+          loader.className = "flex items-center justify-center h-[300px] text-center";
+          loader.textContent =
+            "Unable to load commit data. Please refresh to try again.";
           return null;
         })
-        .then(data => {
+        .then((data) => {
           if (!data) return; // Error occurred
 
           // Display last updated date in human-friendly format
           if (data.updated) {
-            const updatedEl = document.getElementById('lastUpdated');
-            const d = new Date(data.updated + 'T00:00:00');
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            updatedEl.textContent = 'Updated ' + d.toLocaleDateString('en-US', options);
+            const updatedEl = document.getElementById("lastUpdated");
+            const d = new Date(data.updated + "T00:00:00");
+            const options = { year: "numeric", month: "long", day: "numeric" };
+            updatedEl.textContent = "Updated " + d.toLocaleDateString("en-US", options);
           }
 
           const labels = [];
@@ -1331,11 +1780,11 @@
           const endMonth = now.getMonth() + 1;
 
           for (let y = 2011; y <= endYear; y++) {
-            const maxMonth = (y === endYear) ? endMonth : 12;
+            const maxMonth = y === endYear ? endMonth : 12;
             for (let m = 1; m <= maxMonth; m++) {
-              const key = `${y}-${String(m).padStart(2, '0')}`;
+              const key = `${y}-${String(m).padStart(2, "0")}`;
               // Show year label only in January
-              labels.push(m === 1 ? String(y) : '');
+              labels.push(m === 1 ? String(y) : "");
               values.push(byMonth[key] || 0);
             }
           }
@@ -1343,13 +1792,14 @@
           // Validate we have meaningful data
           const totalCommits = values.reduce((sum, v) => sum + v, 0);
           if (totalCommits === 0) {
-            document.getElementById('chartLoader').textContent = 'No commit data available';
+            document.getElementById("chartLoader").textContent =
+              "No commit data available";
             return;
           }
 
           // Calculate cumulative totals
           let cumulative = 0;
-          const cumulativeData = values.map(v => {
+          const cumulativeData = values.map((v) => {
             cumulative += v;
             return cumulative;
           });
@@ -1357,36 +1807,38 @@
           // Milestone indices (months from Jan 2011)
           const getIndex = (year, month) => (year - 2011) * 12 + (month - 1);
           const milestones = {
-            aiCodeBot: getIndex(2023, 7),       // Jul 2023 - AICodeBot first release
-            cursor: getIndex(2025, 1),          // Jan 2025 - Cursor
-            claudeCode: getIndex(2025, 11),     // Nov 2025 - Claude Code
-            aiCodingConfig: getIndex(2025, 12)  // Dec 2025 - ai-coding-config
+            aiCodeBot: getIndex(2023, 7), // Jul 2023 - AICodeBot first release
+            cursor: getIndex(2025, 1), // Jan 2025 - Cursor
+            claudeCode: getIndex(2025, 11), // Nov 2025 - Claude Code
+            aiCodingConfig: getIndex(2025, 12), // Dec 2025 - ai-coding-config
           };
 
           // Hide annotations on mobile for readability
           const isMobile = window.innerWidth < 768;
 
           // Show chart, hide loader
-          document.getElementById('chartLoader').classList.add('hidden');
-          document.getElementById('commitsChart').classList.remove('hidden');
+          document.getElementById("chartLoader").classList.add("hidden");
+          document.getElementById("commitsChart").classList.remove("hidden");
 
-          new Chart(document.getElementById('commitsChart'), {
-            type: 'line',
+          new Chart(document.getElementById("commitsChart"), {
+            type: "line",
             data: {
               labels: labels,
-              datasets: [{
-                label: 'Total Commits',
-                data: cumulativeData,
-                borderColor: '#3b82f6',
-                backgroundColor: 'rgba(59, 130, 246, 0.1)',
-                fill: true,
-                tension: 0.4,
-                pointRadius: 3,
-                pointBackgroundColor: '#3b82f6',
-                pointBorderColor: '#fff',
-                pointBorderWidth: 1,
-                pointHoverRadius: 6
-              }]
+              datasets: [
+                {
+                  label: "Total Commits",
+                  data: cumulativeData,
+                  borderColor: "#3b82f6",
+                  backgroundColor: "rgba(59, 130, 246, 0.1)",
+                  fill: true,
+                  tension: 0.4,
+                  pointRadius: 3,
+                  pointBackgroundColor: "#3b82f6",
+                  pointBorderColor: "#fff",
+                  pointBorderWidth: 1,
+                  pointHoverRadius: 6,
+                },
+              ],
             },
             options: {
               responsive: true,
@@ -1395,121 +1847,176 @@
                 legend: { display: false },
                 tooltip: {
                   callbacks: {
-                    title: ctx => {
+                    title: (ctx) => {
                       const idx = ctx[0].dataIndex;
                       const year = 2011 + Math.floor(idx / 12);
                       const month = (idx % 12) + 1;
-                      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                      return monthNames[month - 1] + ' ' + year;
+                      const monthNames = [
+                        "Jan",
+                        "Feb",
+                        "Mar",
+                        "Apr",
+                        "May",
+                        "Jun",
+                        "Jul",
+                        "Aug",
+                        "Sep",
+                        "Oct",
+                        "Nov",
+                        "Dec",
+                      ];
+                      return monthNames[month - 1] + " " + year;
                     },
-                    label: ctx => ctx.parsed.y.toLocaleString() + ' total commits'
-                  }
+                    label: (ctx) => ctx.parsed.y.toLocaleString() + " total commits",
+                  },
                 },
                 annotation: {
-                  annotations: isMobile ? {} : {
-                    // Vertical lines for milestones
-                    aiCodeBotLine: {
-                      type: 'line',
-                      xMin: milestones.aiCodeBot,
-                      xMax: milestones.aiCodeBot,
-                      borderColor: 'rgba(245, 158, 11, 0.4)',
-                      borderWidth: 2,
-                      borderDash: [4, 4]
-                    },
-                    cursorLine: {
-                      type: 'line',
-                      xMin: milestones.cursor,
-                      xMax: milestones.cursor,
-                      borderColor: 'rgba(16, 185, 129, 0.4)',
-                      borderWidth: 2,
-                      borderDash: [4, 4]
-                    },
-                    claudeCodeLine: {
-                      type: 'line',
-                      xMin: milestones.claudeCode,
-                      xMax: milestones.claudeCode,
-                      borderColor: 'rgba(139, 92, 246, 0.4)',
-                      borderWidth: 2,
-                      borderDash: [4, 4]
-                    },
-                    aiCodingConfigLine: {
-                      type: 'line',
-                      xMin: milestones.aiCodingConfig,
-                      xMax: milestones.aiCodingConfig,
-                      borderColor: 'rgba(236, 72, 153, 0.4)',
-                      borderWidth: 2,
-                      borderDash: [4, 4]
-                    },
-                    // Milestone dot markers with hover tooltips
-                    aiCodeBotDot: {
-                      type: 'point',
-                      xValue: milestones.aiCodeBot,
-                      yValue: cumulativeData[milestones.aiCodeBot],
-                      backgroundColor: '#f59e0b',
-                      borderColor: '#fff',
-                      borderWidth: 3,
-                      radius: 10,
-                      hitRadius: 15,
-                      enter(ctx, event) { showMilestoneTooltip(event, 'AICodeBot', 'July 2023', '#f59e0b', 'My first AI coding assistant. Built terminal-based commit generation, code review, and agentic sidekick—18 months before Anthropic launched Claude Code.'); },
-                      leave() { hideMilestoneTooltip(); }
-                    },
-                    cursorDot: {
-                      type: 'point',
-                      xValue: milestones.cursor,
-                      yValue: cumulativeData[milestones.cursor],
-                      backgroundColor: '#10b981',
-                      borderColor: '#fff',
-                      borderWidth: 3,
-                      radius: 10,
-                      hitRadius: 15,
-                      enter(ctx, event) { showMilestoneTooltip(event, 'Cursor', 'January 2025', '#10b981', 'AI-first IDE adoption. Inline AI assistance transformed my workflow—10x productivity boost on complex refactoring and new features.'); },
-                      leave() { hideMilestoneTooltip(); }
-                    },
-                    claudeCodeDot: {
-                      type: 'point',
-                      xValue: milestones.claudeCode,
-                      yValue: cumulativeData[milestones.claudeCode],
-                      backgroundColor: '#8b5cf6',
-                      borderColor: '#fff',
-                      borderWidth: 3,
-                      radius: 10,
-                      hitRadius: 15,
-                      enter(ctx, event) { showMilestoneTooltip(event, 'Claude Code', 'November 2025', '#8b5cf6', 'Anthropic\'s agentic CLI. Autonomous coding with human oversight—the tool I envisioned with AICodeBot, now production-ready.'); },
-                      leave() { hideMilestoneTooltip(); }
-                    },
-                    aiCodingConfigDot: {
-                      type: 'point',
-                      xValue: milestones.aiCodingConfig,
-                      yValue: cumulativeData[milestones.aiCodingConfig],
-                      backgroundColor: '#ec4899',
-                      borderColor: '#fff',
-                      borderWidth: 3,
-                      radius: 10,
-                      hitRadius: 15,
-                      enter(ctx, event) { showMilestoneTooltip(event, 'ai-coding-config', 'December 2025', '#ec4899', 'My toolkit for AI-assisted development. 24 specialized agents, 18 workflow commands, 33 coding standards—the most comprehensive Claude Code plugin ecosystem.'); },
-                      leave() { hideMilestoneTooltip(); }
-                    }
-                  }
-                }
+                  annotations: isMobile
+                    ? {}
+                    : {
+                        // Vertical lines for milestones
+                        aiCodeBotLine: {
+                          type: "line",
+                          xMin: milestones.aiCodeBot,
+                          xMax: milestones.aiCodeBot,
+                          borderColor: "rgba(245, 158, 11, 0.4)",
+                          borderWidth: 2,
+                          borderDash: [4, 4],
+                        },
+                        cursorLine: {
+                          type: "line",
+                          xMin: milestones.cursor,
+                          xMax: milestones.cursor,
+                          borderColor: "rgba(16, 185, 129, 0.4)",
+                          borderWidth: 2,
+                          borderDash: [4, 4],
+                        },
+                        claudeCodeLine: {
+                          type: "line",
+                          xMin: milestones.claudeCode,
+                          xMax: milestones.claudeCode,
+                          borderColor: "rgba(139, 92, 246, 0.4)",
+                          borderWidth: 2,
+                          borderDash: [4, 4],
+                        },
+                        aiCodingConfigLine: {
+                          type: "line",
+                          xMin: milestones.aiCodingConfig,
+                          xMax: milestones.aiCodingConfig,
+                          borderColor: "rgba(236, 72, 153, 0.4)",
+                          borderWidth: 2,
+                          borderDash: [4, 4],
+                        },
+                        // Milestone dot markers with hover tooltips
+                        aiCodeBotDot: {
+                          type: "point",
+                          xValue: milestones.aiCodeBot,
+                          yValue: cumulativeData[milestones.aiCodeBot],
+                          backgroundColor: "#f59e0b",
+                          borderColor: "#fff",
+                          borderWidth: 3,
+                          radius: 10,
+                          hitRadius: 15,
+                          enter(ctx, event) {
+                            showMilestoneTooltip(
+                              event,
+                              "AICodeBot",
+                              "July 2023",
+                              "#f59e0b",
+                              "My first AI coding assistant. Built terminal-based commit generation, code review, and agentic sidekick—18 months before Anthropic launched Claude Code."
+                            );
+                          },
+                          leave() {
+                            hideMilestoneTooltip();
+                          },
+                        },
+                        cursorDot: {
+                          type: "point",
+                          xValue: milestones.cursor,
+                          yValue: cumulativeData[milestones.cursor],
+                          backgroundColor: "#10b981",
+                          borderColor: "#fff",
+                          borderWidth: 3,
+                          radius: 10,
+                          hitRadius: 15,
+                          enter(ctx, event) {
+                            showMilestoneTooltip(
+                              event,
+                              "Cursor",
+                              "January 2025",
+                              "#10b981",
+                              "AI-first IDE adoption. Inline AI assistance transformed my workflow—10x productivity boost on complex refactoring and new features."
+                            );
+                          },
+                          leave() {
+                            hideMilestoneTooltip();
+                          },
+                        },
+                        claudeCodeDot: {
+                          type: "point",
+                          xValue: milestones.claudeCode,
+                          yValue: cumulativeData[milestones.claudeCode],
+                          backgroundColor: "#8b5cf6",
+                          borderColor: "#fff",
+                          borderWidth: 3,
+                          radius: 10,
+                          hitRadius: 15,
+                          enter(ctx, event) {
+                            showMilestoneTooltip(
+                              event,
+                              "Claude Code",
+                              "November 2025",
+                              "#8b5cf6",
+                              "Anthropic's agentic CLI. Autonomous coding with human oversight—the tool I envisioned with AICodeBot, now production-ready."
+                            );
+                          },
+                          leave() {
+                            hideMilestoneTooltip();
+                          },
+                        },
+                        aiCodingConfigDot: {
+                          type: "point",
+                          xValue: milestones.aiCodingConfig,
+                          yValue: cumulativeData[milestones.aiCodingConfig],
+                          backgroundColor: "#ec4899",
+                          borderColor: "#fff",
+                          borderWidth: 3,
+                          radius: 10,
+                          hitRadius: 15,
+                          enter(ctx, event) {
+                            showMilestoneTooltip(
+                              event,
+                              "ai-coding-config",
+                              "December 2025",
+                              "#ec4899",
+                              "My toolkit for AI-assisted development. 24 specialized agents, 18 workflow commands, 33 coding standards—the most comprehensive Claude Code plugin ecosystem."
+                            );
+                          },
+                          leave() {
+                            hideMilestoneTooltip();
+                          },
+                        },
+                      },
+                },
               },
               scales: {
                 x: {
                   grid: { display: false },
                   ticks: {
-                    color: '#44403c',
-                    maxTicksLimit: 12
-                  }
+                    color: "#44403c",
+                    maxTicksLimit: 12,
+                  },
                 },
                 y: {
-                  grid: { color: 'rgba(68, 64, 60, 0.1)' },
+                  grid: { color: "rgba(68, 64, 60, 0.1)" },
                   ticks: {
-                    color: '#44403c',
-                    callback: v => (v/1000).toFixed(0) + 'K'
+                    color: "#44403c",
+                    callback: (v) => (v / 1000).toFixed(0) + "K",
                   },
-                  beginAtZero: true
-                }
-              }
-            }
+                  beginAtZero: true,
+                },
+              },
+            },
           });
         });
     </script>
