@@ -1161,6 +1161,9 @@
                   }
                 }
               },
+              layout: {
+                padding: { top: 20, right: 25 }
+              },
               scales: {
                 x: {
                   grid: { display: false },
@@ -1175,7 +1178,8 @@
                     color: '#44403c',
                     callback: v => (v/1000).toFixed(0) + 'K'
                   },
-                  beginAtZero: true
+                  beginAtZero: true,
+                  suggestedMax: cumulativeData[cumulativeData.length - 1] * 1.1
                 }
               }
             }
