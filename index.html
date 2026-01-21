@@ -108,7 +108,10 @@
           "Startup Leadership",
           "Technology Entrepreneurship"
         ],
-        "alumniOf": "Silicon Valley",
+        "workLocation": {
+          "@type": "Place",
+          "name": "Austin, Texas"
+        },
         "worksFor": {
           "@type": "Organization",
           "name": "TechNickAI"
@@ -248,9 +251,9 @@
               >Code Forge</a
             >
             <a
-              href="#values"
+              href="/career"
               class="text-warm-charcoal hover:text-warm-blue transition-colors duration-300"
-              >Values</a
+              >Career</a
             >
             <a
               href="#connect"
@@ -325,10 +328,10 @@
             >Code Forge</a
           >
           <a
-            href="#values"
+            href="/career"
             @click="isOpen = false"
             class="block py-3 px-4 text-warm-charcoal hover:bg-warm-blue/5 hover:text-warm-blue rounded-lg transition-colors duration-200"
-            >Values</a
+            >Career</a
           >
           <a
             href="#connect"
@@ -438,27 +441,24 @@
             <div data-aos="fade-left" class="space-y-6">
               <div class="prose prose-lg text-warm-charcoal/90">
                 <p class="text-lg leading-relaxed">
-                  My path began with significant challenges—growing up with an alcoholic
-                  father and navigating learning disabilities that made traditional
-                  education difficult. These early experiences taught me resilience and
-                  the importance of finding alternative approaches to success.
+                  <strong>I learned to build differently because I had to.</strong> Learning
+                  disabilities closed traditional paths—so I found my own. That pattern of
+                  finding alternative approaches became my superpower: seeing opportunities
+                  others miss, spotting waves before they crest, shipping when others are
+                  still debating.
                 </p>
                 <p class="text-lg leading-relaxed">
-                  After discovering my passion for technology, I built a successful
-                  career in Silicon Valley, working with cutting-edge
-                  <a href="#projects" class="text-warm-blue hover:underline"
-                    >AI and machine learning technologies</a
-                  >. But something was missing—the human element that makes technology
-                  truly meaningful.
+                  This approach took me from self-taught programmer to Silicon Valley CTO.
+                  Two exits. Three times employee #1. Systems handling
+                  <strong>10 billion transactions per day</strong>. And now
+                  <a href="#projects" class="text-warm-blue hover:underline">AI</a>—where
+                  I've been building Claude Code tooling for 18 months before Anthropic
+                  launched their own.
                 </p>
                 <p class="text-lg leading-relaxed">
-                  This realization led me to develop a heart-centered approach to
-                  technology, combining analytical rigor with emotional intelligence.
-                  Today, as an <strong>Austin-based AI entrepreneur</strong>, I'm
-                  dedicated to creating
-                  <a href="#projects" class="text-warm-blue hover:underline"
-                    >AI solutions</a
-                  >
+                  Today, as an <strong>Austin-based AI entrepreneur</strong>, I combine
+                  analytical rigor with emotional intelligence to create
+                  <a href="#projects" class="text-warm-blue hover:underline">AI solutions</a>
                   that enhance human potential rather than replace it.
                 </p>
                 <p class="text-lg leading-relaxed">
@@ -468,6 +468,32 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Career CTA -->
+      <section class="py-16 bg-gradient-to-r from-warm-blue/5 via-warm-amber/5 to-warm-blue/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center" data-aos="fade-up">
+            <div class="inline-flex items-center gap-2 bg-warm-amber/10 px-4 py-2 rounded-full mb-6">
+              <span class="text-warm-amber font-semibold text-sm">25+ Years Building at the Frontier</span>
+            </div>
+            <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-warm-charcoal">
+              Web → Enterprise → Social → Crypto → AI
+            </h3>
+            <p class="text-lg text-warm-charcoal/70 mb-8 max-w-2xl mx-auto">
+              $840M exit with Krux. ChangeTip acquired by Airbnb. Three times employee #1.
+              Now shipping AI infrastructure 18 months ahead of the industry.
+            </p>
+            <a
+              href="/career"
+              class="inline-flex items-center gap-2 bg-warm-charcoal text-white px-8 py-4 rounded-full font-semibold hover:bg-warm-blue transition-all duration-300">
+              View Full Career Timeline
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -1262,7 +1288,7 @@
           </p>
           <div class="border-t border-gray-700 pt-6">
             <p class="text-gray-400 text-sm">
-              © 2025 Nick Sullivan. Built with 💙 and a commitment to conscious
+              © 2026 Nick Sullivan. Built with 💙 and a commitment to conscious
               technology.
             </p>
           </div>

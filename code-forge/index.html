@@ -208,11 +208,6 @@
               About
             </a>
             <a
-              href="/#philosophy"
-              class="text-warm-charcoal hover:text-warm-blue transition-colors duration-300">
-              Philosophy
-            </a>
-            <a
               href="/#projects"
               class="text-warm-charcoal hover:text-warm-blue transition-colors duration-300">
               Projects
@@ -223,9 +218,9 @@
               Code Forge
             </a>
             <a
-              href="/#values"
+              href="/career"
               class="text-warm-charcoal hover:text-warm-blue transition-colors duration-300">
-              Values
+              Career
             </a>
             <a
               href="/#connect"
@@ -282,12 +277,6 @@
             About
           </a>
           <a
-            href="/#philosophy"
-            @click="isOpen = false"
-            class="block py-3 px-4 text-warm-charcoal hover:bg-warm-blue/5 hover:text-warm-blue rounded-lg transition-colors duration-200">
-            Philosophy
-          </a>
-          <a
             href="/#projects"
             @click="isOpen = false"
             class="block py-3 px-4 text-warm-charcoal hover:bg-warm-blue/5 hover:text-warm-blue rounded-lg transition-colors duration-200">
@@ -300,10 +289,10 @@
             Code Forge
           </a>
           <a
-            href="/#values"
+            href="/career"
             @click="isOpen = false"
             class="block py-3 px-4 text-warm-charcoal hover:bg-warm-blue/5 hover:text-warm-blue rounded-lg transition-colors duration-200">
-            Values
+            Career
           </a>
           <a
             href="/#connect"
@@ -327,12 +316,35 @@
               class="text-xl lg:text-2xl text-warm-charcoal/80 mb-6 max-w-4xl mx-auto leading-relaxed font-light">
               Where ideas are tempered with love and shaped into tools that serve
             </p>
-            <p class="text-lg text-warm-charcoal/70 max-w-3xl mx-auto mb-12">
+            <p class="text-lg text-warm-charcoal/70 max-w-3xl mx-auto mb-8">
               Open source projects built at the intersection of AI, developer
               experience, and conscious technology. From production MCP gateways to
               heart-centered prompts, these tools emerge from a commitment to building
               technology that enhances human potential.
             </p>
+            <p class="text-sm text-warm-charcoal/50 mb-8">
+              The technical portfolio behind <a href="/career" class="text-warm-blue hover:underline">25+ years shipping code</a>.
+            </p>
+
+            <!-- Stats from GitHub -->
+            <div class="flex justify-center gap-8 mb-12" x-data="{ commits: '17,000+', repos: '130+' }" x-init="
+              fetch('../data/stats.json')
+                .then(r => r.json())
+                .then(data => {
+                  commits = (data.commits != null) ? data.commits.toLocaleString() : '17,000+';
+                  repos = (data.repos != null) ? data.repos.toLocaleString() : '130+';
+                })
+                .catch(() => {})
+            ">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-warm-blue" x-text="commits">17,000+</div>
+                <div class="text-xs text-warm-charcoal/60">GitHub Commits</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-warm-blue" x-text="repos">130+</div>
+                <div class="text-xs text-warm-charcoal/60">Repositories</div>
+              </div>
+            </div>
 
             <!-- Filter Buttons -->
             <div class="flex flex-wrap justify-center gap-4 mb-12">
@@ -402,7 +414,7 @@
               </div>
               <div class="mb-4">
                 <h4 class="font-semibold text-sm text-warm-charcoal mb-2">
-                  Why it matters for Anthropic:
+                  Why it matters:
                 </h4>
                 <p class="text-sm text-warm-charcoal/70">
                   Demonstrates deep understanding of Claude's context efficiency needs.
@@ -535,7 +547,7 @@
               </div>
               <div class="mb-4">
                 <h4 class="font-semibold text-sm text-warm-charcoal mb-2">
-                  Why it matters for Anthropic:
+                  Why it matters:
                 </h4>
                 <p class="text-sm text-warm-charcoal/70">
                   Second MCP protocol implementation demonstrating deep understanding of
@@ -593,7 +605,7 @@
               </div>
               <div class="mb-4">
                 <h4 class="font-semibold text-sm text-warm-charcoal mb-2">
-                  Why it matters for Anthropic:
+                  Why it matters:
                 </h4>
                 <p class="text-sm text-warm-charcoal/70">
                   Built on the Claude SDK, demonstrating intimate knowledge of Claude
@@ -665,10 +677,10 @@
               </div>
               <div class="mb-4">
                 <h4 class="font-semibold text-sm text-warm-charcoal mb-2">
-                  Why it matters for Anthropic:
+                  Why it matters:
                 </h4>
                 <p class="text-sm text-warm-charcoal/70">
-                  Aligns perfectly with Anthropic's Constitutional AI approach.
+                  Aligns with Constitutional AI approaches.
                   Demonstrates deep thinking about AI alignment, safety, and how
                   language shapes AI behavior. Philosophy-to-implementation path.
                 </p>
@@ -740,10 +752,10 @@
               </div>
               <div class="mb-4">
                 <h4 class="font-semibold text-sm text-warm-charcoal mb-2">
-                  Why it matters for Anthropic:
+                  Why it matters:
                 </h4>
                 <p class="text-sm text-warm-charcoal/70">
-                  The most sophisticated Claude Code plugin author outside Anthropic.
+                  One of the most comprehensive Claude Code plugin ecosystems available.
                   304 commits demonstrating deep understanding of how developers want to
                   work with AI assistants. Plugin architecture shows extensibility
                   thinking valuable for platform development.
@@ -973,7 +985,7 @@
           </p>
           <div class="border-t border-gray-700 pt-6">
             <p class="text-gray-400 text-sm">
-              © 2025 Nick Sullivan. Built with 💙 and a commitment to tools that serve.
+              © 2026 Nick Sullivan. Built with 💙 and a commitment to tools that serve.
             </p>
           </div>
         </div>
