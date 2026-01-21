@@ -331,8 +331,8 @@
               fetch('../data/stats.json')
                 .then(r => r.json())
                 .then(data => {
-                  commits = data.commits ? data.commits.toLocaleString() : '17,000+';
-                  repos = data.repos ? data.repos.toLocaleString() : '130+';
+                  commits = (data.commits != null) ? data.commits.toLocaleString() : '17,000+';
+                  repos = (data.repos != null) ? data.repos.toLocaleString() : '130+';
                 })
                 .catch(() => {})
             ">

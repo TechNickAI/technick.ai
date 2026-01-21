@@ -84,8 +84,12 @@ def main():
     # Load existing data
     existing = {}
     if OUTPUT_FILE.exists():
-        with open(OUTPUT_FILE) as f:
-            existing = json.load(f)
+        try:
+            with open(OUTPUT_FILE) as f:
+                existing = json.load(f)
+        except json.JSONDecodeError:
+            print("Warning: Corrupted JSON file, starting fresh")
+            existing = {}
 
     # Get total commits (preserve existing if rate limited)
     total_commits = 0
@@ -121,13 +125,15 @@ def main():
     now = datetime.now()
     rate_limited = False
 
+    current_month_key = f"{now.year}-{now.month:02d}"
+
     for year in range(2011, now.year + 1):
         max_month = 12 if year < now.year else now.month
         for month in range(1, max_month + 1):
             key = f"{year}-{month:02d}"
 
-            # Skip if we already have this month
-            if key in by_month:
+            # Skip if we already have this month (but always update current month)
+            if key in by_month and key != current_month_key:
                 continue
 
             if rate_limited:
