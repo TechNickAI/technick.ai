@@ -333,7 +333,7 @@
           </div>
           <div id="chartContainer" class="bg-warm-cream rounded-2xl p-6 border border-warm-amber/20 relative" data-aos="fade-up">
             <!-- Loading state -->
-            <div id="chartLoader" class="flex items-center justify-center h-[200px]">
+            <div id="chartLoader" class="flex items-center justify-center h-[300px]">
               <div class="text-warm-charcoal/50 text-center">
                 <svg class="animate-spin h-8 w-8 mx-auto mb-2" viewBox="0 0 24 24" fill="none">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -342,7 +342,7 @@
                 <p class="text-sm">Loading commit data...</p>
               </div>
             </div>
-            <canvas id="commitsChart" height="200" class="hidden" role="img" aria-label="Line chart showing cumulative GitHub commits from 2011 to present, with milestone annotations for AICodeBot, Cursor, Claude Code, and ai-coding-config"></canvas>
+            <canvas id="commitsChart" height="300" class="hidden" role="img" aria-label="Line chart showing cumulative GitHub commits from 2011 to present, with milestone annotations for AICodeBot, Cursor, Claude Code, and ai-coding-config"></canvas>
             <!-- Custom milestone tooltip -->
             <div id="milestoneTooltip" class="absolute hidden bg-white rounded-lg shadow-xl border border-gray-200 p-4 max-w-xs z-50 pointer-events-none transition-opacity duration-200">
               <div class="flex items-center gap-2 mb-2">
@@ -977,7 +977,7 @@
           console.error('Failed to load stats:', err);
           // Show error state (static content, no user input)
           const loader = document.getElementById('chartLoader');
-          loader.className = 'flex items-center justify-center h-[200px] text-center';
+          loader.className = 'flex items-center justify-center h-[300px] text-center';
           loader.textContent = 'Unable to load commit data. Please refresh to try again.';
           return null;
         })
