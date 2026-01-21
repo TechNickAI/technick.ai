@@ -331,7 +331,7 @@
             <h2 class="text-2xl font-bold text-warm-charcoal">GitHub Commits (2011–Present)</h2>
             <p class="text-warm-charcoal/60 text-sm">Cumulative commits across all repositories</p>
           </div>
-          <div id="chartContainer" class="bg-warm-cream rounded-2xl p-6 border border-warm-amber/20" data-aos="fade-up">
+          <div id="chartContainer" class="bg-warm-cream rounded-2xl p-6 border border-warm-amber/20 relative" data-aos="fade-up">
             <!-- Loading state -->
             <div id="chartLoader" class="flex items-center justify-center h-[200px]">
               <div class="text-warm-charcoal/50 text-center">
@@ -343,11 +343,40 @@
               </div>
             </div>
             <canvas id="commitsChart" height="200" class="hidden" role="img" aria-label="Line chart showing cumulative GitHub commits from 2011 to present, with milestone annotations for AICodeBot, Cursor, Claude Code, and ai-coding-config"></canvas>
+            <!-- Custom milestone tooltip -->
+            <div id="milestoneTooltip" class="absolute hidden bg-white rounded-lg shadow-xl border border-gray-200 p-4 max-w-xs z-50 pointer-events-none transition-opacity duration-200">
+              <div class="flex items-center gap-2 mb-2">
+                <span id="tooltipDot" class="w-3 h-3 rounded-full"></span>
+                <span id="tooltipTitle" class="font-bold text-warm-charcoal"></span>
+              </div>
+              <p id="tooltipDate" class="text-sm text-warm-charcoal/60 mb-2"></p>
+              <p id="tooltipDesc" class="text-sm text-warm-charcoal/80"></p>
+            </div>
             <!-- Screen reader fallback -->
             <div class="sr-only" id="chartA11y">Total commits: 17,715 across 130 repositories. Key milestones: AICodeBot (July 2023), Cursor (January 2025), Claude Code (November 2025), ai-coding-config (December 2025).</div>
           </div>
+          <!-- Milestone Legend -->
+          <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4 text-xs" data-aos="fade-up">
+            <div class="flex items-center gap-2 group cursor-help" title="Jul 2023: My first AI coding assistant - automated code review & generation">
+              <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+              <span class="text-warm-charcoal/70 group-hover:text-amber-600">AICodeBot</span>
+            </div>
+            <div class="flex items-center gap-2 group cursor-help" title="Jan 2025: AI-first IDE - 10x productivity boost">
+              <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+              <span class="text-warm-charcoal/70 group-hover:text-emerald-600">Cursor</span>
+            </div>
+            <div class="flex items-center gap-2 group cursor-help" title="Nov 2025: Anthropic's agentic CLI - autonomous coding">
+              <span class="w-3 h-3 rounded-full bg-violet-500"></span>
+              <span class="text-warm-charcoal/70 group-hover:text-violet-600">Claude Code</span>
+            </div>
+            <div class="flex items-center gap-2 group cursor-help" title="Dec 2025: My toolkit - skills, agents & workflows">
+              <span class="w-3 h-3 rounded-full bg-pink-500"></span>
+              <span class="text-warm-charcoal/70 group-hover:text-pink-600">ai-coding-config</span>
+            </div>
+          </div>
           <p class="text-center text-warm-charcoal/50 text-xs mt-4" data-aos="fade-up">
             My coding career began in 1998. This chart shows GitHub activity only—pre-GitHub work not included.
+            <span id="lastUpdated" class="block mt-1"></span>
           </p>
         </div>
       </section>
@@ -392,22 +421,46 @@
                 </div>
               </div>
 
+              <!-- 2025 - Luminous -->
+              <div class="relative" data-aos="fade-up" data-aos-delay="150">
+                <div class="timeline-dot"></div>
+                <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="text-warm-blue font-bold text-lg">2025</span>
+                    <span class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium">AI Trading</span>
+                  </div>
+                  <h3 class="text-xl font-bold mb-2">Luminous Intelligence - Founder & CEO</h3>
+                  <p class="text-warm-charcoal/70 mb-3">
+                    <strong>The insight:</strong> What if trading systems weren't just algorithms, but living organisms?
+                    AI agents that discover opportunities across thousands of data sources, execute with emotion-free discipline,
+                    and evolve by learning from every trade.
+                  </p>
+                  <p class="text-warm-charcoal/70">
+                    Built infrastructure ready for GPT-5 from day one. Self-improving engines where agents
+                    rewrite their own strategies. 24/7 market monitoring at scale.
+                  </p>
+                </div>
+              </div>
+
               <!-- June 2023 - AICodeBot -->
               <div class="relative" data-aos="fade-up" data-aos-delay="200">
                 <div class="timeline-dot"></div>
                 <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
                   <div class="flex items-center gap-3 mb-2">
-                    <span class="text-warm-blue font-bold text-lg">June 2023</span>
+                    <span class="text-warm-blue font-bold text-lg">2023</span>
                     <span class="bg-warm-amber/10 text-warm-amber px-3 py-1 rounded-full text-sm font-medium">18 months before Claude Code</span>
                   </div>
                   <h3 class="text-xl font-bold mb-2">AICodeBot - Creator</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> LLMs were going to change how we write code. I built a terminal-based
-                    AI coding assistant—commit generation, code review, agentic sidekick—before most people took AI coding seriously.
+                    <strong>The insight:</strong> January 2023—ChatGPT launches and I see the same thing I saw in
+                    the Satoshi whitepaper. Another career pivot. LLMs were going to change how we write code.
                   </p>
-                  <p class="text-warm-charcoal/70">
-                    Anthropic launched Claude Code 18 months later. I was already there.
-                    This is where the journey to Carmenta began.
+                  <p class="text-warm-charcoal/70 mb-3">
+                    Built a terminal-based AI coding assistant—commit generation, code review, agentic sidekick—before
+                    most people took AI coding seriously. Anthropic launched Claude Code 18 months later. I was already there.
+                  </p>
+                  <p class="text-sm text-warm-charcoal/60">
+                    Same pattern: spot the wave, pivot hard, build the infrastructure.
                   </p>
                 </div>
               </div>
@@ -431,27 +484,6 @@
                     <li><strong>claude_telemetry:</strong> Production observability for headless Claude agents. Works with Logfire, Sentry, Datadog.</li>
                     <li><strong>machina:</strong> MCP gateway for Mac—iMessage, Calendar, Reminders, Contacts.</li>
                   </ul>
-                </div>
-              </div>
-
-              <!-- 2025 - Luminous -->
-              <div class="relative" data-aos="fade-up" data-aos-delay="300">
-                <div class="timeline-dot"></div>
-                <div class="bg-warm-cream p-6 rounded-2xl border border-warm-amber/20">
-                  <div class="flex items-center gap-3 mb-2">
-                    <span class="text-warm-blue font-bold text-lg">2025</span>
-                    <span class="bg-warm-blue/10 text-warm-blue px-3 py-1 rounded-full text-sm font-medium">AI Trading</span>
-                  </div>
-                  <h3 class="text-xl font-bold mb-2">Luminous Intelligence - Founder & CEO</h3>
-                  <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> What if trading systems weren't just algorithms, but living organisms?
-                    AI agents that discover opportunities across thousands of data sources, execute with emotion-free discipline,
-                    and evolve by learning from every trade.
-                  </p>
-                  <p class="text-warm-charcoal/70">
-                    Built infrastructure ready for GPT-5 from day one. Self-improving engines where agents
-                    rewrite their own strategies. 24/7 market monitoring at scale.
-                  </p>
                 </div>
               </div>
 
@@ -505,15 +537,16 @@
                   </div>
                   <h3 class="text-xl font-bold mb-2">ChangeTip - Founder & CEO</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> "A Love Button for the Internet." What if you could tip anyone,
-                    anywhere, instantly? Bitcoin micropayments made social and frictionless.
+                    <strong>The insight:</strong> Read the Satoshi Nakamoto whitepaper and all the lightbulbs went off—this
+                    technology was going to change the world. Pivoted my career to Bitcoin and built three companies in the space.
                   </p>
                   <p class="text-warm-charcoal/70 mb-3">
+                    ChangeTip: "A Love Button for the Internet." Bitcoin micropayments made social and frictionless.
                     Called "Top 25 Mind in Bitcoin" (2015). Acquired by Airbnb in 2016.
-                    Joined Airbnb Payments Engineering post-acquisition.
                   </p>
                   <p class="text-sm text-warm-charcoal/60">
                     Also: First Bitcoin syndicate on AngelList with Gil Penchina (2014-2015).
+                    HeartRithm crypto fund (2020). Three Bitcoin companies from one whitepaper moment.
                   </p>
                 </div>
               </div>
@@ -913,6 +946,30 @@
         once: true,
       });
 
+      // Milestone tooltip functions
+      function showMilestoneTooltip(event, title, date, color, desc) {
+        const tooltip = document.getElementById('milestoneTooltip');
+        const container = document.getElementById('chartContainer');
+        const rect = container.getBoundingClientRect();
+
+        document.getElementById('tooltipDot').style.backgroundColor = color;
+        document.getElementById('tooltipTitle').textContent = title;
+        document.getElementById('tooltipDate').textContent = date;
+        document.getElementById('tooltipDesc').textContent = desc;
+
+        tooltip.classList.remove('hidden');
+
+        // Position tooltip near the mouse but within container
+        const x = event.x - rect.left;
+        const y = event.y - rect.top;
+        tooltip.style.left = Math.min(x + 15, rect.width - 280) + 'px';
+        tooltip.style.top = Math.max(y - 80, 10) + 'px';
+      }
+
+      function hideMilestoneTooltip() {
+        document.getElementById('milestoneTooltip').classList.add('hidden');
+      }
+
       // Commits chart - monthly data with linear timeline
       fetch('../data/stats.json')
         .then(r => r.json())
@@ -926,6 +983,12 @@
         })
         .then(data => {
           if (!data) return; // Error occurred
+
+          // Display last updated date
+          if (data.updated) {
+            const updatedEl = document.getElementById('lastUpdated');
+            updatedEl.textContent = 'Data last updated: ' + data.updated;
+          }
 
           const labels = [];
           const values = [];
@@ -1001,82 +1064,99 @@
                 legend: { display: false },
                 tooltip: {
                   callbacks: {
+                    title: ctx => {
+                      const idx = ctx[0].dataIndex;
+                      const year = 2011 + Math.floor(idx / 12);
+                      const month = (idx % 12) + 1;
+                      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                      return monthNames[month - 1] + ' ' + year;
+                    },
                     label: ctx => ctx.parsed.y.toLocaleString() + ' total commits'
                   }
                 },
                 annotation: {
                   annotations: isMobile ? {} : {
-                    aiCodeBot: {
+                    // Vertical lines for milestones
+                    aiCodeBotLine: {
                       type: 'line',
                       xMin: milestones.aiCodeBot,
                       xMax: milestones.aiCodeBot,
-                      borderColor: '#f59e0b',
+                      borderColor: 'rgba(245, 158, 11, 0.4)',
                       borderWidth: 2,
-                      borderDash: [5, 5],
-                      label: {
-                        display: true,
-                        content: 'AICodeBot',
-                        position: 'start',
-                        backgroundColor: '#f59e0b',
-                        color: '#fff',
-                        font: { size: 9, weight: 'bold' },
-                        padding: 3,
-                        rotation: -90
-                      }
+                      borderDash: [4, 4]
                     },
-                    cursor: {
+                    cursorLine: {
                       type: 'line',
                       xMin: milestones.cursor,
                       xMax: milestones.cursor,
-                      borderColor: '#10b981',
+                      borderColor: 'rgba(16, 185, 129, 0.4)',
                       borderWidth: 2,
-                      borderDash: [5, 5],
-                      label: {
-                        display: true,
-                        content: 'Cursor',
-                        position: 'start',
-                        backgroundColor: '#10b981',
-                        color: '#fff',
-                        font: { size: 9, weight: 'bold' },
-                        padding: 3,
-                        rotation: -90
-                      }
+                      borderDash: [4, 4]
                     },
-                    claudeCode: {
+                    claudeCodeLine: {
                       type: 'line',
                       xMin: milestones.claudeCode,
                       xMax: milestones.claudeCode,
-                      borderColor: '#8b5cf6',
+                      borderColor: 'rgba(139, 92, 246, 0.4)',
                       borderWidth: 2,
-                      borderDash: [5, 5],
-                      label: {
-                        display: true,
-                        content: 'Claude Code',
-                        position: 'start',
-                        backgroundColor: '#8b5cf6',
-                        color: '#fff',
-                        font: { size: 9, weight: 'bold' },
-                        padding: 3,
-                        rotation: -90
-                      }
+                      borderDash: [4, 4]
                     },
-                    aiCodingConfig: {
+                    aiCodingConfigLine: {
                       type: 'line',
                       xMin: milestones.aiCodingConfig,
                       xMax: milestones.aiCodingConfig,
-                      borderColor: '#ec4899',
+                      borderColor: 'rgba(236, 72, 153, 0.4)',
                       borderWidth: 2,
-                      borderDash: [5, 5],
-                      label: {
-                        display: true,
-                        content: 'ai-coding-config',
-                        position: 'start',
-                        backgroundColor: '#ec4899',
-                        color: '#fff',
-                        font: { size: 9, weight: 'bold' },
-                        padding: 3,
-                        rotation: -90
-                      }
+                      borderDash: [4, 4]
+                    },
+                    // Milestone dot markers with hover tooltips
+                    aiCodeBotDot: {
+                      type: 'point',
+                      xValue: milestones.aiCodeBot,
+                      yValue: cumulativeData[milestones.aiCodeBot],
+                      backgroundColor: '#f59e0b',
+                      borderColor: '#fff',
+                      borderWidth: 3,
+                      radius: 10,
+                      hitRadius: 15,
+                      enter(ctx, event) { showMilestoneTooltip(event, 'AICodeBot', 'July 2023', '#f59e0b', 'My first AI coding assistant. Built terminal-based commit generation, code review, and agentic sidekick—18 months before Anthropic launched Claude Code.'); },
+                      leave() { hideMilestoneTooltip(); }
+                    },
+                    cursorDot: {
+                      type: 'point',
+                      xValue: milestones.cursor,
+                      yValue: cumulativeData[milestones.cursor],
+                      backgroundColor: '#10b981',
+                      borderColor: '#fff',
+                      borderWidth: 3,
+                      radius: 10,
+                      hitRadius: 15,
+                      enter(ctx, event) { showMilestoneTooltip(event, 'Cursor', 'January 2025', '#10b981', 'AI-first IDE adoption. Inline AI assistance transformed my workflow—10x productivity boost on complex refactoring and new features.'); },
+                      leave() { hideMilestoneTooltip(); }
+                    },
+                    claudeCodeDot: {
+                      type: 'point',
+                      xValue: milestones.claudeCode,
+                      yValue: cumulativeData[milestones.claudeCode],
+                      backgroundColor: '#8b5cf6',
+                      borderColor: '#fff',
+                      borderWidth: 3,
+                      radius: 10,
+                      hitRadius: 15,
+                      enter(ctx, event) { showMilestoneTooltip(event, 'Claude Code', 'November 2025', '#8b5cf6', 'Anthropic\'s agentic CLI. Autonomous coding with human oversight—the tool I envisioned with AICodeBot, now production-ready.'); },
+                      leave() { hideMilestoneTooltip(); }
+                    },
+                    aiCodingConfigDot: {
+                      type: 'point',
+                      xValue: milestones.aiCodingConfig,
+                      yValue: cumulativeData[milestones.aiCodingConfig],
+                      backgroundColor: '#ec4899',
+                      borderColor: '#fff',
+                      borderWidth: 3,
+                      radius: 10,
+                      hitRadius: 15,
+                      enter(ctx, event) { showMilestoneTooltip(event, 'ai-coding-config', 'December 2025', '#ec4899', 'My toolkit for AI-assisted development. 24 specialized agents, 18 workflow commands, 33 coding standards—the most comprehensive Claude Code plugin ecosystem.'); },
+                      leave() { hideMilestoneTooltip(); }
                     }
                   }
                 }
