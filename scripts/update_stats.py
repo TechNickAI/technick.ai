@@ -83,8 +83,9 @@ def main():
         with open(OUTPUT_FILE) as f:
             existing = json.load(f)
 
-    # Get total commits
+    # Get total commits (preserve existing if rate limited)
     total_commits = 0
+    rate_limited_totals = False
     for email in EMAILS:
         count = get_commit_count_by_email(email)
         if count is not None:
@@ -92,8 +93,14 @@ def main():
             total_commits += count
         else:
             print(f"  {email}: rate limited or error")
+            rate_limited_totals = True
 
-    print(f"Total commits: {total_commits}")
+    # Preserve existing total if we couldn't get new counts
+    if rate_limited_totals and total_commits == 0:
+        total_commits = existing.get("commits", 0)
+        print(f"Using cached commits: {total_commits}")
+    else:
+        print(f"Total commits: {total_commits}")
 
     # Get repo count
     repos = get_repo_count()
