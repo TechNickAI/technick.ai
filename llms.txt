@@ -1,41 +1,31 @@
 # TechNick.AI
 
-> Personal and professional site of Nick Sullivan, a heart-centered AI entrepreneur and technologist in Austin, TX. Silicon Valley CTO building ethical AI that enhances human potential.
-
-Features Nick's journey from early challenges to Silicon Valley success, the TechNickAI philosophy (heart-centered Ikigai), open source projects including MCP Hubby, claude_telemetry, heart-centered-prompts, and ai-coding-config, plus opportunities for mentorship, speaking, advisory work, and collaboration.
+> Personal and professional site of Nick Sullivan - engineering leader, 3× founding engineer, and AI infrastructure builder in Austin, TX. 50,000 hours of craft, two successful exits, now building tools that make AI development actually work.
 
 ## Site Pages
 
-- [Home](index.html): Complete profile including about, philosophy, featured creations, values, and ways to connect
-- [Code Forge](code-forge/index.html): Open source projects showcase with detailed descriptions and integrations
+- [Home](index.html): Complete profile including story, philosophy, projects, values, and ways to connect
+- [Career](career/index.html): Engineering leadership experience, team-building track record, and career opportunities
+- [Code Forge](code-forge/index.html): Open source projects showcase with production-ready AI infrastructure tools
 
 ## Open Source Projects
 
+- [Carmenta](https://carmenta.ai): Unified AI platform with memory persistence and voice
 - [MCP Hubby](https://mcphubby.ai): Production MCP gateway with 95% context reduction through progressive disclosure
 - [claude_telemetry](https://github.com/TechNickAI/claude_telemetry): Observability wrapper for Claude Code with OTEL integration
-- [heart-centered-prompts](https://github.com/technickai/heart-centered-prompts): Revolutionary AI system prompts using unity consciousness
 - [ai-coding-config](https://github.com/TechNickAI/ai-coding-config): Claude Code plugin marketplace and Cursor configuration library
-- [AICodebot](https://github.com/TechNickAI/AICodeBot): Revolutionary terminal-based AI coding assistant (retired, pre-dated modern IDE assistants)
-- [TeslaBot](https://github.com/gorillamania/teslabot): Smart automation for Tesla vehicles via Tessie API
+- [heart-centered-prompts](https://github.com/technickai/heart-centered-prompts): AI system prompts using heart-centered principles
 
-## External Resources
+## External Profiles
 
-- [HeartCentered.AI](https://heartcentered.ai/): Philosophy and approach to heart-centered technology
-- [GitHub Portfolio](https://github.com/TechNickAI): Complete open source contributions
-- [LinkedIn Profile](https://www.linkedin.com/in/nicksullivan): Professional background and connections
+- [GitHub](https://github.com/TechNickAI): Open source contributions and projects
+- [LinkedIn](https://www.linkedin.com/in/nicksullivan): Professional background
 - [Twitter/X](https://twitter.com/TechNickAI): Updates and AI insights
 - [Substack](https://technickai.substack.com/): Writing and long-form content
 
-## Project Documentation
+## Contact
 
-- [README](README.md): Project overview, tech stack, and deployment information
-- [AGENTS.md](AGENTS.md): Essential project context for AI coding assistants
-
-## Contact & Opportunities
-
-- Mentorship: `nick@technick.ai?subject=Mentorship Inquiry`
-- Speaking Engagements: `nick@technick.ai?subject=Speaking Engagement`
-- Advisory Services: `nick@technick.ai?subject=Advisory Services`
-- Collaboration: `nick@technick.ai?subject=Collaboration Opportunity`
-- Investment: `nick@technick.ai?subject=Investment Opportunity`
-- General Inquiry: `nick@technick.ai?subject=General Inquiry`
+- Career opportunities: nick@technick.ai
+- Advisory services: nick@technick.ai
+- Speaking engagements: nick@technick.ai
+- Collaboration: nick@technick.ai
