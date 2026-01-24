@@ -25,7 +25,9 @@
     <meta property="og:image" content="https://technick.ai/images/code-forge-og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Code Forge - Nick Sullivan's Open Source AI Tools" />
+    <meta
+      property="og:image:alt"
+      content="Code Forge - Nick Sullivan's Open Source AI Tools" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -38,10 +40,10 @@
     <meta
       name="twitter:description"
       content="Carmenta, MCP Hubby, claude_telemetry, ai-coding-config, and more. Production-ready infrastructure for AI development. Open source." />
+    <meta name="twitter:image" content="https://technick.ai/images/code-forge-og.png" />
     <meta
-      name="twitter:image"
-      content="https://technick.ai/images/code-forge-og.png" />
-    <meta name="twitter:image:alt" content="Code Forge - Nick Sullivan's Open Source AI Tools" />
+      name="twitter:image:alt"
+      content="Code Forge - Nick Sullivan's Open Source AI Tools" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://technick.ai/code-forge/" />
@@ -331,11 +333,17 @@
               technology that enhances human potential.
             </p>
             <p class="text-sm text-warm-charcoal/50 mb-8">
-              The technical portfolio behind <a href="/career" class="text-warm-blue hover:underline">25+ years shipping code</a>.
+              The technical portfolio behind
+              <a href="/career" class="text-warm-blue hover:underline"
+                >25+ years shipping code</a
+              >.
             </p>
 
             <!-- Stats from GitHub -->
-            <div class="flex justify-center gap-8 mb-12" x-data="{ commits: '17,000+', repos: '130+' }" x-init="
+            <div
+              class="flex justify-center gap-8 mb-12"
+              x-data="{ commits: '17,000+', repos: '130+' }"
+              x-init="
               fetch('../data/stats.json')
                 .then(r => r.json())
                 .then(data => {
@@ -345,7 +353,9 @@
                 .catch(() => {})
             ">
               <div class="text-center">
-                <div class="text-3xl font-bold text-warm-blue" x-text="commits">17,000+</div>
+                <div class="text-3xl font-bold text-warm-blue" x-text="commits">
+                  17,000+
+                </div>
                 <div class="text-xs text-warm-charcoal/60">GitHub Commits</div>
               </div>
               <div class="text-center">
@@ -574,6 +584,73 @@
               </div>
             </div>
 
+            <!-- CryptoAI -->
+            <div
+              x-show="activeFilter === 'all' || activeFilter === 'production'"
+              x-transition
+              data-aos="fade-up"
+              data-aos-delay="350"
+              class="project-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1 border border-warm-amber/10">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-2xl font-bold text-warm-charcoal mb-2">CryptoAI</h3>
+                  <span class="project-status status-production">Production</span>
+                </div>
+                <img
+                  src="../images/projects/cryptoai.png"
+                  alt="CryptoAI"
+                  class="w-12 h-12 rounded-lg" />
+              </div>
+              <p class="text-warm-charcoal/70 mb-4 leading-relaxed">
+                <strong
+                  >Automated cryptocurrency trading platform managing real capital since
+                  2017.</strong
+                >
+                Two products: Lendy (margin lending on Bitfinex) and Antevorta
+                (prediction markets on Kalshi). Zero down days in 8+ years of continuous
+                operation.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-semibold text-sm text-warm-charcoal mb-2">
+                  Technical Sophistication:
+                </h4>
+                <ul class="text-sm text-warm-charcoal/70 space-y-1">
+                  <li>
+                    • <strong>Lendy:</strong> Algorithmic deployment scoring for optimal
+                    lending rates
+                  </li>
+                  <li>
+                    • <strong>Antevorta:</strong> AI-driven prediction markets with
+                    82-95% win rates
+                  </li>
+                  <li>
+                    • Django 5.0 + Celery + Redis architecture, 50K lines of Python
+                  </li>
+                  <li>• Real-time market analysis, continuous 24/7 operation</li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <h4 class="font-semibold text-sm text-warm-charcoal mb-2">
+                  Why it matters:
+                </h4>
+                <p class="text-sm text-warm-charcoal/70">
+                  Demonstrates ability to build production systems where failures have
+                  real financial consequences. Shows algorithmic sophistication, Python
+                  systems architecture at scale, and the discipline required to operate
+                  trading infrastructure for nearly a decade.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="https://cryptoai.dev"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex-1 text-center bg-warm-blue text-white px-4 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-warm-blue/30 min-h-[48px] flex items-center justify-center">
+                  Visit CryptoAI
+                </a>
+              </div>
+            </div>
+
             <!-- claude_telemetry -->
             <div
               x-show="activeFilter === 'all' || activeFilter === 'active'"
@@ -688,9 +765,9 @@
                   Why it matters:
                 </h4>
                 <p class="text-sm text-warm-charcoal/70">
-                  Aligns with Constitutional AI approaches.
-                  Demonstrates deep thinking about AI alignment, safety, and how
-                  language shapes AI behavior. Philosophy-to-implementation path.
+                  Aligns with Constitutional AI approaches. Demonstrates deep thinking
+                  about AI alignment, safety, and how language shapes AI behavior.
+                  Philosophy-to-implementation path.
                 </p>
               </div>
               <div class="flex gap-3">
