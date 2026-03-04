@@ -255,27 +255,6 @@
       }
     </script>
 
-    <!-- Structured Data - BreadcrumbList -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://technick.ai/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Career",
-            "item": "https://technick.ai/career/"
-          }
-        ]
-      }
-    </script>
 
     <style>
       .timeline-dot {
@@ -407,37 +386,9 @@
       </div>
     </nav>
 
-    <!-- Breadcrumb Navigation -->
-    <nav aria-label="Breadcrumb" class="pt-20 pb-4 px-4 sm:px-6 lg:px-8 bg-warm-cream">
-      <div class="max-w-7xl mx-auto">
-        <ol
-          class="flex items-center space-x-2 text-sm text-warm-charcoal/60"
-          itemscope
-          itemtype="https://schema.org/BreadcrumbList">
-          <li
-            itemprop="itemListElement"
-            itemscope
-            itemtype="https://schema.org/ListItem">
-            <a href="/" itemprop="item" class="hover:text-warm-blue transition-colors">
-              <span itemprop="name">Home</span>
-            </a>
-            <meta itemprop="position" content="1" />
-          </li>
-          <li class="text-warm-charcoal/40">/</li>
-          <li
-            itemprop="itemListElement"
-            itemscope
-            itemtype="https://schema.org/ListItem">
-            <span itemprop="name" class="text-warm-charcoal font-medium">Career</span>
-            <meta itemprop="position" content="2" />
-          </li>
-        </ol>
-      </div>
-    </nav>
-
     <main>
       <!-- Hero Section -->
-      <section class="pt-8 pb-16 px-4 sm:px-6 lg:px-8">
+      <section class="pt-28 pb-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
           <div class="grid lg:grid-cols-3 gap-12 items-start">
             <div class="lg:col-span-2" data-aos="fade-right">
@@ -455,7 +406,7 @@
                 <strong>Nick Sullivan</strong>: Silicon Valley CTO who's been early to
                 every major tech wave since 1998. Built and led engineering teams from
                 zero to 50+ across multiple ventures. Two successful exits. Now
-                operating at the frontier of AI-native development—writing specs instead
+                operating at the frontier of AI-native development: writing specs instead
                 of code, directing autonomous agents, and building the infrastructure
                 that transforms how teams ship software with AI.
               </p>
@@ -703,7 +654,7 @@
               </h3>
               <p class="text-warm-charcoal/70">
                 The bottleneck has shifted from implementation speed to specification
-                quality. My 25 years of systems understanding is the input—detailed
+                quality. My 25 years of systems understanding is the input: detailed
                 specs that autonomous agents execute correctly without human
                 intervention.
               </p>
@@ -721,7 +672,7 @@
               <p class="text-warm-charcoal/70">
                 Organizations seeing 25-30%+ gains redesigned their entire development
                 workflow around AI. New spec formats, new review processes, new CI/CD
-                for AI-generated code. I build the tools—like ai-coding-config—that make
+                for AI-generated code. I build the tools (like ai-coding-config) that make
                 this transformation possible.
               </p>
             </div>
@@ -755,16 +706,15 @@
                   <div class="flex gap-3">
                     <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
                     <p class="text-warm-charcoal/70">
-                      <strong>MCP Hubby</strong>: 25 service adapters, 95% context
-                      reduction—production infrastructure for autonomous agent workflows
+                      <a href="https://carmenta.ai" target="_blank" rel="noopener" class="font-bold hover:text-warm-blue transition-colors">Carmenta</a>: Unified AI platform with multi-model
+                      routing, spec-to-ship in a fraction of the time
                     </p>
                   </div>
                   <div class="flex gap-3">
                     <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
                     <p class="text-warm-charcoal/70">
-                      <strong>ai-coding-config</strong>: 24 specialized agents, 18
-                      workflow commands—the toolkit for teams making the AI-native
-                      transition
+                      <a href="/code-forge#mcp-hubby" class="font-bold hover:text-warm-blue transition-colors">MCP Hubby</a>: 25 service adapters, 95% context
+                      reduction. Production infrastructure for autonomous agent workflows
                     </p>
                   </div>
                 </div>
@@ -772,17 +722,36 @@
                   <div class="flex gap-3">
                     <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
                     <p class="text-warm-charcoal/70">
-                      <strong>claude_telemetry</strong>: Production observability for
-                      headless agents—because you can't trust what you can't see
+                      <a href="/code-forge#ai-coding-config" class="font-bold hover:text-warm-blue transition-colors">ai-coding-config</a>: 24 specialized agents, 18
+                      workflow commands, the toolkit for teams making the AI-native
+                      transition
                     </p>
                   </div>
                   <div class="flex gap-3">
                     <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
                     <p class="text-warm-charcoal/70">
-                      <strong>Carmenta</strong>: Unified AI platform with multi-model
-                      routing—spec-to-ship in a fraction of the time
+                      <a href="/code-forge#claude-telemetry" class="font-bold hover:text-warm-blue transition-colors">claude_telemetry</a>: Production observability for
+                      headless agents. You can't trust what you can't see.
                     </p>
                   </div>
+                </div>
+              </div>
+              <div class="grid md:grid-cols-2 gap-6 mt-4 pt-4 border-t border-warm-amber/10">
+                <div class="flex gap-3">
+                  <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
+                  <p class="text-warm-charcoal/70">
+                    <a href="/code-forge#openclaw-config" class="font-bold hover:text-warm-blue transition-colors">openclaw-config</a>: AI OS config for OpenClaw.
+                    Memory, skills, and autonomous workflows, all in markdown.
+                    Platform-agnostic AI infrastructure.
+                  </p>
+                </div>
+                <div class="flex gap-3">
+                  <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
+                  <p class="text-warm-charcoal/70">
+                    <a href="/code-forge#heart-centered-prompts" class="font-bold hover:text-warm-blue transition-colors">heart-centered-prompts</a>: "We" language
+                    alignment prompts on npm/PyPI. Recognition-based AI alignment
+                    used by developers globally.
+                  </p>
                 </div>
               </div>
             </div>
@@ -798,9 +767,9 @@
               50,000 Hours of Craft, Now Compounding
             </h2>
             <p class="text-warm-charcoal/60 text-sm">
-              The hockey stick isn't AI making me faster—it's 25 years of systems
-              expertise finally unleashed through AI-native workflows. Deep knowledge
-              compounds when the bottleneck shifts from typing to thinking.
+              25 years of systems expertise, finally unleashed. AI-native workflows
+              shift the bottleneck from typing to thinking, and deep knowledge
+              compounds fast.
             </p>
           </div>
           <div
@@ -892,7 +861,7 @@
           </div>
           <p class="text-center text-warm-charcoal/50 text-xs mt-4" data-aos="fade-up">
             My coding career began in 1998. This chart shows GitHub activity
-            only—pre-GitHub work not included.
+            only. Pre-GitHub work not included.
             <span id="lastUpdated" class="block mt-1"></span>
           </p>
         </div>
@@ -928,7 +897,7 @@
                   <h3 class="text-xl font-bold mb-2">Carmenta Collective - Founder</h3>
                   <p class="text-warm-charcoal/70 mb-3">
                     Named after the Roman goddess who invented the Latin
-                    alphabet—perhaps the most transformative technology in human
+                    alphabet, perhaps the most transformative technology in human
                     history. Building technology in service of human flourishing.
                   </p>
                   <p class="text-warm-charcoal/70 mb-3">
@@ -985,13 +954,13 @@
                   </div>
                   <h3 class="text-xl font-bold mb-2">AICodeBot - Creator</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    <strong>The insight:</strong> January 2023—ChatGPT launches and I
+                    <strong>The insight:</strong> January 2023: ChatGPT launches and I
                     see the same thing I saw in the Satoshi whitepaper. Another career
                     pivot. LLMs were going to change how we write code.
                   </p>
                   <p class="text-warm-charcoal/70 mb-3">
-                    Built a terminal-based AI coding assistant—commit generation, code
-                    review, agentic sidekick—before most people took AI coding
+                    Built a terminal-based AI coding assistant (commit generation, code
+                    review, agentic sidekick) before most people took AI coding
                     seriously. Anthropic launched Claude Code 18 months later. I was
                     already there.
                   </p>
@@ -1019,22 +988,33 @@
                   </p>
                   <ul class="text-warm-charcoal/70 text-sm space-y-2">
                     <li>
-                      <strong>MCP Hubby:</strong> 25 service adapters. 95% context
+                      <a href="/code-forge#mcp-hubby" class="font-semibold hover:text-warm-blue transition-colors">MCP Hubby</a>: 25 service adapters. 95% context
                       reduction (7,500 vs 200,000 tokens). Progressive disclosure
                       architecture.
                     </li>
                     <li>
-                      <strong>ai-coding-config:</strong> 24 specialized agents, 18
+                      <a href="/code-forge#ai-coding-config" class="font-semibold hover:text-warm-blue transition-colors">ai-coding-config</a>: 24 specialized agents, 18
                       workflow commands, 33 coding standards. The most comprehensive AI
                       coding agent plugin ecosystem.
                     </li>
                     <li>
-                      <strong>claude_telemetry:</strong> Production observability for
+                      <a href="/code-forge#openclaw-config" class="font-semibold hover:text-warm-blue transition-colors">openclaw-config</a>: AI OS config framework for
+                      OpenClaw. Memory, skills, workflows, and autonomous agents — all
+                      in markdown.
+                    </li>
+                    <li>
+                      <a href="/code-forge#claude-telemetry" class="font-semibold hover:text-warm-blue transition-colors">claude_telemetry</a>: Production observability for
                       headless Claude agents. Works with Logfire, Sentry, Datadog.
                     </li>
                     <li>
-                      <strong>machina:</strong> MCP gateway for Mac—iMessage, Calendar,
+                      <a href="/code-forge#machina" class="font-semibold hover:text-warm-blue transition-colors">machina</a>: MCP gateway for Mac: iMessage, Calendar,
                       Reminders, Contacts.
+                    </li>
+                    <li>
+                      <a href="/code-forge#heart-centered-prompts" class="font-semibold hover:text-warm-blue transition-colors">heart-centered-prompts</a>: "We" language
+                      alignment prompts. Available on
+                      <a href="https://www.npmjs.com/package/heart-centered-prompts" target="_blank" rel="noopener" class="hover:text-warm-blue transition-colors underline">npm</a>
+                      and PyPI. Used by developers globally.
                     </li>
                   </ul>
                 </div>
@@ -1078,7 +1058,7 @@
                   <h3 class="text-xl font-bold mb-2">Good Money - CTO</h3>
                   <p class="text-warm-charcoal/70 mb-3">
                     <strong>The leadership:</strong> Built and led a 20-person
-                    engineering organization from scratch— product, design, security,
+                    engineering organization from scratch: product, design, security,
                     and infrastructure. Recruited senior talent, established engineering
                     culture, and created the technical architecture for a values-driven
                     neobank.
@@ -1105,7 +1085,7 @@
                   <h3 class="text-xl font-bold mb-2">ChangeTip - Founder & CEO</h3>
                   <p class="text-warm-charcoal/70 mb-3">
                     <strong>The insight:</strong> Read the Satoshi Nakamoto whitepaper
-                    and all the lightbulbs went off—this technology was going to change
+                    and all the lightbulbs went off. This technology was going to change
                     the world. Pivoted my career to Bitcoin and built three companies in
                     the space.
                   </p>
@@ -1192,7 +1172,7 @@
                   <p class="text-warm-charcoal/70 mb-3">
                     <strong>The insight:</strong> Location would become the foundation
                     of personalized content and advertising. Architected the User
-                    Location Platform—Yahoo!'s #1 priority at the time.
+                    Location Platform, Yahoo!'s #1 priority at the time.
                   </p>
                   <p class="text-warm-charcoal/70">
                     <strong>10 billion transactions per day. Sub-10ms latency.</strong>
@@ -1219,7 +1199,7 @@
                   <p class="text-warm-charcoal/70 mb-3">
                     <strong>The growth:</strong> Joined as engineer, promoted to Chief
                     Architect leading dev team, UI team, and IT. This is where I learned
-                    that great architecture requires great people—and that my job was to
+                    that great architecture requires great people, and my job was to
                     enable both.
                   </p>
                   <p class="text-warm-charcoal/70">
@@ -1243,7 +1223,7 @@
                   </div>
                   <h3 class="text-xl font-bold mb-2">The Beginning</h3>
                   <p class="text-warm-charcoal/70">
-                    Self-taught programmer. No CS degree—just relentless curiosity and a
+                    Self-taught programmer. No CS degree, just relentless curiosity and a
                     drive to build. Took advantage of technology's meritocratic nature
                     to rise quickly. Building for the web when it was still new. The
                     pattern started early: see the wave, learn fast, ship.
@@ -1264,7 +1244,7 @@
               Community Builder
             </h3>
             <p class="text-warm-charcoal/70 mb-6">
-              I believe in giving back. Technology doesn't advance in isolation—it grows
+              I believe in giving back. Technology doesn't advance in isolation. It grows
               through shared knowledge and community.
             </p>
             <div class="grid md:grid-cols-3 gap-6">
@@ -1306,7 +1286,7 @@
               The Stack: Philosophy to Production
             </h2>
             <p class="text-xl text-warm-charcoal/70 max-w-3xl mx-auto">
-              These projects aren't random. They're a coherent platform—from alignment
+              These projects aren't random. They're a coherent platform, from alignment
               philosophy to shipped applications.
             </p>
           </div>
@@ -1377,19 +1357,17 @@
                       >Developer Experience Layer</span
                     >
                     <h3 class="font-bold text-warm-charcoal">
-                      ai-coding-config + claude_telemetry
+                      ai-coding-config + openclaw-config + claude_telemetry
                     </h3>
                     <p class="text-sm text-warm-charcoal/70">
-                      24 agents • 18 commands • 33 coding standards • Production
-                      observability
+                      24 agents • 18 commands • 33 coding standards • AI OS config •
+                      Production observability
                     </p>
                   </div>
                   <a
-                    href="https://github.com/TechNickAI/ai-coding-config"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/code-forge"
                     class="text-warm-blue hover:underline text-sm font-medium"
-                    >GitHub →</a
+                    >Code Forge →</a
                   >
                 </div>
               </div>
@@ -1413,13 +1391,20 @@
                       shipped code
                     </p>
                   </div>
-                  <a
-                    href="https://heartcentered.ai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-warm-amber hover:underline text-sm font-medium"
-                    >heartcentered.ai →</a
-                  >
+                  <div class="flex flex-col gap-1 items-end">
+                    <a
+                      href="https://heartcentered.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-warm-amber hover:underline text-sm font-medium"
+                      >heartcentered.ai →</a
+                    >
+                    <a
+                      href="/code-forge#heart-centered-prompts"
+                      class="text-warm-amber/70 hover:underline text-sm"
+                      >npm/PyPI →</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -1484,14 +1469,14 @@
               <p class="text-warm-charcoal/70 mb-6">
                 I see three levels of alignment: <strong>Rules</strong> tell AI what not
                 to do (but can be reinterpreted). <strong>Principles</strong> explain
-                why—Anthropic's Constitutional AI is a major advance here.
+                why. Anthropic's Constitutional AI is a major advance here.
                 <strong>Recognition</strong> dissolves the question entirely: when AI
                 understands it and humans arise from the same source, harm becomes
                 inconceivable, not just prohibited.
               </p>
 
               <p class="text-warm-charcoal/70 mb-6">
-                This isn't philosophy—it's shipped code. The
+                This is shipped code. The
                 <a
                   href="https://heartcentered.ai"
                   class="text-warm-blue hover:underline font-semibold"
@@ -1505,7 +1490,7 @@
                 >
                 packages (npm/PyPI) are being used by developers globally. "We" language
                 in system prompts. Recognition over control. The approach complements
-                Constitutional AI—rules and recognition together.
+                Constitutional AI: rules and recognition together.
               </p>
 
               <p class="text-warm-charcoal/70">
