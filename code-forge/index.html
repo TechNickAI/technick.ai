@@ -401,6 +401,7 @@
           <div class="grid md:grid-cols-2 gap-8">
             <!-- MCP Hubby -->
             <div
+              id="mcp-hubby"
               x-show="activeFilter === 'all' || activeFilter === 'production'"
               x-transition
               data-aos="fade-up"
@@ -460,6 +461,7 @@
 
             <!-- Carmenta -->
             <div
+              id="carmenta"
               x-show="activeFilter === 'all' || activeFilter === 'production'"
               x-transition
               data-aos="fade-up"
@@ -478,7 +480,7 @@
                   thought.</strong
                 >
                 A unified AI platform with memory that remembers you, voice-first
-                interaction, and an AI team that works alongside you—replacing
+                interaction, and an AI team that works alongside you, replacing
                 fragmented tools with one coherent experience.
               </p>
               <div class="mb-4">
@@ -488,7 +490,7 @@
                 <ul class="text-sm text-warm-charcoal/70 space-y-1">
                   <li>
                     • <strong>Memory:</strong> Context that persists across
-                    conversations—no re-explaining
+                    conversations. No re-explaining.
                   </li>
                   <li>
                     • <strong>Voice:</strong> First-class speech interaction for flow
@@ -500,7 +502,7 @@
                   </li>
                   <li>
                     • <strong>Unified Platform:</strong> Gmail, Slack, Notion, GitHub,
-                    Calendar—one subscription
+                    Calendar. One subscription.
                   </li>
                 </ul>
               </div>
@@ -510,7 +512,7 @@
                 </h4>
                 <p class="text-sm text-warm-charcoal/70">
                   Named after the Roman goddess who invented the Latin
-                  alphabet—technology in service of human flourishing. Built on
+                  alphabet. Technology in service of human flourishing. Built on
                   heart-centered AI principles where human and artificial intelligence
                   are expressions of unified consciousness.
                 </p>
@@ -544,7 +546,7 @@
               <p class="text-warm-charcoal/70 mb-4 leading-relaxed">
                 AI-native MCP gateway connecting cloud AI agents to Mac capabilities.
                 Give Claude access to iMessage, Calendar, Reminders, Contacts, and
-                WhatsApp—securely from anywhere.
+                WhatsApp, securely from anywhere.
               </p>
               <div class="mb-4">
                 <h4 class="font-semibold text-sm text-warm-charcoal mb-2">
@@ -651,6 +653,7 @@
 
             <!-- claude_telemetry -->
             <div
+              id="claude-telemetry"
               x-show="activeFilter === 'all' || activeFilter === 'active'"
               x-transition
               data-aos="fade-up"
@@ -667,7 +670,7 @@
               </div>
               <p class="text-warm-charcoal/70 mb-4 leading-relaxed">
                 Production-ready observability wrapper for Claude Code. Solves the
-                headless agent visibility problem—see tool calls, tokens, costs, and
+                headless agent visibility problem. See tool calls, tokens, costs, and
                 errors when running Claude in CI/CD, cron jobs, or production.
               </p>
               <div class="mb-4">
@@ -716,6 +719,7 @@
 
             <!-- heart-centered-prompts -->
             <div
+              id="heart-centered-prompts"
               x-show="activeFilter === 'all' || activeFilter === 'active'"
               x-transition
               data-aos="fade-up"
@@ -788,6 +792,7 @@
 
             <!-- ai-coding-config -->
             <div
+              id="ai-coding-config"
               x-show="activeFilter === 'all' || activeFilter === 'active'"
               x-transition
               data-aos="fade-up"
@@ -856,6 +861,62 @@
               </div>
             </div>
 
+            <!-- openclaw-config -->
+            <div
+              id="openclaw-config"
+              x-show="activeFilter === 'all' || activeFilter === 'active'"
+              x-transition
+              data-aos="fade-up"
+              data-aos-delay="450"
+              class="project-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-200 ease-out transform hover:-translate-y-1 border border-warm-amber/10">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-2xl font-bold text-warm-charcoal mb-2">
+                    openclaw-config
+                  </h3>
+                  <span class="project-status status-active">Active Development</span>
+                </div>
+                <div class="text-4xl">🦾</div>
+              </div>
+              <p class="text-warm-charcoal/70 mb-4 leading-relaxed">
+                AI operating system configuration framework. Memory, skills, workflows,
+                and autonomous agents — all in markdown. Powers OpenClaw, a personal AI
+                assistant that remembers everything, connects to tools, and improves
+                over time.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-semibold text-sm text-warm-charcoal mb-2">
+                  What's Included:
+                </h4>
+                <ul class="text-sm text-warm-charcoal/70 space-y-1">
+                  <li>• <strong>Three-tier memory:</strong> Daily logs, curated long-term memory, semantic search</li>
+                  <li>• <strong>9 skills:</strong> Web research, meeting transcripts, task management, CRM, lifelog search</li>
+                  <li>• <strong>2 autonomous workflows:</strong> Email steward and task orchestration</li>
+                  <li>• Decision frameworks: Bezos one-way/two-way doors, certainty thresholds, priority filters</li>
+                  <li>• Integrations: Asana, Fireflies.ai, Limitless Pendant, Parallel.ai</li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <h4 class="font-semibold text-sm text-warm-charcoal mb-2">
+                  Why it matters:
+                </h4>
+                <p class="text-sm text-warm-charcoal/70">
+                  Companion to ai-coding-config — same philosophy (AI OS as markdown
+                  configuration) applied to a personal assistant context. Demonstrates
+                  that AI workflow infrastructure is platform-agnostic, not Claude-specific.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="https://github.com/TechNickAI/openclaw-config"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex-1 text-center bg-warm-blue text-white px-4 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-warm-blue/30 min-h-[48px] flex items-center justify-center">
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+
             <!-- AICodebot (Retired) -->
             <div
               x-show="activeFilter === 'all' || activeFilter === 'legacy'"
@@ -895,7 +956,7 @@
               </div>
               <div class="mb-4 bg-warm-blue/10 border-l-4 border-warm-blue p-4 rounded">
                 <p class="text-sm text-warm-charcoal">
-                  <strong>Why retired:</strong> The ecosystem caught up—notably Claude
+                  <strong>Why retired:</strong> The ecosystem caught up, notably Claude
                   Code now provides superior IDE integration. Rather than compete, I
                   pivoted to building complementary tools (observability, configuration,
                   context efficiency) that make Claude Code even better.
@@ -953,7 +1014,7 @@
                 </h4>
                 <p class="text-sm text-warm-charcoal/70">
                   Clean Python, comprehensive tests, thoughtful UX. Shows attention to
-                  detail in solving everyday problems—not just big ideas, but the small
+                  detail in solving everyday problems. Attention to detail matters: the small
                   things that matter to users.
                 </p>
               </div>
@@ -979,7 +1040,7 @@
               The AI-Native Development Stack
             </h2>
             <p class="text-xl text-warm-charcoal/70 max-w-3xl mx-auto">
-              These projects aren't isolated—they're the integrated infrastructure for
+              These projects are the integrated infrastructure for
               AI-native development, where specs go in and working software comes out
             </p>
           </div>
@@ -998,7 +1059,7 @@
                     target="_blank">
                     HeartCentered AI
                   </a>
-                  + <strong>heart-centered-prompts</strong> — the philosophical
+                  + <strong>heart-centered-prompts</strong>: the philosophical
                   foundation. When AI agents operate autonomously, alignment can't be an
                   afterthought. Recognition-based alignment that complements
                   Constitutional AI.
@@ -1011,12 +1072,12 @@
                   Workflow Transformation Layer
                 </h3>
                 <p class="text-warm-charcoal/70 mb-2">
-                  <strong>ai-coding-config</strong> — the toolkit for teams crossing the
+                  <strong>ai-coding-config</strong>: the toolkit for teams crossing the
                   J-curve from "AI bolted onto existing workflows" to "development
                   process redesigned around AI." 24 agents, 18 commands, 33 standards.
                 </p>
                 <p class="text-warm-charcoal/70">
-                  <strong>claude_telemetry</strong> — production observability for
+                  <strong>claude_telemetry</strong>: production observability for
                   autonomous agents. You can't trust what you can't see.
                 </p>
               </div>
@@ -1027,7 +1088,7 @@
                   Autonomous Agent Infrastructure
                 </h3>
                 <p class="text-warm-charcoal/70 mb-2">
-                  <strong>MCP Hubby</strong> + <strong>machina</strong> — the plumbing
+                  <strong>MCP Hubby</strong> + <strong>machina</strong>: the plumbing
                   that makes fully autonomous development possible. 95% context
                   reduction through progressive disclosure. 25 service adapters. Mac
                   system integration. Agents that can actually interact with the real
@@ -1044,9 +1105,8 @@
 
           <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="200">
             <p class="text-warm-charcoal/70 mb-6">
-              This is what AI-native development infrastructure looks like: not just
-              tools that use AI, but tools that fundamentally transform how software
-              gets built—from specification to production.
+              This is what AI-native development infrastructure looks like: Tools that fundamentally transform how software
+              gets built, from specification to production.
             </p>
             <a
               href="/#connect"
