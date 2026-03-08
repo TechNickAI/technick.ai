@@ -1,5 +1,5 @@
 {
-  "commits": 5340,
+  "commits": 17991,
   "repos": 130,
   "updated": "2026-02-15",
   "by_month": {
@@ -174,8 +174,5 @@
     "2026-01": 354,
     "2026-02": 37
   },
-  "emails": [
-    "nick@technick.ai",
-    "nick@sullivanflock.com"
-  ]
+  "emails": ["nick@technick.ai", "nick@sullivanflock.com"]
 }
