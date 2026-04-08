@@ -6,7 +6,6 @@ Queries both email addresses, resumes from where it left off
 
 import json
 import subprocess
-import sys
 from datetime import datetime
 from pathlib import Path
 
@@ -48,7 +47,9 @@ def get_monthly_commits(email: str, year: int, month: int) -> int | None:
     else:
         end = f"{year}-{month + 1:02d}-01"
 
-    data = gh_api(f"search/commits?q=author-email:{email}+committer-date:{start}..{end}&per_page=1")
+    data = gh_api(
+        f"search/commits?q=author-email:{email}+committer-date:{start}..{end}&per_page=1"
+    )
     if data and "total_count" in data:
         return data["total_count"]
     return None
