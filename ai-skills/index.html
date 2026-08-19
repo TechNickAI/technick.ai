@@ -281,8 +281,8 @@
       </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="pt-32 pb-14 px-4 sm:px-6 lg:px-8">
+    <!-- Hero: the one action lives here -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center">
         <h1 class="text-4xl md:text-5xl font-bold leading-tight" data-aos="fade-up">
           Stop re-explaining yourself to your AI
@@ -293,65 +293,10 @@
           data-aos-delay="100">
           Your assistant isn't dumb. It just improvises a slightly different answer
           every time, because your standards live in your head. Skills are those
-          standards, written down once in plain English, loaded automatically when it
-          recognizes the situation.
+          standards, written down once in plain English, loaded automatically when your
+          assistant recognizes the situation.
         </p>
-        <p
-          class="text-base text-warm-charcoal/60 mt-4"
-          data-aos="fade-up"
-          data-aos-delay="150">
-          Free and open source. Works with Claude and Hermes. Takes about two minutes,
-          and nothing is saved until you say yes.
-        </p>
-      </div>
-    </section>
 
-    <!-- Try one right now -->
-    <section class="pb-16 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto" data-aos="fade-up">
-        <div
-          class="bg-white rounded-2xl p-6 md:p-8 border border-warm-amber/25 shadow-sm">
-          <h2 class="text-xl font-semibold">Try one right now, no setup</h2>
-          <p class="text-warm-charcoal/70 mt-2">
-            Paste this above any research question, in any AI. This is a complete skill,
-            just a small one.
-          </p>
-          <div
-            x-data="{
-              text: `Before you answer: give me your recommendation in one sentence, then the two things that would reverse it, then the single question only I can answer. No summary, no frameworks, no options list. If you don't have enough to decide, say what's missing.`,
-              copied: false,
-              copy() {
-                navigator.clipboard.writeText(this.text).then(() => {
-                  this.copied = true;
-                  if (window.posthog) posthog.capture('ai_skills_copy', { which: 'sample' });
-                  setTimeout(() => (this.copied = false), 2000);
-                });
-              },
-            }"
-            class="mt-5">
-            <blockquote
-              class="text-warm-charcoal/90 leading-relaxed border-l-4 border-warm-blue/40 pl-4 py-1"
-              x-text="text"></blockquote>
-            <button
-              @click="copy()"
-              class="mt-4 w-full sm:w-auto bg-warm-blue text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-300">
-              <span x-show="!copied">Copy this</span>
-              <span x-show="copied" style="display: none">Copied</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Install -->
-    <section class="pb-16 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto" data-aos="fade-up">
-        <h2 class="text-2xl font-bold text-center">Get the whole library</h2>
-        <p class="text-warm-charcoal/70 mt-3 text-center">
-          Copy this and paste it into Claude or Hermes. It asks what you want to be
-          better at, shows you the few that fit, and waits for your yes before it saves
-          anything.
-        </p>
         <div
           x-data="{
             text: `Help me add a few new skills to my AI from:
@@ -372,22 +317,28 @@ for my yes before making a change.`,
               navigator.clipboard.writeText(this.text).then(() => {
                 this.copied = true;
                 if (window.posthog) posthog.capture('ai_skills_copy', { which: 'installer' });
-                setTimeout(() => (this.copied = false), 2000);
+                setTimeout(() => (this.copied = false), 2500);
               });
             },
           }"
-          class="mt-6">
+          class="mt-10"
+          data-aos="fade-up"
+          data-aos-delay="150">
           <button
             @click="copy()"
-            class="w-full bg-warm-charcoal text-white px-6 py-4 rounded-xl font-semibold text-lg hover:bg-stone-700 transition-colors duration-300">
+            class="w-full sm:w-auto bg-warm-charcoal text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-warm-blue transition-colors duration-300 shadow-sm">
             <span x-show="!copied">Copy the setup prompt</span>
-            <span x-show="copied" style="display: none"
-              >Copied. Now paste it into your AI.</span
-            >
+            <span x-show="copied" style="display: none">
+              Copied. Now paste it into your AI.
+            </span>
           </button>
-          <details class="mt-4">
+          <p class="text-sm text-warm-charcoal/60 mt-4">
+            Paste it into Claude or Hermes. It asks what you want to be better at, shows
+            you the few skills that fit, and waits for your yes before saving anything.
+          </p>
+          <details class="mt-4 text-left max-w-2xl mx-auto">
             <summary
-              class="cursor-pointer text-sm text-warm-charcoal/60 hover:text-warm-blue">
+              class="cursor-pointer text-sm text-warm-charcoal/55 hover:text-warm-blue text-center">
               See exactly what you're copying
             </summary>
             <pre
@@ -395,6 +346,14 @@ for my yes before making a change.`,
               x-text="text"></pre>
           </details>
         </div>
+
+        <p
+          class="text-sm text-warm-charcoal/55 mt-8"
+          data-aos="fade-up"
+          data-aos-delay="200">
+          Free and open source. About two minutes. Nothing is saved until you approve
+          it.
+        </p>
       </div>
     </section>
 
@@ -404,32 +363,30 @@ for my yes before making a change.`,
         <h2 class="text-2xl font-bold text-center" data-aos="fade-up">
           What's in the library
         </h2>
-
-        <div class="mt-10" data-aos="fade-up">
-          <h3
-            class="text-sm font-semibold uppercase tracking-wide text-warm-charcoal/50">
-            Ready the moment you install them
+        <p
+          class="text-center text-warm-charcoal/60 mt-3 max-w-2xl mx-auto"
+          data-aos="fade-up">
+          You don't need to pick from this list. The setup prompt asks what you want and
+          suggests a few. This is just what's in there.
+        </p>
+        <div class="mt-12 first:mt-10" data-aos="fade-up">
+          <h3 class="text-lg font-semibold text-warm-charcoal">
+            Research and decisions
           </h3>
+          <p class="text-sm text-warm-charcoal/60 mt-1">
+            When you need to know something, or decide something.
+          </p>
           <div class="grid md:grid-cols-2 gap-4 mt-4">
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">
-                deep-dive<span
-                  class="ml-2 align-middle text-[10px] uppercase tracking-wide text-warm-amber/90 font-semibold"
-                  >works, with less</span
-                >
-              </h3>
+              <h3 class="font-semibold text-warm-charcoal">deep-dive</h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 “Go figure this out” comes back with a recommendation and what would
                 change it, instead of a reading list.
               </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">keep-going</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                It finishes the job instead of stopping to ask you which option you
-                want.
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                Consults several different AI models on Hermes; on Claude it uses Claude
+                alone.
               </p>
             </div>
             <div
@@ -442,161 +399,42 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">
-                multi-review<span
-                  class="ml-2 align-middle text-[10px] uppercase tracking-wide text-warm-amber/90 font-semibold"
-                  >works, with less</span
-                >
-              </h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Runs a draft, plan, or decision past several critical angles before you
-                send it.
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">
-                skill-librarian<span
-                  class="ml-2 align-middle text-[10px] uppercase tracking-wide text-warm-amber/90 font-semibold"
-                  >works, with less</span
-                >
-              </h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Audits its own skills: duplicates, dead weight, and why one didn’t fire.
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">trust-framework</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Rules for when it acts on its own versus checks with you, and how it
-                earns more rope.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-12" data-aos="fade-up">
-          <h3
-            class="text-sm font-semibold uppercase tracking-wide text-warm-charcoal/50">
-            Need a login or tool you may already have
-          </h3>
-          <div class="grid md:grid-cols-2 gap-4 mt-4">
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
               <h3 class="font-semibold text-warm-charcoal">grok-search</h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Live web and X search when it needs what happened today.
               </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: env: XAI_API_KEY (xAI console)
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                needs env: XAI_API_KEY (xAI console)
               </p>
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">address-pr-comments</h3>
+              <h3 class="font-semibold text-warm-charcoal">multi-review</h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                For engineers: triages code review feedback and fixes what’s valid.
+                Runs a draft, plan, or decision past several critical angles before you
+                send it.
               </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: gh CLI, authenticated
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">diagram-rendering</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Describe a diagram in words, get a real image back.
-              </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: chromium binary on PATH (or CHROMIUM_BIN) for local rasterize;
-                network access to a Kroki host (KROKI_BASE) and QuickChart
-                (QUICKCHART_BASE)
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">google-docs</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Turns messy notes into a real, formatted Google Doc.
-              </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: gog CLI, authorized via `gog auth login`
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">google-sheets</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Builds a real spreadsheet from raw data, formatted and ready to use.
-              </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: gog CLI, authorized for Google Sheets and Drive; python3;
-                pdftoppm (poppler-utils), for multipage visual QA rasterization; uv, to
-                run the XLSX verification snippets; openpyxl, via `uv run --with
-                openpyxl` (not a standing install)
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">google-slides</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Turns an outline into a presentation deck.
-              </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: gog CLI, authorized via `gog auth login`; pandoc (for markdown
-                conversion)
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">imessage-bluebubbles</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Read and send iMessage from your assistant (Mac).
-              </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: macOS with Messages.app signed into iMessage; BlueBubbles server
-                app (installed by scripts/setup-bluebubbles.sh); Full Disk Access
-                granted by hand (macOS permission prompts cannot be scripted); python3
-                with the requests package
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">vapi-calls</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                It places an actual phone call: a booking, a confirmation, a reminder.
-              </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: env: VAPI_API_KEY (Vapi dashboard → API Keys, private key)
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                Reviews with several different AI models on Hermes; on Claude, Claude
+                reviews its own work.
               </p>
             </div>
           </div>
         </div>
-
-        <div class="mt-12" data-aos="fade-up">
-          <h3
-            class="text-sm font-semibold uppercase tracking-wide text-warm-charcoal/50">
-            Hermes only
+        <div class="mt-12 first:mt-10" data-aos="fade-up">
+          <h3 class="text-lg font-semibold text-warm-charcoal">
+            Getting work finished
           </h3>
           <p class="text-sm text-warm-charcoal/60 mt-1">
-            These run an agent's own memory, health, and scheduling, so they need Hermes
-            rather than Claude.
+            For work that drags on, stalls, or piles up.
           </p>
           <div class="grid md:grid-cols-2 gap-4 mt-4">
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">memory-cleanup</h3>
+              <h3 class="font-semibold text-warm-charcoal">keep-going</h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Trims a bloated memory file without losing the facts that matter.
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">moa-solve</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Throws a hard problem at several AI models and pulls out the best
-                answer.
+                It finishes the job instead of stopping to ask you which option you
+                want.
               </p>
             </div>
             <div
@@ -605,53 +443,8 @@ for my yes before making a change.`,
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Runs a portfolio of long projects like a chief of staff.
               </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: env: TELEGRAM_BOT_TOKEN (for the living board)
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">recall</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Picks up where you left off, across sessions.
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">report</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                File feedback from any session.
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">robustify-doctor</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Tells you whether your agent is actually healthy.
-              </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: Python 3.9+ (stdlib only, no third-party packages); Read access
-                to the target agent&#x27;s HERMES_HOME
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">mini-app</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Runs the little web apps your agent serves.
-              </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: host services: Caddy + PM2; Tailscale Serve/Funnel
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">pr-review-sweep</h3>
-              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
-                Nightly sweep of merged PRs for unhandled review comments.
-              </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: gh CLI, authenticated; Hermes delegation toolset enabled
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                Hermes only · needs env: TELEGRAM_BOT_TOKEN (for the living board)
               </p>
             </div>
             <div
@@ -660,11 +453,235 @@ for my yes before making a change.`,
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Triages inboxes on a schedule and surfaces only what needs you.
               </p>
-              <p class="text-xs text-warm-charcoal/50 mt-2">
-                Needs: email CLI: gog or himalaya; Hermes cron + delegation toolsets
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                Hermes only · needs email CLI: gog or himalaya; Hermes cron + delegation
+                toolsets enabled
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">address-pr-comments</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                For engineers: triages code review feedback and fixes what’s valid.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                needs gh CLI, authenticated
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">pr-review-sweep</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Nightly sweep of merged PRs for unhandled review comments.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                Hermes only · needs gh CLI, authenticated; Hermes delegation toolset
                 enabled
               </p>
             </div>
+          </div>
+        </div>
+        <div class="mt-12 first:mt-10" data-aos="fade-up">
+          <h3 class="text-lg font-semibold text-warm-charcoal">Making things</h3>
+          <p class="text-sm text-warm-charcoal/60 mt-1">
+            Turning messy input into something you can hand to a person.
+          </p>
+          <div class="grid md:grid-cols-2 gap-4 mt-4">
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">google-docs</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Turns messy notes into a real, formatted Google Doc.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                needs gog CLI, authorized via `gog auth login`
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">google-sheets</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Builds a real spreadsheet from raw data, formatted and ready to use.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                needs gog CLI, authorized for Google Sheets and Drive; python3; pdftoppm
+                (poppler-utils), for multipage visual QA rasterization; uv, to run the
+                XLSX verification snippets; openpyxl, via `uv run --with openpyxl` (not
+                a standing install)
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">google-slides</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Turns an outline into a presentation deck.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                needs gog CLI, authorized via `gog auth login`; pandoc (for markdown
+                conversion)
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">diagram-rendering</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Describe a diagram in words, get a real image back.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                needs chromium binary on PATH (or CHROMIUM_BIN) for local rasterize;
+                network access to a Kroki host (KROKI_BASE) and QuickChart
+                (QUICKCHART_BASE)
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">mini-app</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Runs the little web apps your agent serves.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                Hermes only · needs host services: Caddy + PM2; Tailscale Serve/Funnel
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 first:mt-10" data-aos="fade-up">
+          <h3 class="text-lg font-semibold text-warm-charcoal">Reaching people</h3>
+          <p class="text-sm text-warm-charcoal/60 mt-1">
+            Your assistant talking to the outside world.
+          </p>
+          <div class="grid md:grid-cols-2 gap-4 mt-4">
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">vapi-calls</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                It places an actual phone call: a booking, a confirmation, a reminder.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                needs env: VAPI_API_KEY (Vapi dashboard → API Keys, private key)
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">imessage-bluebubbles</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Read and send iMessage from your assistant (Mac).
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                needs macOS with Messages.app signed into iMessage; BlueBubbles server
+                app (installed by scripts/setup-bluebubbles.sh); Full Disk Access
+                granted by hand (macOS permission prompts cannot be scripted); python3
+                with the requests package
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">report</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                File feedback from any session.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">Hermes only</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 first:mt-10" data-aos="fade-up">
+          <h3 class="text-lg font-semibold text-warm-charcoal">How your AI works</h3>
+          <p class="text-sm text-warm-charcoal/60 mt-1">
+            Its judgment, its memory, and its own upkeep.
+          </p>
+          <div class="grid md:grid-cols-2 gap-4 mt-4">
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">trust-framework</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Rules for when it acts on its own versus checks with you, and how it
+                earns more rope.
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">recall</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Picks up where you left off, across sessions.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">Hermes only</p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">memory-cleanup</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Trims a bloated memory file without losing the facts that matter.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">Hermes only</p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">moa-solve</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Throws a hard problem at several AI models and pulls out the best
+                answer.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">Hermes only</p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">skill-librarian</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Audits its own skills: duplicates, dead weight, and why one didn’t fire.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                Written for Hermes&#x27; skill layout, so on Claude it advises rather
+                than fully audits.
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
+              <h3 class="font-semibold text-warm-charcoal">robustify-doctor</h3>
+              <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
+                Tells you whether your agent is actually healthy.
+              </p>
+              <p class="text-xs text-warm-charcoal/45 mt-2">
+                Hermes only · needs Python 3.9+ (stdlib only, no third-party packages);
+                Read access to the target agent&#x27;s HERMES_HOME
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Not on Claude or Hermes: a skill you can still use -->
+    <section class="pb-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto" data-aos="fade-up">
+        <div class="bg-white rounded-2xl p-6 md:p-8 border border-warm-amber/25">
+          <h2 class="text-xl font-semibold">On ChatGPT or something else?</h2>
+          <p class="text-warm-charcoal/70 mt-2">
+            The library installs into Claude and Hermes today. The idea works anywhere,
+            though, so here is one complete skill you can use right now. Paste it above
+            any research question.
+          </p>
+          <div
+            x-data="{
+              text: `Before you answer: give me your recommendation in one sentence, then the two things that would reverse it, then the single question only I can answer. No summary, no frameworks, no options list. If you don't have enough to decide, say what's missing.`,
+              copied: false,
+              copy() {
+                navigator.clipboard.writeText(this.text).then(() => {
+                  this.copied = true;
+                  if (window.posthog) posthog.capture('ai_skills_copy', { which: 'sample' });
+                  setTimeout(() => (this.copied = false), 2500);
+                });
+              },
+            }"
+            class="mt-5">
+            <blockquote
+              class="text-warm-charcoal/90 leading-relaxed border-l-4 border-warm-blue/40 pl-4 py-1"
+              x-text="text"></blockquote>
+            <button
+              @click="copy()"
+              class="mt-4 w-full sm:w-auto border border-warm-charcoal/25 text-warm-charcoal px-6 py-3 rounded-lg font-medium hover:border-warm-blue hover:text-warm-blue transition-colors duration-300">
+              <span x-show="!copied">Copy this skill</span>
+              <span x-show="copied" style="display: none">Copied</span>
+            </button>
           </div>
         </div>
       </div>
