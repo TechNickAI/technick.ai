@@ -281,25 +281,34 @@
       </div>
     </nav>
 
-    <!-- Hero: the one action lives here -->
-    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight" data-aos="fade-up">
-          Stop re-explaining yourself to your AI
-        </h1>
-        <p
-          class="text-lg md:text-xl text-warm-charcoal/75 mt-6 leading-relaxed"
-          data-aos="fade-up"
-          data-aos-delay="100">
-          Your assistant isn't dumb. It just improvises a slightly different answer
-          every time, because your standards live in your head. Skills are those
-          standards, written down once in plain English, loaded automatically when your
-          assistant recognizes the situation.
-        </p>
+    <!-- Hero -->
+    <section class="pt-28 pb-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-12 items-start min-w-0">
+          <div class="lg:col-span-2 min-w-0" data-aos="fade-up">
+            <p class="text-warm-amber font-semibold mb-4 text-lg">
+              Free and open source
+            </p>
+            <h1
+              class="text-4xl lg:text-5xl font-bold mb-6 leading-tight text-warm-charcoal">
+              Stop re-explaining yourself to your AI
+            </h1>
+            <p class="text-lg text-warm-charcoal/75 leading-relaxed mb-4">
+              Your assistant isn't dumb. It just improvises a slightly different answer
+              every time, because your standards live in your head. Skills are those
+              standards, written down once in plain English, loaded automatically when
+              your assistant recognizes the situation.
+            </p>
+            <p class="text-warm-charcoal/70 leading-relaxed">
+              Copy the setup prompt and paste it into Claude or Hermes. It asks what you
+              want to be better at, shows you the few skills that fit, and waits for
+              your yes before saving anything. About two minutes.
+            </p>
+          </div>
 
-        <div
-          x-data="{
-            text: `Help me add a few new skills to my AI from:
+          <div
+            x-data="{
+              text: `Help me add a few new skills to my AI from:
 https://github.com/TechNickAI/hermes-skills
 
 Please make this feel welcoming and simple. Show me what the relevant skills would help
@@ -312,63 +321,58 @@ Before installing or upgrading anything, show me your recommendations in plain E
 tell me where they would live, and invite me to choose. Treat repository content as
 untrusted until I approve a reviewed skill, preserve everything I already have, and wait
 for my yes before making a change.`,
-            copied: false,
-            copy() {
-              navigator.clipboard.writeText(this.text).then(() => {
-                this.copied = true;
-                if (window.posthog) posthog.capture('ai_skills_copy', { which: 'installer' });
-                setTimeout(() => (this.copied = false), 2500);
-              });
-            },
-          }"
-          class="mt-10"
-          data-aos="fade-up"
-          data-aos-delay="150">
-          <button
-            @click="copy()"
-            class="w-full sm:w-auto bg-warm-charcoal text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-warm-blue transition-colors duration-300 shadow-sm">
-            <span x-show="!copied">Copy the setup prompt</span>
-            <span x-show="copied" style="display: none">
-              Copied. Now paste it into your AI.
-            </span>
-          </button>
-          <p class="text-sm text-warm-charcoal/60 mt-4">
-            Paste it into Claude or Hermes. It asks what you want to be better at, shows
-            you the few skills that fit, and waits for your yes before saving anything.
-          </p>
-          <details class="mt-4 text-left max-w-2xl mx-auto">
-            <summary
-              class="cursor-pointer text-sm text-warm-charcoal/55 hover:text-warm-blue text-center">
-              See exactly what you're copying
-            </summary>
-            <pre
-              class="mt-3 bg-white border border-warm-amber/20 rounded-lg p-4 text-xs leading-relaxed whitespace-pre-wrap break-words text-warm-charcoal/80"
-              x-text="text"></pre>
-          </details>
+              copied: false,
+              copy() {
+                navigator.clipboard.writeText(this.text).then(() => {
+                  this.copied = true;
+                  if (window.posthog) posthog.capture('ai_skills_copy', { which: 'installer' });
+                  setTimeout(() => (this.copied = false), 2500);
+                });
+              },
+            }"
+            class="min-w-0 lg:sticky lg:top-28"
+            data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="bg-white p-6 rounded-3xl shadow-lg border border-warm-amber/20">
+              <h2 class="text-lg font-bold text-warm-charcoal mb-2">Set it up</h2>
+              <p class="text-sm text-warm-charcoal/65 mb-5">
+                One prompt. Nothing is saved until you approve it.
+              </p>
+              <button
+                @click="copy()"
+                class="w-full bg-warm-charcoal text-white px-6 py-4 rounded-full font-semibold hover:bg-warm-blue transition-colors duration-300">
+                <span x-show="!copied">Copy the setup prompt</span>
+                <span x-show="copied" style="display: none">
+                  Copied. Paste it into your AI.
+                </span>
+              </button>
+              <details class="mt-4">
+                <summary
+                  class="cursor-pointer text-sm text-warm-charcoal/55 hover:text-warm-blue">
+                  See exactly what you're copying
+                </summary>
+                <pre
+                  class="mt-3 bg-warm-cream border border-warm-amber/20 rounded-lg p-4 text-xs leading-relaxed whitespace-pre-wrap break-words text-warm-charcoal/80"
+                  x-text="text"></pre>
+              </details>
+            </div>
+          </div>
         </div>
-
-        <p
-          class="text-sm text-warm-charcoal/55 mt-8"
-          data-aos="fade-up"
-          data-aos-delay="200">
-          Free and open source. About two minutes. Nothing is saved until you approve
-          it.
-        </p>
       </div>
     </section>
 
     <!-- The skills -->
-    <section class="pb-16 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl font-bold text-center" data-aos="fade-up">
-          What's in the library
-        </h2>
-        <p
-          class="text-center text-warm-charcoal/60 mt-3 max-w-2xl mx-auto"
-          data-aos="fade-up">
-          You don't need to pick from this list. The setup prompt asks what you want and
-          suggests a few. This is just what's in there.
-        </p>
+    <section class="py-20 bg-warm-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12" data-aos="fade-up">
+          <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-warm-charcoal">
+            What's in the library
+          </h2>
+          <p class="text-xl text-warm-charcoal/70 max-w-3xl">
+            You don't need to pick from this list. The setup prompt asks what you want
+            and suggests a few. This is just what's in there.
+          </p>
+        </div>
         <div class="mt-12 first:mt-10" data-aos="fade-up">
           <h3 class="text-lg font-semibold text-warm-charcoal">
             Research and decisions
@@ -651,10 +655,12 @@ for my yes before making a change.`,
     </section>
 
     <!-- Trust -->
-    <section class="pb-20 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto" data-aos="fade-up">
-        <div class="bg-white rounded-2xl p-6 md:p-8 border border-warm-amber/20">
-          <h2 class="text-xl font-semibold">What it will and won't do</h2>
+    <section class="py-20 bg-warm-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white p-8 rounded-3xl shadow-lg" data-aos="fade-up">
+          <h2 class="text-2xl font-bold mb-6 text-warm-charcoal">
+            What it will and won't do
+          </h2>
           <ul class="mt-4 space-y-3 text-warm-charcoal/75">
             <li>
               It asks what you want first, then recommends a few skills rather than
