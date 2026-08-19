@@ -255,7 +255,6 @@
       }
     </script>
 
-
     <style>
       .timeline-dot {
         width: 16px;
@@ -311,6 +310,11 @@
               href="/career"
               class="text-warm-blue font-semibold transition-colors duration-300">
               Career
+            </a>
+            <a
+              href="/ai-skills"
+              class="text-warm-charcoal hover:text-warm-blue transition-colors duration-300">
+              AI Skills
             </a>
             <a
               href="/#connect"
@@ -377,6 +381,12 @@
             >Career</a
           >
           <a
+            href="/ai-skills"
+            @click="isOpen = false"
+            class="block py-3 px-4 text-warm-charcoal hover:bg-warm-blue/5 hover:text-warm-blue rounded-lg transition-colors duration-200"
+            >AI Skills</a
+          >
+          <a
             href="/#connect"
             @click="isOpen = false"
             class="block py-3 px-4 hover:bg-warm-blue/5 rounded-lg"
@@ -406,9 +416,9 @@
                 <strong>Nick Sullivan</strong>: Silicon Valley CTO who's been early to
                 every major tech wave since 1998. Built and led engineering teams from
                 zero to 50+ across multiple ventures. Two successful exits. Now
-                operating at the frontier of AI-native development: writing specs instead
-                of code, directing autonomous agents, and building the infrastructure
-                that transforms how teams ship software with AI.
+                operating at the frontier of AI-native development: writing specs
+                instead of code, directing autonomous agents, and building the
+                infrastructure that transforms how teams ship software with AI.
               </p>
 
               <!-- Key Stats - 4 high-impact stats that tell a story -->
@@ -672,8 +682,8 @@
               <p class="text-warm-charcoal/70">
                 Organizations seeing 25-30%+ gains redesigned their entire development
                 workflow around AI. New spec formats, new review processes, new CI/CD
-                for AI-generated code. I build the tools (like ai-coding-config) that make
-                this transformation possible.
+                for AI-generated code. I build the tools (like ai-coding-config) that
+                make this transformation possible.
               </p>
             </div>
 
@@ -706,15 +716,25 @@
                   <div class="flex gap-3">
                     <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
                     <p class="text-warm-charcoal/70">
-                      <a href="https://carmenta.ai" target="_blank" rel="noopener" class="font-bold hover:text-warm-blue transition-colors">Carmenta</a>: Unified AI platform with multi-model
-                      routing, spec-to-ship in a fraction of the time
+                      <a
+                        href="https://carmenta.ai"
+                        target="_blank"
+                        rel="noopener"
+                        class="font-bold hover:text-warm-blue transition-colors"
+                        >Carmenta</a
+                      >: Unified AI platform with multi-model routing, spec-to-ship in a
+                      fraction of the time
                     </p>
                   </div>
                   <div class="flex gap-3">
                     <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
                     <p class="text-warm-charcoal/70">
-                      <a href="/code-forge#mcp-hubby" class="font-bold hover:text-warm-blue transition-colors">MCP Hubby</a>: 25 service adapters, 95% context
-                      reduction. Production infrastructure for autonomous agent workflows
+                      <a
+                        href="/code-forge#mcp-hubby"
+                        class="font-bold hover:text-warm-blue transition-colors"
+                        >MCP Hubby</a
+                      >: 25 service adapters, 95% context reduction. Production
+                      infrastructure for autonomous agent workflows
                     </p>
                   </div>
                 </div>
@@ -722,35 +742,49 @@
                   <div class="flex gap-3">
                     <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
                     <p class="text-warm-charcoal/70">
-                      <a href="/code-forge#ai-coding-config" class="font-bold hover:text-warm-blue transition-colors">ai-coding-config</a>: 24 specialized agents, 18
-                      workflow commands, the toolkit for teams making the AI-native
-                      transition
+                      <a
+                        href="/code-forge#ai-coding-config"
+                        class="font-bold hover:text-warm-blue transition-colors"
+                        >ai-coding-config</a
+                      >: 24 specialized agents, 18 workflow commands, the toolkit for
+                      teams making the AI-native transition
                     </p>
                   </div>
                   <div class="flex gap-3">
                     <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
                     <p class="text-warm-charcoal/70">
-                      <a href="/code-forge#claude-telemetry" class="font-bold hover:text-warm-blue transition-colors">claude_telemetry</a>: Production observability for
-                      headless agents. You can't trust what you can't see.
+                      <a
+                        href="/code-forge#claude-telemetry"
+                        class="font-bold hover:text-warm-blue transition-colors"
+                        >claude_telemetry</a
+                      >: Production observability for headless agents. You can't trust
+                      what you can't see.
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="grid md:grid-cols-2 gap-6 mt-4 pt-4 border-t border-warm-amber/10">
+              <div
+                class="grid md:grid-cols-2 gap-6 mt-4 pt-4 border-t border-warm-amber/10">
                 <div class="flex gap-3">
                   <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
                   <p class="text-warm-charcoal/70">
-                    <a href="/code-forge#openclaw-config" class="font-bold hover:text-warm-blue transition-colors">openclaw-config</a>: AI OS config for OpenClaw.
-                    Memory, skills, and autonomous workflows, all in markdown.
-                    Platform-agnostic AI infrastructure.
+                    <a
+                      href="/code-forge#openclaw-config"
+                      class="font-bold hover:text-warm-blue transition-colors"
+                      >openclaw-config</a
+                    >: AI OS config for OpenClaw. Memory, skills, and autonomous
+                    workflows, all in markdown. Platform-agnostic AI infrastructure.
                   </p>
                 </div>
                 <div class="flex gap-3">
                   <span class="text-warm-blue font-bold text-lg shrink-0">→</span>
                   <p class="text-warm-charcoal/70">
-                    <a href="/code-forge#heart-centered-prompts" class="font-bold hover:text-warm-blue transition-colors">heart-centered-prompts</a>: "We" language
-                    alignment prompts on npm/PyPI. Recognition-based AI alignment
-                    used by developers globally.
+                    <a
+                      href="/code-forge#heart-centered-prompts"
+                      class="font-bold hover:text-warm-blue transition-colors"
+                      >heart-centered-prompts</a
+                    >: "We" language alignment prompts on npm/PyPI. Recognition-based AI
+                    alignment used by developers globally.
                   </p>
                 </div>
               </div>
@@ -768,8 +802,8 @@
             </h2>
             <p class="text-warm-charcoal/60 text-sm">
               25 years of systems expertise, finally unleashed. AI-native workflows
-              shift the bottleneck from typing to thinking, and deep knowledge
-              compounds fast.
+              shift the bottleneck from typing to thinking, and deep knowledge compounds
+              fast.
             </p>
           </div>
           <div
@@ -860,8 +894,8 @@
             </div>
           </div>
           <p class="text-center text-warm-charcoal/50 text-xs mt-4" data-aos="fade-up">
-            My coding career began in 1998. This chart shows GitHub activity
-            only. Pre-GitHub work not included.
+            My coding career began in 1998. This chart shows GitHub activity only.
+            Pre-GitHub work not included.
             <span id="lastUpdated" class="block mt-1"></span>
           </p>
         </div>
@@ -896,9 +930,9 @@
                   </div>
                   <h3 class="text-xl font-bold mb-2">Carmenta Collective - Founder</h3>
                   <p class="text-warm-charcoal/70 mb-3">
-                    Named after the Roman goddess who invented the Latin
-                    alphabet, perhaps the most transformative technology in human
-                    history. Building technology in service of human flourishing.
+                    Named after the Roman goddess who invented the Latin alphabet,
+                    perhaps the most transformative technology in human history.
+                    Building technology in service of human flourishing.
                   </p>
                   <p class="text-warm-charcoal/70 mb-3">
                     <strong>The insight:</strong> Every AI tool makes you re-explain
@@ -988,32 +1022,58 @@
                   </p>
                   <ul class="text-warm-charcoal/70 text-sm space-y-2">
                     <li>
-                      <a href="/code-forge#mcp-hubby" class="font-semibold hover:text-warm-blue transition-colors">MCP Hubby</a>: 25 service adapters. 95% context
-                      reduction (7,500 vs 200,000 tokens). Progressive disclosure
-                      architecture.
+                      <a
+                        href="/code-forge#mcp-hubby"
+                        class="font-semibold hover:text-warm-blue transition-colors"
+                        >MCP Hubby</a
+                      >: 25 service adapters. 95% context reduction (7,500 vs 200,000
+                      tokens). Progressive disclosure architecture.
                     </li>
                     <li>
-                      <a href="/code-forge#ai-coding-config" class="font-semibold hover:text-warm-blue transition-colors">ai-coding-config</a>: 24 specialized agents, 18
-                      workflow commands, 33 coding standards. The most comprehensive AI
-                      coding agent plugin ecosystem.
+                      <a
+                        href="/code-forge#ai-coding-config"
+                        class="font-semibold hover:text-warm-blue transition-colors"
+                        >ai-coding-config</a
+                      >: 24 specialized agents, 18 workflow commands, 33 coding
+                      standards. The most comprehensive AI coding agent plugin
+                      ecosystem.
                     </li>
                     <li>
-                      <a href="/code-forge#openclaw-config" class="font-semibold hover:text-warm-blue transition-colors">openclaw-config</a>: AI OS config framework for
-                      OpenClaw. Memory, skills, workflows, and autonomous agents — all
-                      in markdown.
+                      <a
+                        href="/code-forge#openclaw-config"
+                        class="font-semibold hover:text-warm-blue transition-colors"
+                        >openclaw-config</a
+                      >: AI OS config framework for OpenClaw. Memory, skills, workflows,
+                      and autonomous agents — all in markdown.
                     </li>
                     <li>
-                      <a href="/code-forge#claude-telemetry" class="font-semibold hover:text-warm-blue transition-colors">claude_telemetry</a>: Production observability for
-                      headless Claude agents. Works with Logfire, Sentry, Datadog.
+                      <a
+                        href="/code-forge#claude-telemetry"
+                        class="font-semibold hover:text-warm-blue transition-colors"
+                        >claude_telemetry</a
+                      >: Production observability for headless Claude agents. Works with
+                      Logfire, Sentry, Datadog.
                     </li>
                     <li>
-                      <a href="/code-forge#machina" class="font-semibold hover:text-warm-blue transition-colors">machina</a>: MCP gateway for Mac: iMessage, Calendar,
-                      Reminders, Contacts.
+                      <a
+                        href="/code-forge#machina"
+                        class="font-semibold hover:text-warm-blue transition-colors"
+                        >machina</a
+                      >: MCP gateway for Mac: iMessage, Calendar, Reminders, Contacts.
                     </li>
                     <li>
-                      <a href="/code-forge#heart-centered-prompts" class="font-semibold hover:text-warm-blue transition-colors">heart-centered-prompts</a>: "We" language
-                      alignment prompts. Available on
-                      <a href="https://www.npmjs.com/package/heart-centered-prompts" target="_blank" rel="noopener" class="hover:text-warm-blue transition-colors underline">npm</a>
+                      <a
+                        href="/code-forge#heart-centered-prompts"
+                        class="font-semibold hover:text-warm-blue transition-colors"
+                        >heart-centered-prompts</a
+                      >: "We" language alignment prompts. Available on
+                      <a
+                        href="https://www.npmjs.com/package/heart-centered-prompts"
+                        target="_blank"
+                        rel="noopener"
+                        class="hover:text-warm-blue transition-colors underline"
+                        >npm</a
+                      >
                       and PyPI. Used by developers globally.
                     </li>
                   </ul>
@@ -1223,8 +1283,8 @@
                   </div>
                   <h3 class="text-xl font-bold mb-2">The Beginning</h3>
                   <p class="text-warm-charcoal/70">
-                    Self-taught programmer. No CS degree, just relentless curiosity and a
-                    drive to build. Took advantage of technology's meritocratic nature
+                    Self-taught programmer. No CS degree, just relentless curiosity and
+                    a drive to build. Took advantage of technology's meritocratic nature
                     to rise quickly. Building for the web when it was still new. The
                     pattern started early: see the wave, learn fast, ship.
                   </p>
@@ -1244,8 +1304,8 @@
               Community Builder
             </h3>
             <p class="text-warm-charcoal/70 mb-6">
-              I believe in giving back. Technology doesn't advance in isolation. It grows
-              through shared knowledge and community.
+              I believe in giving back. Technology doesn't advance in isolation. It
+              grows through shared knowledge and community.
             </p>
             <div class="grid md:grid-cols-3 gap-6">
               <div class="bg-warm-cream p-4 rounded-xl">

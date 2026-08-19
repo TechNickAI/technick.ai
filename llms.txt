@@ -7,6 +7,7 @@
 - [Home](index.html): Complete profile including story, philosophy, projects, values, and ways to connect
 - [Career](career/index.html): Engineering leadership experience, team-building track record, and career opportunities
 - [Code Forge](code-forge/index.html): Open source projects showcase with production-ready AI infrastructure tools
+- [AI Skills](ai-skills/index.html): Free library of reusable procedures that make an AI assistant handle recurring work consistently; installs into Claude or Hermes from a single pasted prompt
 
 ## Open Source Projects
 
