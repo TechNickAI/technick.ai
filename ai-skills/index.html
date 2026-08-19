@@ -299,10 +299,15 @@
               standards, written down once in plain English, loaded automatically when
               your assistant recognizes the situation.
             </p>
+            <p class="text-warm-charcoal/70 leading-relaxed mb-4">
+              Copy the setup prompt and paste it into Claude. It asks what you want to
+              be better at, shows you the few skills that fit, and waits for your yes
+              before saving anything.
+            </p>
             <p class="text-warm-charcoal/70 leading-relaxed">
-              Copy the setup prompt and paste it into Claude or Hermes. It asks what you
-              want to be better at, shows you the few skills that fit, and waits for
-              your yes before saving anything. About two minutes.
+              These are not a prompt roundup. They are the procedures running four AI
+              agents that work every day on research, money, code, and communication.
+              Each one loads the 13 to 18 of these that fit its job.
             </p>
           </div>
 
@@ -365,7 +370,12 @@ for my yes before making a change.`,
                 One prompt. Nothing is saved until you approve it.
               </p>
               <p class="text-sm text-warm-charcoal/55 mb-5">
-                Works in Claude and Hermes. Not ChatGPT yet.
+                Works in Claude. Not ChatGPT yet. (Also
+                <a
+                  href="https://github.com/NousResearch/hermes-agent"
+                  class="text-warm-blue hover:underline"
+                  >Hermes</a
+                >, if you run your own agent.)
               </p>
               <button
                 @click="copy()"
@@ -418,6 +428,10 @@ for my yes before making a change.`,
             You don't need to pick from this list. The setup prompt asks what you want
             and suggests a few. This is just what's in there.
           </p>
+          <p class="text-warm-charcoal/60 max-w-3xl mt-3">
+            Every name links to the skill itself, so you can read exactly what it tells
+            your AI to do before you install it.
+          </p>
         </div>
         <div class="mt-12 first:mt-10" data-aos="fade-up">
           <h3 class="text-lg font-semibold text-warm-charcoal">
@@ -429,7 +443,13 @@ for my yes before making a change.`,
           <div class="grid md:grid-cols-2 gap-4 mt-4">
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">deep-dive</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/deep-dive/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >deep-dive</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 “Go figure this out” comes back with a recommendation and what would
                 change it, instead of a reading list.
@@ -441,7 +461,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">mob-check</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/mob-check/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >mob-check</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 What real people are saying right now on Reddit, X, and YouTube, not the
                 SEO version.
@@ -449,7 +475,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">grok-search</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/grok-search/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >grok-search</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Live web and X search when it needs what happened today.
               </p>
@@ -457,7 +489,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">multi-review</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/multi-review/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >multi-review</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Runs a draft, plan, or decision past several critical angles before you
                 send it.
@@ -479,7 +517,13 @@ for my yes before making a change.`,
           <div class="grid md:grid-cols-2 gap-4 mt-4">
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">keep-going</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/keep-going/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >keep-going</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 It finishes the job instead of stopping to ask you which option you
                 want.
@@ -487,7 +531,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">project-steward</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/project-steward/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >project-steward</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Runs a portfolio of long projects like a chief of staff.
               </p>
@@ -497,7 +547,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">email-steward</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/productivity/email-steward/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >email-steward</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Triages inboxes on a schedule and surfaces only what needs you.
               </p>
@@ -507,7 +563,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">address-pr-comments</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/engineering/address-pr-comments/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >address-pr-comments</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 For engineers: triages code review feedback and fixes what’s valid.
               </p>
@@ -517,7 +579,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">pr-review-sweep</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/engineering/pr-review-sweep/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >pr-review-sweep</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Nightly sweep of merged PRs for unhandled review comments.
               </p>
@@ -535,7 +603,13 @@ for my yes before making a change.`,
           <div class="grid md:grid-cols-2 gap-4 mt-4">
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">google-docs</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/productivity/google-docs/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >google-docs</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Turns messy notes into a real, formatted Google Doc.
               </p>
@@ -545,7 +619,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">google-sheets</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/productivity/google-sheets/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >google-sheets</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Builds a real spreadsheet from raw data, formatted and ready to use.
               </p>
@@ -555,7 +635,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">google-slides</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/productivity/google-slides/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >google-slides</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Turns an outline into a presentation deck.
               </p>
@@ -565,7 +651,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">diagram-rendering</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/engineering/diagram-rendering/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >diagram-rendering</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Describe a diagram in words, get a real image back.
               </p>
@@ -573,7 +665,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">mini-app</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/engineering/mini-app/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >mini-app</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Runs the little web apps your agent serves.
               </p>
@@ -591,7 +689,13 @@ for my yes before making a change.`,
           <div class="grid md:grid-cols-2 gap-4 mt-4">
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">vapi-calls</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/productivity/vapi-calls/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >vapi-calls</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 It places an actual phone call: a booking, a confirmation, a reminder.
               </p>
@@ -599,7 +703,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">imessage-bluebubbles</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/productivity/imessage-bluebubbles/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >imessage-bluebubbles</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Read and send iMessage from your assistant (Mac).
               </p>
@@ -607,7 +717,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">report</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/report/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >report</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 File feedback from any session.
               </p>
@@ -623,7 +739,13 @@ for my yes before making a change.`,
           <div class="grid md:grid-cols-2 gap-4 mt-4">
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">trust-framework</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/trust-framework/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >trust-framework</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Rules for when it acts on its own versus checks with you, and how it
                 earns more rope.
@@ -631,7 +753,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">recall</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/recall/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >recall</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Picks up where you left off, across sessions.
               </p>
@@ -639,7 +767,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">memory-cleanup</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/memory-cleanup/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >memory-cleanup</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Trims a bloated memory file without losing the facts that matter.
               </p>
@@ -647,7 +781,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">moa-solve</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/moa-solve/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >moa-solve</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Throws a hard problem at several AI models and pulls out the best
                 answer.
@@ -656,7 +796,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">skill-librarian</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/skill-librarian/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >skill-librarian</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Audits its own skills: duplicates, dead weight, and why one didn’t fire.
               </p>
@@ -667,7 +813,13 @@ for my yes before making a change.`,
             </div>
             <div
               class="bg-white rounded-xl p-5 border border-warm-amber/20 hover:border-warm-blue/40 transition-colors duration-300">
-              <h3 class="font-semibold text-warm-charcoal">robustify-doctor</h3>
+              <h3 class="font-semibold text-warm-charcoal">
+                <a
+                  href="https://github.com/TechNickAI/hermes-skills/blob/main/skills/core/robustify-doctor/SKILL.md"
+                  class="hover:text-warm-blue transition-colors duration-300"
+                  >robustify-doctor</a
+                >
+              </h3>
               <p class="text-warm-charcoal/70 mt-1 text-sm leading-relaxed">
                 Tells you whether your agent is actually healthy.
               </p>
