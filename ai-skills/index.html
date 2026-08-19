@@ -650,43 +650,6 @@ for my yes before making a change.`,
       </div>
     </section>
 
-    <!-- Not on Claude or Hermes: a skill you can still use -->
-    <section class="pb-16 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto" data-aos="fade-up">
-        <div class="bg-white rounded-2xl p-6 md:p-8 border border-warm-amber/25">
-          <h2 class="text-xl font-semibold">On ChatGPT or something else?</h2>
-          <p class="text-warm-charcoal/70 mt-2">
-            The library installs into Claude and Hermes today. The idea works anywhere,
-            though, so here is one complete skill you can use right now. Paste it above
-            any research question.
-          </p>
-          <div
-            x-data="{
-              text: `Before you answer: give me your recommendation in one sentence, then the two things that would reverse it, then the single question only I can answer. No summary, no frameworks, no options list. If you don't have enough to decide, say what's missing.`,
-              copied: false,
-              copy() {
-                navigator.clipboard.writeText(this.text).then(() => {
-                  this.copied = true;
-                  if (window.posthog) posthog.capture('ai_skills_copy', { which: 'sample' });
-                  setTimeout(() => (this.copied = false), 2500);
-                });
-              },
-            }"
-            class="mt-5">
-            <blockquote
-              class="text-warm-charcoal/90 leading-relaxed border-l-4 border-warm-blue/40 pl-4 py-1"
-              x-text="text"></blockquote>
-            <button
-              @click="copy()"
-              class="mt-4 w-full sm:w-auto border border-warm-charcoal/25 text-warm-charcoal px-6 py-3 rounded-lg font-medium hover:border-warm-blue hover:text-warm-blue transition-colors duration-300">
-              <span x-show="!copied">Copy this skill</span>
-              <span x-show="copied" style="display: none">Copied</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Trust -->
     <section class="pb-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto" data-aos="fade-up">
@@ -711,6 +674,9 @@ for my yes before making a change.`,
             </li>
           </ul>
           <p class="text-sm text-warm-charcoal/55 mt-5">
+            The library installs into Claude and Hermes today, not ChatGPT.
+          </p>
+          <p class="text-sm text-warm-charcoal/55 mt-3">
             These are instructions your assistant follows, not enforced technical
             controls, so review the list it proposes before you approve it. Everything
             is public on
