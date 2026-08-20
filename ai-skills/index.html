@@ -398,7 +398,10 @@ for my yes before making a change.`,
                 class="mt-4 text-sm text-warm-charcoal/75">
                 <p class="font-semibold text-warm-charcoal mb-2">Finish in Claude:</p>
                 <ol class="list-decimal list-inside space-y-1">
-                  <li>Start a new chat.</li>
+                  <li>
+                    Start a new chat. (A normal chat, not Customize &rsaquo; Skills,
+                    which only takes file uploads.)
+                  </li>
                   <li>Paste the message and send it.</li>
                   <li>
                     It asks what you want help with, then shows what it suggests.
@@ -881,6 +884,42 @@ for my yes before making a change.`,
               class="text-warm-blue hover:underline"
               >GitHub</a
             >, and you can delete one at any time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- If the chat cannot fetch -->
+    <section class="pb-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="bg-white p-8 rounded-3xl shadow-lg" data-aos="fade-up">
+          <h2 class="text-2xl font-bold mb-3 text-warm-charcoal">
+            If Claude says it can't open the link
+          </h2>
+          <p class="text-warm-charcoal/70 mb-4 max-w-2xl">
+            The Claude website and phone app can only open pages they found in a search,
+            so they sometimes refuse a link handed to them directly. Claude Code and the
+            desktop app don't have this limit. When it happens, install the file
+            instead:
+          </p>
+          <ol
+            class="list-decimal list-inside space-y-2 text-warm-charcoal/75 max-w-2xl mb-5">
+            <li>
+              Download a skill from
+              <a
+                href="https://github.com/TechNickAI/hermes-skills/releases/latest"
+                target="_blank"
+                rel="noopener"
+                class="text-warm-blue hover:underline"
+                >the releases page</a
+              >. Each one is a small <span class="font-mono text-sm">.skill</span> file.
+            </li>
+            <li>In Claude, open Customize, then Skills, then Add.</li>
+            <li>Upload the file. It stays available in every future chat.</li>
+          </ol>
+          <p class="text-sm text-warm-charcoal/55">
+            Not sure which to try first? deep-dive, keep-going, and multi-review are the
+            three that need no setup.
           </p>
         </div>
       </div>
